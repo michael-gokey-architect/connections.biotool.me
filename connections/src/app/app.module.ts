@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { GuestModule } from './guest/guest.module';
+import { QuestModule } from './quest/quest.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule,
+    GuestModule,
+    QuestModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConnectionCentralComponent } from './connection-central/connection-central.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import { ConnectionCentralComponent } from './connection-central/connection-cent
     ConnectionCentralComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
   ]
 })
 export class ConnectionsModule { }

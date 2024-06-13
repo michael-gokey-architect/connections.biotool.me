@@ -7,7 +7,7 @@ import { ConnectionCentralComponent } from './connections/connection-central/con
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
-  { path: 'connections', component: ConnectionCentralComponent}
+  { path: 'connections', component: ConnectionCentralComponent},
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];

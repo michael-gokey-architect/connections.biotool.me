@@ -4,6 +4,7 @@ import { GuestPublicLandingComponent } from './guest-public-landing/guest-public
 import { UserBadgePanelComponent } from './user-badge-panel/user-badge-panel.component';
 import { UserBioPanelComponent } from './user-bio-panel/user-bio-panel.component';
 import { UserLinkPanelComponent } from './user-link-panel/user-link-panel.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +16,8 @@ import { UserLinkPanelComponent } from './user-link-panel/user-link-panel.compon
     UserLinkPanelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
   ]
 })
 export class GuestModule { }
