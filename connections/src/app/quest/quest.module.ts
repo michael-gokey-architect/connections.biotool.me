@@ -16,6 +16,11 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
+  ],
+  exports: [
+    QuestBadgesPanelComponent,
+    QuestRewardsPageComponent,
+    QuestRewardsPanelComponent
   ]
 })
 export class QuestModule { }
