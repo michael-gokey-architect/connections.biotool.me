@@ -9,6 +9,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ConnectionCentralComponent
   ],
+  exports: [
+    ConnectionCentralComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,

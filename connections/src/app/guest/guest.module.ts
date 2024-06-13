@@ -15,6 +15,12 @@ import { SharedModule } from '../shared/shared.module';
     UserBioPanelComponent,
     UserLinkPanelComponent
   ],
+  exports: [
+    GuestPublicLandingComponent,
+    UserBadgePanelComponent,
+    UserBioPanelComponent,
+    UserLinkPanelComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
