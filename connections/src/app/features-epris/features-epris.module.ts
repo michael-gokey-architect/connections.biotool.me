@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageBlueComponent } from './page-blue/page-blue.component';
 import { PagePurpleComponent } from './page-purple/page-purple.component';
 import { PageRedComponent } from './page-red/page-red.component';
+import { PageGrayComponent } from './page-gray/page-gray.component';
 
 
 
@@ -10,7 +11,8 @@ import { PageRedComponent } from './page-red/page-red.component';
   declarations: [
     PageBlueComponent,
     PagePurpleComponent,
-    PageRedComponent
+    PageRedComponent,
+    PageGrayComponent
   ],
   imports: [
     CommonModule

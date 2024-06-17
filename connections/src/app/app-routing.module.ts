@@ -5,6 +5,10 @@ import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-f
 import { ConnectionCentralComponent } from './connections/connection-central/connection-central.component';
 import { QuestRewardsPageComponent } from './quest/quest-rewards-page/quest-rewards-page.component';
 import { ThemeSwitcherComponent } from './features/theme-switcher/theme-switcher.component';
+import { PageRedComponent } from './features-epris/page-red/page-red.component';
+import { PageBlueComponent } from './features-epris/page-blue/page-blue.component';
+import { PagePurpleComponent } from './features-epris/page-purple/page-purple.component';
+import { PageGrayComponent } from './features-epris/page-gray/page-gray.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -12,6 +16,10 @@ const routes: Routes = [
   { path: 'connections', component: ConnectionCentralComponent },
   { path: 'quests', component:QuestRewardsPageComponent},
   { path: 'theme', component: ThemeSwitcherComponent },
+  { path: 'gray', component: PageGrayComponent },
+  { path: 'blue', component: PageBlueComponent },
+  { path: 'purple', component: PagePurpleComponent },
+  { path: 'red', component: PageRedComponent },
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];
