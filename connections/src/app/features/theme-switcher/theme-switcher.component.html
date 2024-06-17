@@ -1,1 +1,370 @@
-<p>theme-switcher works!</p>
+<!-- themeGrays section -->
+<div class="content {{theme}}">
+	<div class="header flex justify-between items-center p-3">
+		<div class="user-info flex items-center gap-4">
+			<img class="w-12" src="/assets/images/icon/small-logo-image.png" alt="Profile image">
+			<p class="uppercase title-text">User's Profile</p>
+		</div>
+		<div class="menu flex items-center gap-4">
+			<img class="header-icon" src="/assets/images/icon/qr-icon.svg" alt="QR icon">
+			<img class="header-icon" src="/assets/images/icon/hamburger-menu-icon.svg" alt="Menu icon">
+		</div>
+	</div>
+	<div class="bg-profile p-4">
+		<div class="flex">
+			<img class="w-16" src="/assets/images/ImgPlaceholder.svg" />
+			<div class="ml-6">
+				<div class="flex">
+					<p class="text-lg text uppercase font-medium title-text">
+						full name
+					</p>
+					<!-- <app-theme-switch [theme]="theme" (themeUpdated)="onThemeUpdate($event)"></app-theme-switch> -->
+				</div>
+				<div class="grid grid-cols-4 gap-2">
+					<img class="w-10" src="/assets/images/icon/facebook-social.png" alt="Facebook">
+					<img class="w-10" src="/assets/images/icon/linkedin-social.png" alt="LinkedIn">
+					<img class="w-10" src="/assets/images/icon/x-social.png" alt="X / Twitter">
+					<img class="w-10" src="/assets/images/icon/instagram-social.png" alt="Instagram">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About Me section-->
+	<div class="bg-about 0 px-8 text-center py-10">
+		<h1 class="font-bold text-sm uppercase text-center leading-10 title-text">about me:</h1>
+		<p class="pb-4 text-sm">
+			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
+			biscuit cake pastry candy candy danish.
+		</p>
+		<p class="pb-4 text-sm">
+			Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
+			biscuit pie brownie chocolate cake jelly.
+		</p>
+	</div>
+
+	<!-- Websites -->
+	<div class="w-9/12 mx-auto mt-8 space-y-6">
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 1
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full ">
+			Website 2
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 3
+		</div>
+	</div>
+
+	<!-- Badges -->
+	<div class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/quest-icon.svg" alt="Quest icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">My Quest</p>
+		</div>
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/badges-icon.svg" alt="Badges icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">My Badges</p>
+		</div>
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/rewards-icon.svg" alt="Rewards icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">
+				My Rewards
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- themeBlues section -->
+<!-- <div id="theme-blues" *ngIf="theme === 'themes'"> -->
+	<div id="theme-blues" >
+	<div class="header flex justify-between items-center p-3">
+		<div class="user-info flex items-center gap-4">
+			<img class="w-12" src="/assets/images/icon/small-logo-image.png" alt="Profile image">
+			<p class="uppercase title-text">User's Profile</p>
+		</div>
+		<div class="menu flex items-center gap-4">
+			<img class="header-icon" src="/assets/images/icon/qr-icon.svg" alt="QR icon">
+			<img class="header-icon" src="/assets/images/icon/hamburger-menu-icon.svg" alt="Menu icon">
+		</div>
+	</div>
+	<div class="bg-profile p-4">
+		<div class="flex">
+			<img class="w-16" src="/assets/images/ImgPlaceholder.svg" />
+			<div class="ml-6">
+				<p class="text-lg text uppercase font-medium title-text">
+					full name
+				</p>
+				<div class="grid grid-cols-4 gap-2">
+					<img class="w-10" src="/assets/images/icon/facebook-social.png" alt="Facebook">
+					<img class="w-10" src="/assets/images/icon/linkedin-social.png" alt="LinkedIn">
+					<img class="w-10" src="/assets/images/icon/x-social.png" alt="X / Twitter">
+					<img class="w-10" src="/assets/images/icon/instagram-social.png" alt="Instagram">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About Me section-->
+	<div class="bg-about 0 px-8 text-center py-10">
+		<h1 class="font-bold text-sm uppercase text-center leading-10 title-text">about me:</h1>
+		<p class="pb-4 text-sm">
+			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
+			biscuit cake pastry candy candy danish.
+		</p>
+		<p class="pb-4 text-sm">
+			Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
+			biscuit pie brownie chocolate cake jelly.
+		</p>
+	</div>
+
+	<!-- Websites -->
+	<div class="w-9/12 mx-auto mt-8 space-y-6">
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 1
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full ">
+			Website 2
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 3
+		</div>
+	</div>
+
+	<!-- Badges -->
+	<div class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/quest-icon.svg" alt="Quest icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">My Quest</p>
+		</div>
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/badges-icon.svg" alt="Badges icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">My Badges</p>
+		</div>
+
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/rewards-icon.svg" alt="Rewards icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full">My Rewards</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- themeReds section -->
+<!-- <div id="theme-reds" *ngIf="theme === 'themes'"> -->
+	<div id="theme-reds" >
+	<div class="header flex justify-between items-center p-3">
+		<div class="user-info flex items-center gap-4">
+			<img class="w-12" src="/assets/images/icon/small-logo-image.png" alt="Profile image">
+			<p class="uppercase title-text">User's Profile</p>
+		</div>
+		<div class="menu flex items-center gap-4">
+			<img class="header-icon" src="/assets/images/icon/qr-icon.svg" alt="QR icon">
+			<img class="header-icon" src="/assets/images/icon/hamburger-menu-icon.svg" alt="Menu icon">
+		</div>
+	</div>
+	<div class="bg-profile p-4">
+		<div class="flex">
+			<img class="w-16" src="/assets/images/ImgPlaceholder.svg" />
+			<div class="ml-6">
+				<p class="text-lg text uppercase font-medium title-text">
+					full name
+				</p>
+				<div class="grid grid-cols-4 gap-2">
+					<img class="w-10" src="/assets/images/icon/facebook-social.png" alt="Facebook">
+					<img class="w-10" src="/assets/images/icon/linkedin-social.png" alt="LinkedIn">
+					<img class="w-10" src="/assets/images/icon/x-social.png" alt="X / Twitter">
+					<img class="w-10" src="/assets/images/icon/instagram-social.png" alt="Instagram">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About Me section-->
+	<div class="bg-about 0 px-8 text-center py-10">
+		<h1 class="font-bold text-sm uppercase text-center leading-10 title-text">about me:</h1>
+		<p class="pb-4 text-sm">
+			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
+			biscuit cake pastry candy candy danish.
+		</p>
+		<p class="pb-4 text-sm">
+			Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
+			biscuit pie brownie chocolate cake jelly.
+		</p>
+	</div>
+
+	<!-- Websites -->
+	<div class="w-9/12 mx-auto mt-8 space-y-6">
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 1
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full ">
+			Website 2
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 3
+		</div>
+	</div>
+
+	<!-- Badges -->
+	<div class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/quest-icon.svg" alt="Quest icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Quest</p>
+		</div>
+
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/badges-icon.svg" alt="Badges icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Badges</p>
+		</div>
+
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/rewards-icon.svg" alt="Rewards icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Rewards</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- themePurples section -->
+<!-- <div id="theme-purples" *ngIf="theme === 'themes'"> -->
+	<div id="theme-purples" >
+	<div class="header flex justify-between items-center p-3">
+		<div class="user-info flex items-center gap-4">
+			<img class="w-12" src="/assets/images/icon/small-logo-image.png" alt="Profile image">
+			<p class="uppercase title-text">User's Profile</p>
+		</div>
+		<div class="menu flex items-center gap-4">
+			<img class="header-icon" src="/assets/images/icon/qr-icon.svg" alt="QR icon">
+			<img class="header-icon" src="/assets/images/icon/hamburger-menu-icon.svg" alt="Menu icon">
+		</div>
+	</div>
+	<div class="bg-profile p-4">
+		<div class="flex">
+			<img class="w-16" src="/assets/images/ImgPlaceholder.svg" />
+			<div class="ml-6">
+				<p class="text-lg text uppercase font-medium title-text">
+					full name
+				</p>
+				<div class="grid grid-cols-4 gap-2">
+					<img class="w-10" src="/assets/images/icon/facebook-social.png" alt="Facebook">
+					<img class="w-10" src="/assets/images/icon/linkedin-social.png" alt="LinkedIn">
+					<img class="w-10" src="/assets/images/icon/x-social.png" alt="X / Twitter">
+					<img class="w-10" src="/assets/images/icon/instagram-social.png" alt="Instagram">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About Me section-->
+	<div class="bg-about 0 px-8 text-center py-10">
+		<h1 class="font-bold text-sm uppercase text-center leading-10 title-text">about me:</h1>
+		<p class="pb-4 text-sm">
+			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
+			biscuit cake pastry candy candy danish.
+		</p>
+		<p class="pb-4 text-sm">
+			Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
+			biscuit pie brownie chocolate cake jelly.
+		</p>
+	</div>
+
+	<!-- Websites -->
+	<div class="w-9/12 mx-auto mt-8 space-y-6">
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 1
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full ">
+			Website 2
+		</div>
+		<div class="ring-1 primary-button ring-gray-600 shadow-md text-center py-3 rounded-full">
+			Website 3
+		</div>
+	</div>
+
+	<!-- Badges -->
+	<div class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/quest-icon.svg" alt="Quest icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Quest</p>
+		</div>
+
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/badges-icon.svg" alt="Badges icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Badges</p>
+		</div>
+
+		<div class="flex flex-col items-center">
+			<div class="relative shadow-2xl w-24 h-24 flex items-center justify-center rounded-full bg-badge">
+				<img class="w-10 mt-2.5" src="/assets/images/icon/rewards-icon.svg" alt="Rewards icon">
+				<div class="absolute inset-0 flex items-center justify-center">
+					<div class="w-12 h-12 bg-badge-blur blur-md rounded-full"></div>
+				</div>
+			</div>
+			<p class="text-center pt-1 w-full"> My Rewards</p>
+		</div>
+	</div>
+</div>
+
