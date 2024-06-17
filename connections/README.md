@@ -40,3 +40,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - npm install -D tailwindcss-aspect-ratio
 - npm install  -D tailwindcss-container-query
 
+### Testing
+Adding the ThingsName.... **'should create, ThingsName'** 
+
+ ```javascript
+ it('should create, ThingsName', () => {
+ ```
