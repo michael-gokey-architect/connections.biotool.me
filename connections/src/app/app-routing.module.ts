@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-f
 import { ConnectionCentralComponent } from './connections/connection-central/connection-central.component';
 import { QuestRewardsPageComponent } from './quest/quest-rewards-page/quest-rewards-page.component';
 import { ThemeSwitcherComponent } from './features/theme-switcher/theme-switcher.component';
+import { PageRedComponent } from './features/page-red/page-red.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'connections', component: ConnectionCentralComponent },
   { path: 'quests', component:QuestRewardsPageComponent},
   { path: 'theme', component: ThemeSwitcherComponent },
+  { path: 'red',  component: PageRedComponent },
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];
