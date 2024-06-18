@@ -7,6 +7,7 @@ import { ManageAliasComponent } from './manage-alias/manage-alias.component';
 import { PageRedComponent } from './page-red/page-red.component';
 import { PageBlueComponent } from './page-blue/page-blue.component';
 import { PagePurpleComponent } from './page-purple/page-purple.component';
+import { PageGrayComponent } from './page-gray/page-gray.component';
 
 
 
@@ -18,7 +19,8 @@ import { PagePurpleComponent } from './page-purple/page-purple.component';
     ManageAliasComponent,
     PageRedComponent,
     PageBlueComponent,
-    PagePurpleComponent
+    PagePurpleComponent,
+    PageGrayComponent
   ],
   imports: [
     CommonModule
