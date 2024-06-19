@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Merienda:wght@300..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Tenor+Sans&family=Titan+One&display=swap');
+
 body {
 	height: fit-content;
 }
@@ -10,4 +12,91 @@ body {
 	background: #FFFFFF;
 	border-top: 3px solid #FFFFFF;
 	box-sizing: border-box;
+}
+
+/***** THEME *****/
+.text {
+	color: #000;
+}
+.bg-badge,
+.bg-footer {
+	background-color: #031A35;
+}
+.theme-header,
+.profile,
+.primary-button {
+	background-color: #063771;
+}
+.bg-badge-blur {
+	background-color: #2B5CC4;
+}
+.bg-about {
+	background-color: #D3E5FD;
+}
+.theme-header,
+.profile p,
+.primary-button,
+.text-white {
+	color: #FFF;
+}
+.theme-header .title-text,
+.profile .title-text,
+.bg-about .title-text,
+.badges {
+	font-family: 'Merienda One', cursive;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.theme-header .title-text {
+	font-size: 16px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
+.profile .title-text {
+	font-size: 20.8499px;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.bg-about .title-text {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #212121;
+}
+button,
+.badges {
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: -0.02em;
+}
+button {
+	font-family: 'Tenor Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+}
+.primary-button {
+	border-radius: 100px;
+	border: 3px solid #00152F;
+	background: #063771;
+	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
+}
+.secondary-button {
+	border-radius: 100px;
+	border: 2px solid #00152F;
+	background: #F5F5F5;
+	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
+	color: #063771;
+}
+.tertiary-button {
+	border-radius: 100px;
+	border: 3px solid #FFF;
+	background: #DDEBFB;
+	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
+	color: #063771;
+}
+.badges {
+	font-size: 11px;
+	text-transform: uppercase;
 }

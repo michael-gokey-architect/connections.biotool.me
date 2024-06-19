@@ -13,12 +13,12 @@
 
 
 <!-- User Bio -->
-<div id="header" class="bg-patchwrq p-7 rounded-b-3xl bg-cover bg-center "
+<div class="bg-patchwrq profile p-7 rounded-b-3xl bg-cover bg-center "
 	style="background-image: url('/assets/images/onboarding-images/PatchwrqBg.png');">
 	<div class="flex items-center">
 		<img class="w-20" alt="John Bianchi" src="../assets/images/onboarding-images/JohnBianchi.png" />
 		<div class="ml-5">
-			<p class="text-xl mb-4 text-white uppercase">{{userFullName}}</p>
+			<p class="text-xl mb-4 text-white uppercase title-text">{{userFullName}}</p>
 			<div class="grid grid-cols-4 top-1">
 				<a href="https://www.facebook.com/john.bianchi221" target="blank" title="Facebook">
 					<img class="w-8 h-8 mr-2" alt="Facebook logo" src="../assets/images/onboarding-images/Facebook.png" />
@@ -55,16 +55,20 @@
 <div id="links">
 	<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 text-white">
 		<button type="button" (click)="onLinkedInClick()"
-			class="w-full ring-4 bg-blue-900 ring-gray-900 truncate shadow-md  text-center py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto primary-button">
 			LinkedIn
 		</button>
 		<button type="button" (click)="onPatchWRKClick()"
-			class="w-full ring-4 bg-blue-900 ring-gray-900 truncate shadow-md  text-center py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto primary-button">
 			PatchWRQ Site
 		</button>
 		<button type="button" (click)="onQuestAppClick()"
-			class="w-full ring-4 bg-blue-900 ring-gray-900 truncate shadow-md  text-center py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto secondary-button">
 			Quest App
+		</button>
+		<button type="button"
+			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto tertiary-button">
+			Button 4
 		</button>
 	</div>
 </div>
