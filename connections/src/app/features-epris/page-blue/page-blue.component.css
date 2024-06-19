@@ -4,12 +4,7 @@ body {
 	height: fit-content;
 }
 
-.theme-header {
-	background-color: #6495ED;
-}
-
 .about-me {
-	background: #FFFFFF;
 	border-top: 3px solid #FFFFFF;
 	box-sizing: border-box;
 }
@@ -18,19 +13,18 @@ body {
 .text {
 	color: #000;
 }
-.bg-badge,
-.bg-footer {
+.badge,
+.footer {
 	background-color: #031A35;
 }
 .theme-header,
-.profile,
-.primary-button {
+.profile {
 	background-color: #063771;
 }
-.bg-badge-blur {
-	background-color: #2B5CC4;
+.badge-blur {
+	background-color: #00152F;
 }
-.bg-about {
+.about-me {
 	background-color: #D3E5FD;
 }
 .theme-header,
@@ -41,7 +35,7 @@ body {
 }
 .theme-header .title-text,
 .profile .title-text,
-.bg-about .title-text,
+.about-me .title-text,
 .badges {
 	font-family: 'Merienda One', cursive;
 	font-style: normal;
@@ -58,11 +52,17 @@ body {
 	line-height: 30px;
 	color: #FFFFFF;
 }
-.bg-about .title-text {
+.about-me .title-text {
 	font-size: 14px;
 	line-height: 20px;
 	text-align: center;
 	color: #212121;
+}
+.about-me,
+button {
+	font-family: 'Tenor Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
 }
 button,
 .badges {
@@ -71,9 +71,6 @@ button,
 	letter-spacing: -0.02em;
 }
 button {
-	font-family: 'Tenor Sans', sans-serif;
-	font-style: normal;
-	font-weight: 400;
 	font-size: 14px;
 }
 .primary-button {
