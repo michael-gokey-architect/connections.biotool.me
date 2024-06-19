@@ -8,6 +8,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class PageBlueComponent {
 	userFullName = "John Bianchi"
+	userFirstName = "John"
 
 	onLinkedInClick() {
 		window.open('https://www.linkedin.com/in/bianchijohn/', '_blank');
