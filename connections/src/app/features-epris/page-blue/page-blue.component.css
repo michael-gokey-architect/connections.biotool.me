@@ -5,3 +5,9 @@ body {
 .theme-header {
 	background-color: #6495ED;
 }
+
+.about-me {
+	background: #FFFFFF;
+	border-top: 3px solid #FFFFFF;
+	box-sizing: border-box;
+}
