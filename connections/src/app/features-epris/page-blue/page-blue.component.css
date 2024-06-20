@@ -1,8 +1,7 @@
-/* The two fonts shoudl be here. I would rather the two are here, rather than the massive all 8 in the styles.css */
-
-
 body {
 	height: fit-content;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
 }
 
 .about-me {
@@ -11,90 +10,14 @@ body {
 }
 
 /***** THEME *****/
-.text {
-	color: #000;
-}
-.badge,
-.footer {
-	background-color: #031A35;
-}
-.theme-header,
-.profile {
-	background-color: #063771;
-}
-.badge-blur {
-	background-color: #00152F;
-}
-.about-me {
-	background-color: #D3E5FD;
-}
-.theme-header,
-.profile p,
-.primary-button,
-.text-white {
-	color: #FFF;
-}
 .theme-header .title-text,
 .profile .title-text,
 .about-me .title-text,
 .badges {
 	font-family: 'Merienda', cursive;
-	font-style: normal;
-	font-weight: 400;
-	text-transform: uppercase;
 }
-.theme-header .title-text {
-	font-size: 16px;
-	line-height: 23px;
-	color: #FFFFFF;
-}
-.profile .title-text {
-	font-size: 20.8499px;
-	line-height: 30px;
-	color: #FFFFFF;
-}
-.about-me .title-text {
-	font-size: 14px;
-	line-height: 20px;
-	text-align: center;
-	color: #212121;
-}
+
 .about-me,
 button {
 	font-family: 'Tenor Sans', sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-button,
-.badges {
-	line-height: 16px;
-	text-align: center;
-	letter-spacing: -0.02em;
-}
-button {
-	font-size: 14px;
-}
-.primary-button {
-	border-radius: 100px;
-	border: 3px solid #00152F;
-	background: #063771;
-	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
-}
-.secondary-button {
-	border-radius: 100px;
-	border: 2px solid #00152F;
-	background: #F5F5F5;
-	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
-	color: #063771;
-}
-.tertiary-button {
-	border-radius: 100px;
-	border: 3px solid #FFF;
-	background: #DDEBFB;
-	box-shadow: 0px 4px 10px 1px rgba(25, 82, 151, 0.30);
-	color: #063771;
-}
-.badges {
-	font-size: 11px;
-	text-transform: uppercase;
 }

@@ -2,14 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Merienda:wght@300..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Tenor+Sans&family=Titan+One&display=swap');
 
 html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Montserrat, "Helvetica Neue", sans-serif; 
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     width: 425px;
     overflow-y: scroll;
     margin-left: auto !important;

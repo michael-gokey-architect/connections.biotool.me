@@ -5,14 +5,13 @@ module.exports = {
   plugins: [
     // require('@tailwindcss/forms'),
     require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp")
+    require("@tailwindcss/line-clamp"),
     // require('tailwindcss/aspect-ratio'),
     // require('@tailwindcss/container-queries')
   ],
   variants: {},
 
   theme: {
-    // extend: {},
     extend: {
       colors: {
         theme1: {
@@ -55,6 +54,15 @@ module.exports = {
           "4xl": "2rem",
         },
       },
+      boxShadow: {
+        gray: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+        blue: "0px 4px 10px 1px rgba(25, 82, 151, 0.30)",
+        red: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+        purple: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+      },
+    },
+    borderWidth: {
+      3: "3px",
     },
   },
 };

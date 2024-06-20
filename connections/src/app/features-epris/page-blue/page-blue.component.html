@@ -1,10 +1,10 @@
 <!-- Header -->
-<div class="theme-header flex justify-between items-center p-3">
-	<div class="user-info flex items-center gap-4">
+<div class="theme-header flex justify-between items-center p-3 bg-blue-950">
+	<div class="flex items-center gap-4">
 		<!-- <img class="w-12" src="../assets/images/onboarding-images/JohnBianchi.png" alt="Profile image"> -->
-		<p class="uppercase title-text">Profile Page</p>
+		<p class="uppercase text-white title-text">Profile Page</p>
 	</div>
-	<div class="menu flex items-center gap-4">
+	<div class="flex items-center gap-4">
 		<img class="header-icon w-8" src="/assets/images/onboarding-images/qr-icon.png" alt="QR icon">
 		<img class="header-icon w-8" src="/assets/icon/hamburger.png" alt="Menu icon">
 	</div>
@@ -13,7 +13,7 @@
 
 
 <!-- User Bio -->
-<div class="bg-patchwrq profile p-7 rounded-b-3xl bg-cover bg-center "
+<div class="profile p-7 bg-cover bg-center "
 	style="background-image: url('../assets/images/onboarding-images/pw-background.jpg');">
 	<div class="flex items-center">
 		<img class="w-20" alt="John Bianchi" src="../assets/images/onboarding-images/JohnBianchi.png" />
@@ -40,8 +40,8 @@
 
 
 <!-- About -->
-<div class="about-me 0 px-8 text-center py-10">
-	<h1 class="font-bold text-sm uppercase text-center leading-10 title-text">About Me:</h1>
+<div class="about-me bg-blue-100 px-8 text-center py-5">
+	<h1 class="text-sm uppercase text-center leading-10 text-[#212121] title-text">About Me:</h1>
 	<p class="pb-4 text-sm">
 		Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes biscuit cake pastry candy candy danish.
 	</p>
@@ -55,19 +55,19 @@
 <div id="links">
 	<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 text-white">
 		<button type="button" (click)="onLinkedInClick()"
-			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto primary-button">
+			class="w-full border-3 border-[#00152f] bg-blue-950 truncate shadow-blue text-center py-3 mt-0 mb-0 rounded-full mx-auto primary-button">
 			LinkedIn
 		</button>
 		<button type="button" (click)="onPatchWRKClick()"
-			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto primary-button">
+			class="w-full border-3 border-[#00152f] bg-blue-600 truncate shadow-blue text-center py-3 mt-0 mb-0 rounded-full mx-auto secondary-button">
 			PatchWRQ Site
 		</button>
 		<button type="button" (click)="onQuestAppClick()"
-			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto secondary-button">
+			class="w-full border-3 border-neutral-400 bg-neutral-100 truncate shadow-blue text-center text-blue-800 py-3 mt-0 mb-0 rounded-full mx-auto">
 			Quest App
 		</button>
 		<button type="button"
-			class="w-full truncate shadow-md text-center py-3 mt-0 mb-0 rounded-full mx-auto tertiary-button">
+			class="w-full border-3 border-white bg-blue-100 truncate shadow-blue text-center text-black py-3 mt-0 mb-0 rounded-full mx-auto">
 			Button 4
 		</button>
 	</div>
@@ -76,12 +76,12 @@
 
 
 <!-- User Badge -->
-<div id="badges" class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10">
+<div id="badges" class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
 	<div id="badgesQuests" class="flex flex-col items-center">
 		<div
-			class="relative shadow-2xl shadow-black/50 w-24 h-24 flex items-center justify-center rounded-full bg-blue-900 ring-2 ring-white badge">
+			class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-blue-950 ring-2 ring-white">
 			<div class="absolute inset-0 flex items-center justify-center">
-				<div class="w-12 h-12 bg-blue-600 blur-md rounded-full"></div>
+				<div class="w-12 h-12 bg-blue-800 blur-md rounded-full"></div>
 			</div>
 			<div class="text-center w-full text-white z-30">
 				<div class="text-center w-full text-white z-30">
@@ -90,28 +90,28 @@
 				</div>
 			</div>
 		</div>
-		<p class="text-center text-sm pt-1 w-full">My Quest</p>
+		<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Quest</p>
 	</div>
 
 	<div id="badgesMine" class="flex flex-col items-center">
 		<div
-			class="relative shadow-2xl shadow-black/50 w-24 h-24 flex items-center justify-center rounded-full bg-blue-900 ring-2 ring-white badge">
+			class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-blue-950 ring-2 ring-white">
 			<div class="absolute inset-0 flex items-center justify-center">
-				<div class="w-12 h-12 bg-blue-600 blur-md rounded-full"></div>
+				<div class="w-12 h-12 bg-blue-800 blur-md rounded-full"></div>
 			</div>
 			<div class="text-center w-full text-white z-30">
 				<a href="#" title="my badges"> <img class="w-auto h-12 mx-auto mt-3"
 						src="../assets/images/onboarding-images/badges.png" alt="badges" /></a>
 			</div>
 		</div>
-		<p class="text-center text-sm pt-1 w-full">My Badges</p>
+		<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Badges</p>
 	</div>
 
 	<div id="badgesRewards" class="flex flex-col items-center">
 		<div
-			class="relative shadow-2xl shadow-black/50 w-24 h-24 flex items-center justify-center rounded-full bg-blue-900 ring-2 ring-white badge">
+			class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-blue-950 ring-2 ring-white">
 			<div class="absolute inset-0 flex items-center justify-center">
-				<div class="w-12 h-12 bg-blue-600 blur-md rounded-full"></div>
+				<div class="w-12 h-12 bg-blue-800 blur-md rounded-full"></div>
 			</div>
 			<div class="text-center w-full text-white z-30">
 				<div class="text-center w-full text-white z-30">
@@ -120,16 +120,14 @@
 				</div>
 			</div>
 		</div>
-		<p class="text-center text-sm pt-1 w-full">My Rewards</p>
+		<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Rewards</p>
 	</div>
 </div>
 
 
 
-
-
 <!-- Footer -->
-<footer id="footer" class="text-white footer">
+<footer class="bg-blue-950 text-white">
 	<div class="mx-auto max-w-7xl overflow-hidden py-6 lg:px-8">
 		<nav class="-mb-6 columns-1 text-center grid grid-cols-4" aria-label="Footer">
 			<div class="pb-6">
