@@ -63,6 +63,7 @@ module.exports = {
     },
     borderWidth: {
 			1: "1px",
+			2: "2px",
       3: "3px",
     },
   },
