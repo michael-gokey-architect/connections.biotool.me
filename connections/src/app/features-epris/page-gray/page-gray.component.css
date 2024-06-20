@@ -1,8 +1,10 @@
-/* The two fonts shoudl be here. I would rather the two are here, rather than the massive all 8 in the styles.css */
 body {
 	height: fit-content;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
 	border-right: #000 2px solid;
 	border-left: #000 2px solid;
+	background-color: #F5F5F5;
 }
 
 .about-me {
@@ -11,83 +13,14 @@ body {
 }
 
 /***** THEME *****/
-.text {
-	color: #000;
-}
-.badge,
-.footer {
-	background-color: #353535;
-}
-.theme-header,
-.profile,
-.badge-blur {
-	background-color: #979797;
-}
-.about-me {
-	background-color: #DADADA;
-}
-.text-white {
-	color: #FFF;
-}
 .theme-header .title-text,
 .profile .title-text,
-.about-me .title-text {
-	font-family: 'Roboto Slab', serif;
-	font-style: normal;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.theme-header .title-text {
-	font-size: 16px;
-	line-height: 21px;
-	color: #FFF;
-}
-.profile .title-text {
-	font-size: 20.8499px;
-	line-height: 27px;
-	color: #FFF;
-}
-.about-me .title-text {
-	font-size: 14px;
-	line-height: 18px;
-	text-align: center;
-	color: #212121;
-}
-button,
+.about-me .title-text,
 .badges {
-	font-family: 'Montserrat', sans-serif;
-	font-style: normal;
-	text-align: center;
-	letter-spacing: -0.02em;
-	color: #353535;
+	font-family: "Roboto Slab", serif;
 }
+/* 
+.about-me,
 button {
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 17px;
-}
-.primary-button {
-	border-radius: 100px;
-	border: 1px solid #353535;
-	background: #353535;
-	box-shadow: 0px 4px 10px 1px rgba(183, 183, 183, 0.25);
-	color: #FFF;
-}
-.secondary-button {
-	border-radius: 100px;
-	border: 1px solid #353535;
-	background: #FFF;
-	box-shadow: 0px 4px 10px 1px rgba(183, 183, 183, 0.25);
-}
-.tertiary-button {
-	border-radius: 100px;
-	background: #DADADA;
-	box-shadow: 0px 4px 10px 1px rgba(183, 183, 183, 0.25);
-	color: #7E7E7E;
-}
-.badges {
-	font-weight: 700;
-	font-size: 9px;
-	line-height: 11px;
-	text-transform: uppercase;
-}
+	font-family: 'Tenor Sans', sans-serif;
+} */
