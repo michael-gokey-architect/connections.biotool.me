@@ -1,1 +1,24 @@
-/* The two fonts shoudl be here. I would rather the two are here, rather than the massive all 8 in the styles.css */
+body {
+	height: fit-content;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
+	border-right: #212121 1px solid;
+	border-left: #212121 1px solid;
+}
+
+.about-me {
+	border-top: 3px solid #FFFFFF;
+	box-sizing: border-box;
+}
+
+/***** THEME *****/
+.theme-header .title-text,
+.profile .title-text,
+.about-me .title-text {
+	font-family: "Titan One", sans-serif;
+}
+
+button,
+.badges {
+	font-family: "Merriweather Sans", sans-serif;
+}
