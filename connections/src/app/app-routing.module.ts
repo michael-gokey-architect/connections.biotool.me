@@ -9,6 +9,7 @@ import { PageRedComponent } from './features-epris/page-red/page-red.component';
 import { PageBlueComponent } from './features-epris/page-blue/page-blue.component';
 import { PagePurpleComponent } from './features-epris/page-purple/page-purple.component';
 import { PageGrayComponent } from './features-epris/page-gray/page-gray.component';
+import { OrganizationLandingComponent } from './organization/organization-landing/organization-landing.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'blue', component: PageBlueComponent },
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
+  { path: 'organization', component: OrganizationLandingComponent },
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];
