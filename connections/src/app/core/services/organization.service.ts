@@ -21,7 +21,6 @@ export class OrganizationService {
 
   constructor(private httpClient: HttpClient) { }
 
-  //need to implement error catch block
   getOrganizations(): Observable<any> {
 
     return this.httpClient.get(this.apiURL + '/GetOrganizations/')
@@ -40,6 +39,14 @@ export class OrganizationService {
       )
   }
 
+  deleteOrganizations(organization_id: number): Observable<any> {
+
+    return this.httpClient.delete(this.apiURL + '/DeleteOrganization/'+ organization_id)
+
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
 
   errorHandler(error:any) {
     let errorMessage = '';
