@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-page-red',
   templateUrl: './page-red.component.html',
   styleUrls: ['./page-red.component.css'],
+	encapsulation: ViewEncapsulation.None
 })
 export class PageRedComponent {
   userFullName = 'John Bianchi';
