@@ -10,6 +10,9 @@ import { PageBlueComponent } from './features-epris/page-blue/page-blue.componen
 import { PagePurpleComponent } from './features-epris/page-purple/page-purple.component';
 import { PageGrayComponent } from './features-epris/page-gray/page-gray.component';
 import { OrganizationLandingComponent } from './organization/organization-landing/organization-landing.component';
+import { CreateOrganizationComponent } from './organization/create-organization/create-organization.component';
+import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
+import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -22,6 +25,9 @@ const routes: Routes = [
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
   { path: 'organization', component: OrganizationLandingComponent },
+  { path: 'get-organization', component: GetOrganizationComponent },
+  { path: 'create-organization', component: CreateOrganizationComponent },
+  { path: 'delete-organization', component: DeleteOrganizationComponent },
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];

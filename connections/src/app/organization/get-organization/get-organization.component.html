@@ -1,0 +1,9 @@
+<h1 class="text-lg font-bold text-center mb-3"><span>You can see ORGANIZATION NAME</span></h1>
+<div *ngIf="organizations.length > 0; else noData">
+    <ul>
+        <li *ngFor="let organization of organizations">{{ organization.organization_name }}</li>
+    </ul>
+</div>
+<ng-template #noData>
+        No organizations found.
+</ng-template>
