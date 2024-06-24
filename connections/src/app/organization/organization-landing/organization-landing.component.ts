@@ -24,4 +24,7 @@ export class OrganizationLandingComponent {
     //using router to navigate on same page
     this.router.navigateByUrl('/delete-organization')
   }
+  onUpdateOrganization() {
+    this.router.navigateByUrl('/update-organization')
+  }
 }

@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreateOrganizationComponent } from './create-organization/create-organization.component';
 import { DeleteOrganizationComponent } from './delete-organization/delete-organization.component';
 import { GetOrganizationComponent } from './get-organization/get-organization.component';
+import { UpdateOrganizationComponent } from './update-organization/update-organization.component';
 
 
 
@@ -13,7 +14,8 @@ import { GetOrganizationComponent } from './get-organization/get-organization.co
     OrganizationLandingComponent,
     CreateOrganizationComponent,
     DeleteOrganizationComponent,
-    GetOrganizationComponent
+    GetOrganizationComponent,
+    UpdateOrganizationComponent
   ],
   imports: [
     CommonModule,

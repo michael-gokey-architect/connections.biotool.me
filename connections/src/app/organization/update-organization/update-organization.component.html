@@ -1,0 +1,74 @@
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>UPDATE ORGANIZATION DETAILS</span></h1>
+        <form [formGroup]="organizationUpdatedForm" (ngSubmit)="onSubmit($event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="organization_id">
+                    <span>Organization Id</span>
+                </label>
+                <input formControlName="organization_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="organization_id" type="text" placeholder="Enter Org Id">
+                <div
+                    *ngIf="organizationUpdatedForm && organizationUpdatedForm?.get('organization_id')?.invalid && (organizationUpdatedForm?.get('organization_id')?.dirty || organizationUpdatedForm?.get('organization_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">Organization Id is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="organization_name">
+                    <span>Organization Name</span>
+                </label>
+                <input formControlName="organization_name"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="organization_name" type="text" placeholder="Enter Org Name">
+                <div
+                    *ngIf="organizationUpdatedForm && organizationUpdatedForm?.get('organization_name')?.invalid && (organizationUpdatedForm?.get('organization_name')?.dirty || organizationUpdatedForm?.get('organization_name')?.touched)">
+                    <p class="text-red-500 text-xs italic">Organization Name is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="email">
+                    <span>Organization Email</span>
+                </label>
+                <input formControlName="email"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" type="email" placeholder="Enter Org Email">
+                <div
+                    *ngIf="organizationUpdatedForm && organizationUpdatedForm?.get('email')?.invalid && (organizationUpdatedForm?.get('email')?.dirty || organizationUpdatedForm?.get('email')?.touched)">
+                    <p class="text-red-500 text-xs italic">Valid Email is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="point_of_contact_name">
+                    <span>Organization Point of Contact Name</span>
+                </label>
+                <input formControlName="point_of_contact_name"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="point_of_contact_name" type="text" placeholder="Enter Org Point of Contact Name">
+                <div
+                    *ngIf="organizationUpdatedForm && organizationUpdatedForm?.get('point_of_contact_name')?.invalid && (organizationUpdatedForm?.get('point_of_contact_name')?.dirty || organizationUpdatedForm?.get('point_of_contact_name')?.touched)">
+                    <p class="text-red-500 text-xs italic">Contact Name is required.</p>
+                </div>
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="address_line1">
+                    <span>Organization Address</span>
+                </label>
+                <textarea formControlName="address_line1"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="address_line1" placeholder="Enter Org Address" rows="4"></textarea>
+                <div
+                    *ngIf="organizationUpdatedForm && organizationUpdatedForm?.get('address_line1')?.invalid && (organizationUpdatedForm?.get('address_line1')?.dirty || organizationUpdatedForm?.get('address_line1')?.touched)">
+                    <p class="text-red-500 text-xs italic">Address is required.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="organizationUpdatedForm && organizationUpdatedForm.invalid">
+                    Update Org
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
