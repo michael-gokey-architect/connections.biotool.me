@@ -15,6 +15,7 @@ import { DeleteOrganizationComponent } from './organization/delete-organization/
 import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
 import { PageGray2Component } from './features/page-gray2/page-gray2.component';
+import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },
   { path: 'delete-organization', component: DeleteOrganizationComponent },
+  { path: 'update-organization', component: UpdateOrganizationComponent },
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];
