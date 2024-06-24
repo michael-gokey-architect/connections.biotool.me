@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { GuestModule } from './guest/guest.module';
 import { QuestModule } from './quest/quest.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { OrganizationModule } from './organization/organization.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { QuestModule } from './quest/quest.module';
     SharedModule,
     GuestModule,
     QuestModule,
-    AppRoutingModule
+    OrganizationModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

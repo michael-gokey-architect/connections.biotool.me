@@ -4,59 +4,69 @@ module.exports = {
 
   plugins: [
     // require('@tailwindcss/forms'),
-    require('@tailwindcss/typography')
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
     // require('tailwindcss/aspect-ratio'),
-    // require('@tailwindcss/container-queries'),
+    // require('@tailwindcss/container-queries')
   ],
   variants: {},
 
   theme: {
-    // extend: {},
     extend: {
       colors: {
-        'theme1': {
-          'primary': '#1DA1F2',
-          'secondary': '#14171A',
-          'tertiary': '#657786',
-          'quaternary': '#AAB8C2',
-          'quinary': '#E1E8ED',
-          'senary': '#F5F8FA',
-          'label-titles': '#000000',
-          'font-color': '#ffffff'
+        theme1: {
+          primary: "#1DA1F2",
+          secondary: "#14171A",
+          tertiary: "#657786",
+          quaternary: "#AAB8C2",
+          quinary: "#E1E8ED",
+          senary: "#F5F8FA",
+          "label-titles": "#000000",
+          "font-color": "#ffffff",
         },
-        'theme2': {
-          'primary': '#FF6347',
-          'secondary': '#8B0000',
-          'tertiary': '#B22222',
-          'quaternary': '#FF4500',
-          'quinary': '#FFA07A',
-          'senary': '#FF7F50',
-          'label-titles': '#000000',
-          'font-color': '#ffffff'
-        }
+        theme2: {
+          primary: "#FF6347",
+          secondary: "#8B0000",
+          tertiary: "#B22222",
+          quaternary: "#FF4500",
+          quinary: "#FFA07A",
+          senary: "#FF7F50",
+          "label-titles": "#000000",
+          "font-color": "#ffffff",
+        },
       },
       fontFamily: {
-        'theme1': {
-          sans: ['Graphik', 'sans-serif'],
-          serif: ['Merriweather', 'serif'],
+        theme1: {
+          sans: ["Graphik", "sans-serif"],
+          serif: ["Merriweather", "serif"],
         },
-        'theme2': {
-          sans: ['Ropo', 'sans-serif'],
-          serif: ['Playfair', 'serif'],
+        theme2: {
+          sans: ["Ropo", "sans-serif"],
+          serif: ["Playfair", "serif"],
         },
-
       },
       extend: {
         spacing: {
-          '8xl': '96rem',
-          '9xl': '128rem',
+          "8xl": "96rem",
+          "9xl": "128rem",
         },
         borderRadius: {
-          '4xl': '2rem',
-        }
+          "4xl": "2rem",
+        },
       },
-    }
-  }
-}
+      boxShadow: {
+        gray: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+        blue: "0px 4px 10px 1px rgba(25, 82, 151, 0.30)",
+        red: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+        purple: "0px 4px 10px 1px rgba(183, 183, 183, 0.25)",
+      },
+    },
+    borderWidth: {
+			1: "1px",
+			2: "2px",
+      3: "3px",
+    },
+  },
+};
 
 

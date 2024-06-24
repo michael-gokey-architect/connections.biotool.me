@@ -3,13 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Montserrat, "Helvetica Neue", sans-serif; 
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     width: 425px;
     overflow-y: scroll;
     margin-left: auto !important;

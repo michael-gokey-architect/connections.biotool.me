@@ -1,0 +1,23 @@
+body {
+	height: fit-content;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
+}
+
+.about-me {
+	border-top: 3px solid #FFFFFF;
+	box-sizing: border-box;
+}
+
+/***** THEME *****/
+.theme-header .title-text,
+.profile .title-text,
+.about-me .title-text,
+.badges {
+	font-family: 'Merienda', cursive;
+}
+
+.about-me,
+button {
+	font-family: 'Tenor Sans', sans-serif;
+}
