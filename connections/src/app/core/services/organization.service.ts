@@ -48,6 +48,17 @@ export class OrganizationService {
       )
   }
 
+  //we need to pass org id as a query parameter to update
+  //right now org id is given as req body 
+  updateOrganization(organization: Organization): Observable<any> {
+
+    return this.httpClient.put(this.apiURL + '/UpdateOrganization/', JSON.stringify(organization), this.httpOptions)
+
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
+
   errorHandler(error:any) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {

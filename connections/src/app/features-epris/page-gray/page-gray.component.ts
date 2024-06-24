@@ -27,4 +27,15 @@ export class PageGrayComponent {
     //using router to navigate on same page
     this.router.navigateByUrl('/organization')
   }
+  onEvents() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/events')
+  }
+  onConnections() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/connections')
+  }
+
+ 
+
 }

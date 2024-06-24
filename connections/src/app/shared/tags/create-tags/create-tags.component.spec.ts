@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageGrayComponent } from './page-gray.component';
+import { CreateTagsComponent } from './create-tags.component';
 
-describe('PageGrayComponent', () => {
-  let component: PageGrayComponent;
-  let fixture: ComponentFixture<PageGrayComponent>;
+describe('CreateTagsComponent', () => {
+  let component: CreateTagsComponent;
+  let fixture: ComponentFixture<CreateTagsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageGrayComponent ]
+      declarations: [ CreateTagsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PageGrayComponent);
+    fixture = TestBed.createComponent(CreateTagsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
