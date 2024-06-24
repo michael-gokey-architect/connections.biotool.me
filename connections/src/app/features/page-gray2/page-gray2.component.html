@@ -39,15 +39,10 @@
 
 
 <!-- About -->
-<div class="about-me bg-neutral-200 px-8 text-center py-5">
+<div class="about-me bg-neutral-200 px-8 text-left py-5">
 	<h1 class="text-sm uppercase text-center leading-10 text-[#212121] title-text font-bold">About Me:</h1>
 	<p class="pb-4 text-sm">
-		Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
-		biscuit cake pastry candy candy danish.
-	</p>
-	<p class="pb-4 text-sm">
-		Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
-		biscuit pie brownie chocolate cake jelly.
+		{{userBio}}
 	</p>
 </div>
 
@@ -67,10 +62,22 @@
 			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
 			Organization
 		</button>
-		<button type="button" (click)="onCreateOrganization()"
-		class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
-		NEXT things
-	</button>
+		<button type="button" (click)="onLinks()"
+			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			Links
+		</button>
+		<button type="button" (click)="onTags()"
+			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			Tags
+		</button>
+		<button type="button" (click)="onRoles()"
+			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			Roles
+		</button>
+		<button type="button" (click)="onPii()"
+			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			PII
+		</button>				
 	</div>
 </div>
 

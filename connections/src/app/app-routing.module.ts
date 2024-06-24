@@ -16,6 +16,10 @@ import { GetOrganizationComponent } from './organization/get-organization/get-or
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
 import { PageGray2Component } from './features/page-gray2/page-gray2.component';
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
+import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
+import { LinksLandingComponent } from './shared/links/links-landing/links-landing.component';
+import { PiiLandingComponent } from './shared/pii/pii-landing/pii-landing.component';
+import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -34,6 +38,10 @@ const routes: Routes = [
   { path: 'create-organization', component: CreateOrganizationComponent },
   { path: 'delete-organization', component: DeleteOrganizationComponent },
   { path: 'update-organization', component: UpdateOrganizationComponent },
+  { path: 'roles', component: RoleLandingComponent },
+  { path: 'links', component: LinksLandingComponent }, 
+  { path: 'tags', component: TagLandingComponent }, 
+  { path: 'pii', component: PiiLandingComponent },   
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];
