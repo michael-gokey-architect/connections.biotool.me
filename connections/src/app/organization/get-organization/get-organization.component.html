@@ -1,9 +1,14 @@
-<h1 class="text-lg font-bold text-center mb-3"><span>You can see ORGANIZATION NAME & ID</span></h1>
-<div *ngIf="organizations.length > 0; else noData">
-    <ul>
-        <li *ngFor="let organization of organizations">{{ organization.organization_name }} {{organization.organization_id}}</li>
-    </ul>
+<div class="flex items-center justify-center min-h-full">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>ORGANIZATION NAME & ID</span></h1>
+        <div *ngIf="organizations.length > 0; else noData">
+            <ul>
+                <li *ngFor="let organization of organizations">{{ organization.organization_name }}
+                    , {{organization.organization_id}}</li>
+            </ul>
+        </div>
+    </div>
 </div>
 <ng-template #noData>
-        No organizations found.
+    No organizations found.
 </ng-template>
