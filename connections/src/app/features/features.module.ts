@@ -4,10 +4,8 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
 import { FeatureLandingComponent } from './feature-landing/feature-landing.component';
 import { UserAvatarUploaderComponent } from './user-avatar-uploader/user-avatar-uploader.component';
 import { ManageAliasComponent } from './manage-alias/manage-alias.component';
-import { PageRedComponent } from './page-red/page-red.component';
-import { PageBlueComponent } from './page-blue/page-blue.component';
-import { PagePurpleComponent } from './page-purple/page-purple.component';
-import { PageGray2Component } from './page-gray2/page-gray2.component';
+import { CrudComponent } from './crud/crud.component';
+import { QrcodeGenerateComponent } from './qrcode-generate/qrcode-generate.component';
 
 
 
@@ -17,10 +15,8 @@ import { PageGray2Component } from './page-gray2/page-gray2.component';
     FeatureLandingComponent,
     UserAvatarUploaderComponent,
     ManageAliasComponent,
-    PageRedComponent,
-    PageBlueComponent,
-    PagePurpleComponent,
-    PageGray2Component
+    CrudComponent,
+    QrcodeGenerateComponent
   ],
   imports: [
     CommonModule

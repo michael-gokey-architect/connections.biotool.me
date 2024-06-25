@@ -16,6 +16,16 @@ import { GetTagsComponent } from './tags/get-tags/get-tags.component';
 import { CreateTagsComponent } from './tags/create-tags/create-tags.component';
 import { UpdateTagsComponent } from './tags/update-tags/update-tags.component';
 import { DeleteTagsComponent } from './tags/delete-tags/delete-tags.component';
+import { PiiLandingComponent } from './pii/pii-landing/pii-landing.component';
+import { GetPiiComponent } from './pii/get-pii/get-pii.component';
+import { CreatePiiComponent } from './pii/create-pii/create-pii.component';
+import { DeletePiiComponent } from './pii/delete-pii/delete-pii.component';
+import { UpdatePiiComponent } from './pii/update-pii/update-pii.component';
+import { LinksLandingComponent } from './links/links-landing/links-landing.component';
+import { GetLinksComponent } from './links/get-links/get-links.component';
+import { CreateLinksComponent } from './links/create-links/create-links.component';
+import { UpdateLinksComponent } from './links/update-links/update-links.component';
+import { DeleteLinksComponent } from './links/delete-links/delete-links.component';
 
 
 @NgModule({
@@ -33,7 +43,17 @@ import { DeleteTagsComponent } from './tags/delete-tags/delete-tags.component';
     GetTagsComponent,
     CreateTagsComponent,
     UpdateTagsComponent,
-    DeleteTagsComponent
+    DeleteTagsComponent,
+    PiiLandingComponent,
+    GetPiiComponent,
+    CreatePiiComponent,
+    DeletePiiComponent,
+    UpdatePiiComponent,
+    LinksLandingComponent,
+    GetLinksComponent,
+    CreateLinksComponent,
+    UpdateLinksComponent,
+    DeleteLinksComponent
   ],
   exports: [  
     FooterComponent,
