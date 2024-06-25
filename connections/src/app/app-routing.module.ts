@@ -11,13 +11,17 @@ import { PagePurpleComponent } from './features-epris/page-purple/page-purple.co
 import { PageGrayComponent } from './features-epris/page-gray/page-gray.component';
 import { OrganizationLandingComponent } from './organization/organization-landing/organization-landing.component';
 import { CreateOrganizationComponent } from './organization/create-organization/create-organization.component';
-import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
 import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
-import { EventsLandingComponent } from './events/events-landing/events-landing.component';
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
+import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
+import { EventsLandingComponent } from './events/events-landing/events-landing.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { LinksLandingComponent } from './shared/links/links-landing/links-landing.component';
 import { PiiLandingComponent } from './shared/pii/pii-landing/pii-landing.component';
+import { CreatePiiComponent } from './shared/pii/create-pii/create-pii.component';
+import { GetPiiComponent } from './shared/pii/get-pii/get-pii.component';
+import { UpdatePiiComponent } from './shared/pii/update-pii/update-pii.component';
+import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component';
 import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
 import { CrudComponent } from './features/crud/crud.component';
 import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
@@ -43,6 +47,10 @@ const routes: Routes = [
   { path: 'links', component: LinksLandingComponent }, 
   { path: 'tags', component: TagLandingComponent }, 
   { path: 'pii', component: PiiLandingComponent },  
+  { path: 'get-pii', component: GetPiiComponent },
+  { path: 'create-pii', component: CreatePiiComponent },
+  { path: 'delete-pii', component: DeletePiiComponent },
+  { path: 'update-pii', component: UpdatePiiComponent },
   { path: 'qrcode', component: QrcodeGenerateComponent }, 
   
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
