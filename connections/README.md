@@ -74,3 +74,6 @@ Adding the ThingsName.... **'should create, ThingsName'**
         "organization_user_profiles": []
     }
 
+Epris to get the other CRUD pages working for Tags and Role, using the example of the org
+
+Sid work on QR code
