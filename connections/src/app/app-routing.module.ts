@@ -14,12 +14,13 @@ import { CreateOrganizationComponent } from './organization/create-organization/
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
 import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
-import { PageGray2Component } from './features/page-gray2/page-gray2.component';
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { LinksLandingComponent } from './shared/links/links-landing/links-landing.component';
 import { PiiLandingComponent } from './shared/pii/pii-landing/pii-landing.component';
 import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
+import { CrudComponent } from './features/crud/crud.component';
+import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
   { path: 'quests', component:QuestRewardsPageComponent},
   { path: 'theme', component: ThemeSwitcherComponent },
   { path: 'gray', component: PageGrayComponent },
-  { path: 'gray2', component: PageGray2Component },
+  { path: 'crud', component: CrudComponent },
   { path: 'blue', component: PageBlueComponent },
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
@@ -41,7 +42,9 @@ const routes: Routes = [
   { path: 'roles', component: RoleLandingComponent },
   { path: 'links', component: LinksLandingComponent }, 
   { path: 'tags', component: TagLandingComponent }, 
-  { path: 'pii', component: PiiLandingComponent },   
+  { path: 'pii', component: PiiLandingComponent },  
+  { path: 'qrcode', component: QrcodeGenerateComponent }, 
+  
   { path: '',  redirectTo: 'guest', pathMatch: 'full'},
   { path: "**", redirectTo: 'page-not-found' },
 ];

@@ -50,6 +50,10 @@
 <!-- Links -->
 <div id="links">
 	<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 text-white font-semibold">
+		<button type="button" (click)="onQRCode()"
+			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			QR Code generator
+		</button>	
 		<button type="button" (click)="onConnections()"
 			class="w-full border-1 border-[#353535] bg-neutral-500 truncate shadow-gray text-center py-3 mt-0 mb-0 rounded-full mx-auto">
 			Connections

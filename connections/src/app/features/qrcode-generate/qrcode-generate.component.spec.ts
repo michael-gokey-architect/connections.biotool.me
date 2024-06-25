@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageBlueComponent } from './page-blue.component';
+import { QrcodeGenerateComponent } from './qrcode-generate.component';
 
-describe('PageBlueComponent', () => {
-  let component: PageBlueComponent;
-  let fixture: ComponentFixture<PageBlueComponent>;
+describe('QrcodeGenerateComponent', () => {
+  let component: QrcodeGenerateComponent;
+  let fixture: ComponentFixture<QrcodeGenerateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageBlueComponent ]
+      declarations: [ QrcodeGenerateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PageBlueComponent);
+    fixture = TestBed.createComponent(QrcodeGenerateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,13 @@
+body {
+	height: fit-content;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
+	border-right: #000 2px solid;
+	border-left: #000 2px solid;
+	background-color: #F5F5F5;
+}
+
+.about-me {
+	border-top: 3px solid #FFFFFF;
+	box-sizing: border-box;
+}
