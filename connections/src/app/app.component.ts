@@ -13,5 +13,3 @@ export class AppComponent {
   name = environment.environmentName;
 
 }
-
-// ng serve --configuration=testing
