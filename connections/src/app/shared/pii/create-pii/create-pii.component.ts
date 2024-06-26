@@ -39,7 +39,7 @@ export class CreatePiiComponent {
         console.error('Error submitting form:', error);
       },
       complete: () => {
-        console.log('Create Org completed');
+        console.log('Create Link completed');
       }
     });
   }

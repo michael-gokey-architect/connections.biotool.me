@@ -6,11 +6,11 @@
                 <label class="block text-gray-700 text-sm mb-2" for="user_id">
                     <span>User Id</span>
                 </label>
-                <input formControlName="organization_name"
+                <input formControlName="user_id"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="user_id" type="text" placeholder="Enter User Id">
                 <div
-                    *ngIf="piiUpdatedForm && piiUpdatedForm?.get('user_id')?.invalid && (piiUpdatedForm?.get('user_id')?.dirty || piiUpdatedForm?.get('User_id')?.touched)">
+                    *ngIf="piiUpdatedForm && piiUpdatedForm?.get('user_id')?.invalid && (piiUpdatedForm?.get('user_id')?.dirty || piiUpdatedForm?.get('user_id')?.touched)">
                     <p class="text-red-500 text-xs italic">User Id is required.</p>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 </label>
                 <input formControlName="date_of_birth"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="date_of_birth" type="email" placeholder="Enter date of birth">
+                    id="date_of_birth" type="text" placeholder="Enter date of birth">
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="gender">
@@ -50,7 +50,7 @@
                 <button
                     class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
                     type="submit" [disabled]="piiUpdatedForm && piiUpdatedForm.invalid">
-                    Create Pii
+                    Update Pii
                 </button>
             </div>
         </form>

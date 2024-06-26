@@ -26,7 +26,7 @@ export class DeletePiiComponent {
           this.deleteForm.reset();
         },
         error: error => {
-          console.error('Error deleting piis:', error);
+          console.error('Error getting piis:', error);
         }
       });
     }
