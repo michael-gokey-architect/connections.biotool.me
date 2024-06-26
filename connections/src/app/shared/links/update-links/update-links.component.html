@@ -3,6 +3,16 @@
         <h1 class="text-lg font-bold text-center mb-3"><span>UPDATE LINK DETAILS</span></h1>
         <form [formGroup]="linkForm" (ngSubmit)="onSubmit($event)">
             <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="key_id">
+                    <span>Key Id</span>
+                </label>
+                <input formControlName="key_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="key_id" type="number" placeholder="Enter Key ID" />
+                <div
+                    *ngIf="linkForm?.get('key_id')?.invalid && (linkForm?.get('key_id')?.dirty || linkForm.get('key_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">Key Id is required.</p>
+                </div>
                 <label class="block text-gray-700 text-sm mb-2" for="user_id">
                     <span>User Id</span>
                 </label>
