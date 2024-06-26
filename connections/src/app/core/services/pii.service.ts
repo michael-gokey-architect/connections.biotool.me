@@ -23,36 +23,28 @@ export class PiiService {
   constructor(private httpClient: HttpClient) { }
 
   getUserPii(user_id: number): Observable<any> {
-
     return this.httpClient.get(this.apiURL + '/GetUserPii/' + user_id)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   createUserPii(pii: Pii): Observable<any> {
-
     return this.httpClient.post(this.apiURL + '/AddUserPii/', JSON.stringify(pii), this.httpOptions)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   deleteUserPii(user_id: number): Observable<any> {
-
     return this.httpClient.delete(this.apiURL + '/DeleteUserPii/'+ user_id)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   updateUserPii(pii: Pii): Observable<any> {
-
     return this.httpClient.put(this.apiURL + '/UpdateUserPii/', JSON.stringify(pii), this.httpOptions)
-
       .pipe(
         catchError(this.errorHandler)
       )

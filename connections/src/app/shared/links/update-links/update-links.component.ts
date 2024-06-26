@@ -15,6 +15,7 @@ export class UpdateLinksComponent {
     this.linkForm = this.fb.group({
       user_id: ['', Validators.required],
       link_type: ['', Validators.required],
+      link_active: ['', Validators.required],
       url_link: ['', Validators.required]
     });
   }
