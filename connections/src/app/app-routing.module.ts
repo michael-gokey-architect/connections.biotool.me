@@ -25,10 +25,6 @@ import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component
 import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
 import { CrudComponent } from './features/crud/crud.component';
 import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
-import { GetPiiComponent } from './shared/pii/get-pii/get-pii.component';
-import { CreatePiiComponent } from './shared/pii/create-pii/create-pii.component';
-import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component';
-import { UpdatePiiComponent } from './shared/pii/update-pii/update-pii.component';
 import { GetLinksComponent } from './shared/links/get-links/get-links.component';
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';

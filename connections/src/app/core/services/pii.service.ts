@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Pii } from '../models/pii.interface';
 
 @Injectable({
@@ -17,14 +18,14 @@ export class PiiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPii(pii_id: number): Observable<any> {
+  getUserPii(user_id: number): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetUserPii/' + pii_id)
+      .get(this.apiURL + '/GetUserPii/' + user_id)
 
       .pipe(catchError(this.errorHandler));
   }
 
-  createPii(pii: Pii): Observable<any> {
+  createUserPii(pii: Pii): Observable<any> {
     return this.httpClient
       .post(
         this.apiURL + '/AddUserPii/',
@@ -35,16 +36,16 @@ export class PiiService {
       .pipe(catchError(this.errorHandler));
   }
 
-  deletePii(pii_id: number): Observable<any> {
+  deleteUserPii(user_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteUserPii/' + pii_id)
+      .delete(this.apiURL + '/DeleteUserPii/' + user_id)
 
       .pipe(catchError(this.errorHandler));
   }
 
   //we need to pass org id as a query parameter to update
   //right now org id is given as req body
-  updatePii(pii: Pii): Observable<any> {
+  updateUserPii(pii: Pii): Observable<any> {
     return this.httpClient
       .put(
         this.apiURL + '/UpdateUserPii/',
