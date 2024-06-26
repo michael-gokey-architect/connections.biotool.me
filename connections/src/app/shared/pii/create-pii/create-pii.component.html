@@ -1,1 +1,58 @@
-<p>create-pii works!</p>
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>PII DETAILS</span></h1>
+        <form [formGroup]="piiForm" (ngSubmit)="onSubmit($event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="user_id">
+                    <span>User Id</span>
+                </label>
+                <input formControlName="user_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="user_id" type="text" placeholder="Enter User Id">
+                <div
+                    *ngIf="piiForm && piiForm?.get('user_id')?.invalid && (piiForm?.get('user_id')?.dirty || piiForm?.get('user_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">User Id is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="date_of_birth">
+                    <span>Date of Birth</span>
+                </label>
+                <input formControlName="date_of_birth"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="date_of_birth" type="text" placeholder="Enter date of birth">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="gender">
+                    <span>Gender</span>
+                </label>
+                <input formControlName="gender"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="gender" type="text" placeholder="Enter Gender">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="marital_status">
+                    <span>Marital Status</span>
+                </label>
+                <input formControlName="marital_status"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="marital_status" type="text" placeholder="Enter Marital Status">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="biography">
+                    <span>Biography</span>
+                </label>
+                <textarea formControlName="biography"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="biography" placeholder="Enter Biography" rows="4"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="piiForm && piiForm.invalid">
+                    Create Pii
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

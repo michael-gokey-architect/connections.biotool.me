@@ -1,1 +1,50 @@
-<p>update-links works!</p>
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>UPDATE LINK DETAILS</span></h1>
+        <form [formGroup]="linkForm" (ngSubmit)="onSubmit($event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="user_id">
+                    <span>User Id</span>
+                </label>
+                <input formControlName="user_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="user_id" type="text" placeholder="Enter User Id">
+                <div
+                    *ngIf="linkForm && linkForm?.get('user_id')?.invalid && (linkForm?.get('user_id')?.dirty || linkForm.get('user_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">User Id is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="link_type">
+                    <span>Link Type</span>
+                </label>
+                <input formControlName="link_type"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="link_type" type="text" placeholder="Enter link type">
+            </div>
+            <div
+                *ngIf="linkForm && linkForm?.get('link_type')?.invalid && (linkForm?.get('link_type')?.dirty || linkForm.get('link_type')?.touched)">
+                <p class="text-red-500 text-xs italic">Link type is required.</p>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="url_link">
+                    <span>Url Link</span>
+                </label>
+                <input formControlName="url_link"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="url_link" type="text" placeholder="Enter url link">
+            </div>
+            <div
+                *ngIf="linkForm && linkForm?.get('url_link')?.invalid && (linkForm?.get('url_link')?.dirty || linkForm.get('url_link')?.touched)">
+                <p class="text-red-500 text-xs italic">Url link is required.</p>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="linkForm && linkForm.invalid">
+                    Update Pii
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
