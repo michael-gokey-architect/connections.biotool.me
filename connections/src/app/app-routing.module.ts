@@ -16,6 +16,10 @@ import { UpdateOrganizationComponent } from './organization/update-organization/
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
+import { CreateRolesComponent } from './shared/roles/create-roles/create-roles.component';
+import { GetRolesComponent } from './shared/roles/get-roles/get-roles.component';
+import { UpdateRolesComponent } from './shared/roles/update-roles/update-roles.component';
+import { DeleteRolesComponent } from './shared/roles/delete-roles/delete-roles.component';
 import { LinksLandingComponent } from './shared/links/links-landing/links-landing.component';
 import { PiiLandingComponent } from './shared/pii/pii-landing/pii-landing.component';
 import { CreatePiiComponent } from './shared/pii/create-pii/create-pii.component';
@@ -47,15 +51,15 @@ const routes: Routes = [
   { path: 'create-organization', component: CreateOrganizationComponent },
   { path: 'delete-organization', component: DeleteOrganizationComponent },
   { path: 'update-organization', component: UpdateOrganizationComponent },
-  { path: 'get-pii', component: GetPiiComponent },
-  { path: 'create-pii', component: CreatePiiComponent },
-  { path: 'delete-pii', component: DeletePiiComponent },
-  { path: 'update-pii', component: UpdatePiiComponent },
   { path: 'get-link', component: GetLinksComponent },
   { path: 'create-link', component: CreateLinksComponent },
   { path: 'delete-link', component: DeleteLinksComponent },
   { path: 'update-link', component: UpdateLinksComponent },
   { path: 'roles', component: RoleLandingComponent },
+  { path: 'get-roles', component: GetRolesComponent },
+  { path: 'create-roles', component: CreateRolesComponent },
+  { path: 'delete-roles', component: DeleteRolesComponent },
+  { path: 'update-roles', component: UpdateRolesComponent },
   { path: 'links', component: LinksLandingComponent }, 
   { path: 'tags', component: TagLandingComponent }, 
   { path: 'pii', component: PiiLandingComponent },  
