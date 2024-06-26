@@ -25,6 +25,14 @@ import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component
 import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
 import { CrudComponent } from './features/crud/crud.component';
 import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
+import { GetPiiComponent } from './shared/pii/get-pii/get-pii.component';
+import { CreatePiiComponent } from './shared/pii/create-pii/create-pii.component';
+import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component';
+import { UpdatePiiComponent } from './shared/pii/update-pii/update-pii.component';
+import { GetLinksComponent } from './shared/links/get-links/get-links.component';
+import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
+import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
+import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -43,6 +51,14 @@ const routes: Routes = [
   { path: 'create-organization', component: CreateOrganizationComponent },
   { path: 'delete-organization', component: DeleteOrganizationComponent },
   { path: 'update-organization', component: UpdateOrganizationComponent },
+  { path: 'get-pii', component: GetPiiComponent },
+  { path: 'create-pii', component: CreatePiiComponent },
+  { path: 'delete-pii', component: DeletePiiComponent },
+  { path: 'update-pii', component: UpdatePiiComponent },
+  { path: 'get-link', component: GetLinksComponent },
+  { path: 'create-link', component: CreateLinksComponent },
+  { path: 'delete-link', component: DeleteLinksComponent },
+  { path: 'update-link', component: UpdateLinksComponent },
   { path: 'roles', component: RoleLandingComponent },
   { path: 'links', component: LinksLandingComponent }, 
   { path: 'tags', component: TagLandingComponent }, 

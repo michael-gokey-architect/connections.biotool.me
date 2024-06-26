@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pii-landing',
@@ -7,23 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./pii-landing.component.css'],
 })
 export class PiiLandingComponent {
-  constructor(private router: Router) {}
-
-  onGetPii() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/get-pii');
+  constructor(private router: Router){
   }
 
-  onCreatePii() {
+  onGetUserPii() {
     //using router to navigate on same page
-    this.router.navigateByUrl('/create-pii');
+    this.router.navigateByUrl('/get-pii')
   }
 
-  onDeletePii() {
+  onCreateUserPii() {
     //using router to navigate on same page
-    this.router.navigateByUrl('/delete-pii');
+    this.router.navigateByUrl('/create-pii')
   }
-  onUpdatePii() {
-    this.router.navigateByUrl('/update-pii');
+
+  onDeleteUserPii() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/delete-pii')
+  }
+  onUpdateUserPii() {
+    this.router.navigateByUrl('/update-pii')
   }
 }
