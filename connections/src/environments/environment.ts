@@ -1,6 +1,6 @@
 export const environment = {
 production: false,
-environmentName: "staging",
+environmentName: "development",
 
 apiUrl_user:            'http://localhost:2000/users',
 apiUrl_event:           'http://localhost:2000/events',

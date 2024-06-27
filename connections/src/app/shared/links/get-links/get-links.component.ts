@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LinksService } from 'src/app/core/services/links.service';
 
 @Component({
   selector: 'app-get-links',
@@ -6,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./get-links.component.css']
 })
 export class GetLinksComponent {
+  getForm: FormGroup;
 
+  constructor(private linkService: LinksService, private fb: FormBuilder) {
+    this.getForm = this.fb.group({
+      userId: ['', [Validators.required]]
+    });
+  }
+
+  getLink(): void {
+    //get all LInks
+    if (this.getForm.valid) {
+      const id = this.getForm.value.userId;
+      this.linkService.getLink(id).subscribe({
+        next: response => {
+          console.log('link get successfully:', response);
+          this.getForm.reset();
+        },
+        error: error => {
+          console.error('Error getting link:', error);
+        }
+      });
+    }
+  }
 }

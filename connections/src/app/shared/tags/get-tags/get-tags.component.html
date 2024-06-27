@@ -1,1 +1,13 @@
-<p>get-tags works!</p>
+<div class="flex items-center justify-center min-h-full">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>TAG ID</span></h1>
+		<div *ngIf="tags.length > 0; else noData">
+			<ul>
+				<li *ngFor="let tag of tags">{{tag.tag_id}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<ng-template #noData>
+	No tags found.
+</ng-template>

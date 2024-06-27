@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -26,7 +27,6 @@ import { GetLinksComponent } from './links/get-links/get-links.component';
 import { CreateLinksComponent } from './links/create-links/create-links.component';
 import { UpdateLinksComponent } from './links/update-links/update-links.component';
 import { DeleteLinksComponent } from './links/delete-links/delete-links.component';
-
 
 @NgModule({
   declarations: [
@@ -63,7 +63,8 @@ import { DeleteLinksComponent } from './links/delete-links/delete-links.componen
   ],
   imports: [
     CommonModule,
-    RouterModule
+		RouterModule,
+		ReactiveFormsModule
   ]
 })
 export class SharedModule { }
