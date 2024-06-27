@@ -21,17 +21,16 @@ export class DeleteTagsComponent {
 
   deleteTag(): void {
     if (this.deleteForm.valid) {
-			const id = this.deleteForm.value.tagId;
-			console.log("Attempted Tag Delete")
-      // this.tagService.deleteTags(id).subscribe({
-      //   next: (response) => {
-      //     console.log('Tag deleted successfully:', response);
-      //     this.deleteForm.reset();
-      //   },
-      //   error: (error) => {
-      //     console.error('Error deleting tag:', error);
-      //   },
-      // });
+      const id = this.deleteForm.value.orgId;
+      this.tagService.deleteTags(id).subscribe({
+        next: (response) => {
+          console.log('Tag deleted successfully:', response);
+          this.deleteForm.reset();
+        },
+        error: (error) => {
+          console.error('Error deleting tag:', error);
+        },
+      });
     }
   }
 }

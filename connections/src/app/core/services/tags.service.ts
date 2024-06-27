@@ -28,24 +28,23 @@ export class TagsService {
 
   createTag(tag: Tags): Observable<any> {
     return this.httpClient
-      .post(
-        this.apiURL + '/AddTag/',
-        JSON.stringify(tag),
-        this.httpOptions
-      )
+      .post(this.apiURL + '/AddTag/', JSON.stringify(tag), this.httpOptions)
 
       .pipe(catchError(this.errorHandler));
   }
 
-  //we need to pass role id as a query parameter to update
-  //right now role id is given as req body
+  deleteTags(tag_id: number): Observable<any> {
+    return this.httpClient
+      .delete(this.apiURL + '/DeleteTag/' + tag_id)
+
+      .pipe(catchError(this.errorHandler));
+  }
+
+  //we need to pass tag id as a query parameter to update
+  //right now tag id is given as req body
   updateTag(tag: Tags): Observable<any> {
     return this.httpClient
-      .put(
-        this.apiURL + '/UpdateTag/',
-        JSON.stringify(tag),
-        this.httpOptions
-      )
+      .put(this.apiURL + '/UpdateTag/', JSON.stringify(tag), this.httpOptions)
 
       .pipe(catchError(this.errorHandler));
   }
