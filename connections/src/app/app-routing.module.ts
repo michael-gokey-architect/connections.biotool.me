@@ -27,6 +27,10 @@ import { GetPiiComponent } from './shared/pii/get-pii/get-pii.component';
 import { UpdatePiiComponent } from './shared/pii/update-pii/update-pii.component';
 import { DeletePiiComponent } from './shared/pii/delete-pii/delete-pii.component';
 import { TagLandingComponent } from './shared/tags/tag-landing/tag-landing.component';
+import { CreateTagsComponent } from './shared/tags/create-tags/create-tags.component';
+import { GetTagsComponent } from './shared/tags/get-tags/get-tags.component';
+import { UpdateTagsComponent } from './shared/tags/update-tags/update-tags.component';
+import { DeleteTagsComponent } from './shared/tags/delete-tags/delete-tags.component';
 import { CrudComponent } from './features/crud/crud.component';
 import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
 import { GetLinksComponent } from './shared/links/get-links/get-links.component';
@@ -38,14 +42,14 @@ const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: 'connections', component: ConnectionCentralComponent },
-  { path: 'quests', component:QuestRewardsPageComponent},
+  { path: 'quests', component: QuestRewardsPageComponent },
   { path: 'theme', component: ThemeSwitcherComponent },
   { path: 'gray', component: PageGrayComponent },
   { path: 'crud', component: CrudComponent },
   { path: 'blue', component: PageBlueComponent },
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
-  { path: 'events', component: EventsLandingComponent },  
+  { path: 'events', component: EventsLandingComponent },
   { path: 'organization', component: OrganizationLandingComponent },
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },
@@ -60,17 +64,21 @@ const routes: Routes = [
   { path: 'create-role', component: CreateRolesComponent },
   { path: 'delete-role', component: DeleteRolesComponent },
   { path: 'update-role', component: UpdateRolesComponent },
-  { path: 'links', component: LinksLandingComponent }, 
-  { path: 'tags', component: TagLandingComponent }, 
-  { path: 'pii', component: PiiLandingComponent },  
+  { path: 'links', component: LinksLandingComponent },
+  { path: 'tags', component: TagLandingComponent },
+  { path: 'get-tag', component: GetTagsComponent },
+  { path: 'create-tag', component: CreateTagsComponent },
+  { path: 'delete-tag', component: DeleteTagsComponent },
+  { path: 'update-tag', component: UpdateTagsComponent },
+  { path: 'pii', component: PiiLandingComponent },
   { path: 'get-pii', component: GetPiiComponent },
   { path: 'create-pii', component: CreatePiiComponent },
   { path: 'delete-pii', component: DeletePiiComponent },
   { path: 'update-pii', component: UpdatePiiComponent },
-  { path: 'qrcode', component: QrcodeGenerateComponent }, 
-  
-  { path: '',  redirectTo: 'guest', pathMatch: 'full'},
-  { path: "**", redirectTo: 'page-not-found' },
+  { path: 'qrcode', component: QrcodeGenerateComponent },
+
+  { path: '', redirectTo: 'guest', pathMatch: 'full' },
+  { path: '**', redirectTo: 'page-not-found' },
 ];
 
 @NgModule({
