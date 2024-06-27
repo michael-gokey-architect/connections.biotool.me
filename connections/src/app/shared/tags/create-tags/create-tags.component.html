@@ -1,1 +1,74 @@
-<p>create-tags works!</p>
+<div class="flex items-center justify-center min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>TAG DETAILS</span></h1>
+		<form [formGroup]="tagForm" (ngSubmit)="onSubmit($event)">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_id">
+					<span>Tag ID</span>
+				</label>
+				<input formControlName="tag_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_id" type="number" placeholder="Enter Tag ID">
+				<div
+					*ngIf="tagForm && tagForm?.get('tag_id')?.invalid && (tagForm?.get('tag_id')?.dirty || tagForm?.get('tag_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Tag ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_header">
+					<span>Tag Header</span>
+				</label>
+				<input formControlName="tag_header"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_header" type="text" placeholder="Enter Tag Header">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_description">
+					<span>Tag Description</span>
+				</label>
+				<input formControlName="tag_description"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_description" type="text" placeholder="Enter Tag Description">
+			</div>
+			<div class="mb-6">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_notes">
+					<span>Tag Notes</span>
+				</label>
+				<textarea formControlName="tag_notes"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_notes" placeholder="Enter Tag Notes" rows="4"></textarea>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_owner_type">
+					<span>Tag Owner Type</span>
+				</label>
+				<input formControlName="tag_owner_type"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_owner_type" type="text" placeholder="Enter Tag Owner Type">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="tag_owner">
+					<span>Tag Owner</span>
+				</label>
+				<input formControlName="tag_owner"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="tag_owner" type="text" placeholder="Enter Tag Owner">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="display_tag">
+					<span>Display Tag</span>
+				</label>
+				<input formControlName="display_tag"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="display_tag" type="text" placeholder="Enter Display Tag">
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+					type="submit" [disabled]="tagForm && tagForm.invalid">
+					Create Tag
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
