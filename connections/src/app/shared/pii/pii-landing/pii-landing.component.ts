@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-pii-landing',
   templateUrl: './pii-landing.component.html',
-  styleUrls: ['./pii-landing.component.css']
+  styleUrls: ['./pii-landing.component.css'],
 })
 export class PiiLandingComponent {
   constructor(private router: Router){

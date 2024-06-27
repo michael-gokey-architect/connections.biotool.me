@@ -1,1 +1,54 @@
-<p>create-roles works!</p>
+<div class="flex items-center justify-center min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>ROLE DETAILS</span></h1>
+		<form [formGroup]="rolesForm" (ngSubmit)="onSubmit($event)">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="role_id">
+					<span>Role ID</span>
+				</label>
+				<input formControlName="role_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="role_id" type="number" placeholder="Enter Role ID">
+				<div
+					*ngIf="rolesForm && rolesForm?.get('role_id')?.invalid && (rolesForm?.get('role_id')?.dirty || rolesForm?.get('role_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Role ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="role_type">
+					<span>Role Type</span>
+				</label>
+				<input formControlName="role_type"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="role_type" type="text" placeholder="Enter Role Type">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="organization_id">
+					<span>Role Organization ID</span>
+				</label>
+				<input formControlName="organization_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="organization_id" type="number" placeholder="Enter Org ID">
+				<div
+					*ngIf="rolesForm && rolesForm?.get('organization_id')?.invalid && (rolesForm?.get('organization_id')?.dirty || rolesForm?.get('organization_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Organization ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-6">
+				<label class="block text-gray-700 text-sm mb-2" for="role_status">
+					<span>Role Status</span>
+				</label>
+				<input formControlName="role_status"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="role_status" placeholder="Enter Role Status">
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+					type="submit" [disabled]="rolesForm && rolesForm.invalid">
+					Create Role
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

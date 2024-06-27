@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Pii } from 'src/app/core/models/pii';
+import { Pii } from 'src/app/core/models/pii.interface';
 import { PiiService } from 'src/app/core/services/pii.service';
 
 @Component({

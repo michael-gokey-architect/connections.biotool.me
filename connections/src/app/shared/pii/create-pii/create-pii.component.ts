@@ -5,7 +5,7 @@ import { PiiService } from 'src/app/core/services/pii.service';
 @Component({
   selector: 'app-create-pii',
   templateUrl: './create-pii.component.html',
-  styleUrls: ['./create-pii.component.css']
+  styleUrls: ['./create-pii.component.css'],
 })
 export class CreatePiiComponent {
   piiForm: FormGroup;
@@ -16,7 +16,7 @@ export class CreatePiiComponent {
       user_id: ['', Validators.required],
       date_of_birth: [''],
       gender: [''],
-      marital_staus: [''],
+      marital_status: [''],
       biography: ['']
     });
   }
@@ -39,7 +39,7 @@ export class CreatePiiComponent {
         console.error('Error submitting form:', error);
       },
       complete: () => {
-        console.log('Create Link completed');
+        console.log('Create PII completed');
       }
     });
   }
