@@ -11,7 +11,7 @@ export class DeleteRolesComponent {
   deleteForm!: FormGroup;
 
   constructor(
-    private orgService: RolesService,
+    private roleService: RolesService,
     private fb: FormBuilder
   ) {
     this.deleteForm = this.fb.group({
@@ -21,8 +21,8 @@ export class DeleteRolesComponent {
 
   deleteRole(): void {
     if (this.deleteForm.valid) {
-      const id = this.deleteForm.value.orgId;
-      this.orgService.deleteUserRoles(id).subscribe({
+      const id = this.deleteForm.value.roleId;
+      this.roleService.deleteUserRoles(id).subscribe({
         next: (response) => {
           console.log('Role deleted successfully:', response);
           this.deleteForm.reset();

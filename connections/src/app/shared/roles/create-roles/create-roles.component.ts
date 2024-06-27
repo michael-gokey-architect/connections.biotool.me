@@ -11,7 +11,7 @@ export class CreateRolesComponent {
   rolesForm: FormGroup;
 
   constructor(
-    private orgService: RolesService,
+    private roleService: RolesService,
     private fb: FormBuilder
   ) {
     //basic validators need to put check in UI
@@ -28,11 +28,11 @@ export class CreateRolesComponent {
     // if (this.rolesForm.valid) {
     event.preventDefault();
 
-    console.log('Org Form Value', this.rolesForm.value);
+    console.log('Role Form Value', this.rolesForm.value);
 
     //create roles call
     //use subscribe with next and error object as per new standard
-    this.orgService.createUserRole(this.rolesForm.value).subscribe({
+    this.roleService.createUserRole(this.rolesForm.value).subscribe({
       next: (response) => {
         console.log('Form submitted successfully:', response);
         this.rolesForm.reset();
@@ -41,7 +41,7 @@ export class CreateRolesComponent {
         console.error('Error submitting form:', error);
       },
       complete: () => {
-        console.log('Create Org completed');
+        console.log('Create Role completed');
       },
     });
   }

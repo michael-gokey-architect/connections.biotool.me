@@ -43,8 +43,8 @@ export class RolesService {
       .pipe(catchError(this.errorHandler));
   }
 
-  //we need to pass org id as a query parameter to update
-  //right now org id is given as req body
+  //we need to pass role id as a query parameter to update
+  //right now role id is given as req body
   updateUserRole(role: Roles): Observable<any> {
     return this.httpClient
       .put(

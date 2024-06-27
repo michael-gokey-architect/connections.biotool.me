@@ -10,7 +10,7 @@
 				</label>
 				<input formControlName="tagId"
 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					id="tagId" type="number" placeholder="Enter Org ID" />
+					id="tagId" type="number" placeholder="Enter Tag ID" />
 				<div
 					*ngIf="deleteForm?.get('tagId')?.invalid && (deleteForm?.get('tagId')?.dirty || deleteForm.get('tagId')?.touched)">
 					<p class="text-red-500 text-xs italic">Valid Tag ID is required.</p>
@@ -19,7 +19,7 @@
 			<button
 				class="bg-red-400 hover:bg-red-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
 				type="submit" [disabled]="deleteForm && deleteForm.invalid">
-				Delete Org
+				Delete Tag
 			</button>
 		</form>
 	</div>

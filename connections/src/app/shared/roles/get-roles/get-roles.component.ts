@@ -10,11 +10,11 @@ import { RolesService } from 'src/app/core/services/roles.service';
 export class GetRolesComponent {
   roles: Roles[] = [];
 
-  constructor(private orgService: RolesService) {}
+  constructor(private roleService: RolesService) {}
 
   ngOnInit(): void {
     //get all roles
-    this.orgService.getUserRoles().subscribe({
+    this.roleService.getUserRoles().subscribe({
       next: (data) => {
         this.roles = data;
         console.log('Roles:', this.roles);
@@ -23,7 +23,7 @@ export class GetRolesComponent {
         console.error('Error fetching roles:', error);
       },
       complete: () => {
-        console.log('Request to fetch Org completed');
+        console.log('Request to fetch Role completed');
       },
     });
   }
