@@ -12,13 +12,13 @@ export class DeleteLinksComponent {
 
   constructor(private linkService: LinksService, private fb: FormBuilder) {
     this.deleteForm = this.fb.group({
-      userId: ['', [Validators.required]]
+      key_id: ['', [Validators.required]]
     });
   }
 
   deleteLink(): void {
     if (this.deleteForm.valid) {
-      const id = this.deleteForm.value.userId;
+      const id = this.deleteForm.value.key_id;
       this.linkService.deleteLink(id).subscribe({
         next: response => {
           console.log('Link deleted successfully:', response);

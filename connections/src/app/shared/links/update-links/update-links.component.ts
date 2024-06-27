@@ -13,6 +13,7 @@ export class UpdateLinksComponent {
   constructor(private linkService: LinksService, private fb: FormBuilder) {
     //basic validators need to put check in UI
     this.linkForm = this.fb.group({
+      key_id: ['', Validators.required],
       user_id: ['', Validators.required],
       link_type: ['', Validators.required],
       link_active: ['', Validators.required],

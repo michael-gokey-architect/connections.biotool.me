@@ -16,7 +16,7 @@ export class UpdatePiiComponent {
       user_id: ['', Validators.required],
       date_of_birth: [''],
       gender: [''],
-      marital_staus: [''],
+      marital_status: [''],
       biography: ['']
     });
   }

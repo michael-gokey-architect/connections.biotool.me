@@ -1,1 +1,14 @@
-<p>get-roles works!</p>
+<div class="flex items-center justify-center min-h-full">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>ROLE TYPE & ID</span></h1>
+		<div *ngIf="roles.length > 0; else noData">
+			<ul>
+				<li *ngFor="let role of roles">{{ role.role_type }}
+					, {{role.role_id}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<ng-template #noData>
+	No roles found.
+</ng-template>
