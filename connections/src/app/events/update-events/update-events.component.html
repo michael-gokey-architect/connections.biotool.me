@@ -1,1 +1,142 @@
-<p>update-events works!</p>
+<div class="flex items-center justify-center min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>UPDATE EVENT DETAILS</span></h1>
+		<form [formGroup]="eventUpdatedForm" (ngSubmit)="onSubmit($event)">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="event_id">
+					<span>Event ID</span>
+				</label>
+				<input formControlName="event_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="event_id" type="number" placeholder="Enter Event ID">
+				<div
+					*ngIf="eventUpdatedForm && eventUpdatedForm?.get('event_id')?.invalid && (eventUpdatedForm?.get('event_id')?.dirty || eventUpdatedForm?.get('event_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Event ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="organization_id">
+					<span>Event Organization ID</span>
+				</label>
+				<input formControlName="organization_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="organization_id" type="number" placeholder="Enter Event Org ID">
+				<div
+					*ngIf="eventUpdatedForm && eventUpdatedForm?.get('organization_id')?.invalid && (eventUpdatedForm?.get('organization_id')?.dirty || eventUpdatedForm?.get('organization_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Valid Organization ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="description">
+					<span>Event Description</span>
+				</label>
+				<input formControlName="description"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="description" type="text" placeholder="Enter Event Description">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="start_date">
+					<span>Event Start Date</span>
+				</label>
+				<input formControlName="start_date"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="start_date" type="date" placeholder="Enter Event Start Date">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="end_date">
+					<span>Event End Date</span>
+				</label>
+				<input formControlName="end_date"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="end_date" type="date" placeholder="Enter Event End Date">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="venue_name">
+					<span>Event Venue Name</span>
+				</label>
+				<input formControlName="venue_name"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="venue_name" type="text" placeholder="Enter Event Venue Name">
+			</div>
+			<div class="mb-6">
+				<label class="block text-gray-700 text-sm mb-2" for="address_line1">
+					<span>Event Address Line 1</span>
+				</label>
+				<textarea formControlName="address_line1"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="address_line1" placeholder="Enter Event Address Line 1" rows="4"></textarea>
+			</div>
+			<div class="mb-6">
+				<label class="block text-gray-700 text-sm mb-2" for="address_line2">
+					<span>Event Address Line 2</span>
+				</label>
+				<textarea formControlName="address_line2"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="address_line2" placeholder="Enter Event Address Line 2" rows="4"></textarea>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="city">
+					<span>Event City</span>
+				</label>
+				<input formControlName="city"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="city" type="text" placeholder="Enter Event City">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="state_province">
+					<span>Event State/Province</span>
+				</label>
+				<input formControlName="state_province"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="state_province" type="text" placeholder="Enter Event State/Province">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="postal_code">
+					<span>Event Postal Code</span>
+				</label>
+				<input formControlName="postal_code"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="postal_code" type="text" placeholder="Enter Event Postal Code">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="country">
+					<span>Event Country</span>
+				</label>
+				<input formControlName="country"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="country" type="text" placeholder="Enter Event Country">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="email">
+					<span>Event Email</span>
+				</label>
+				<input formControlName="email"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="email" type="email" placeholder="Enter Event Email">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="phone_number">
+					<span>Event Phone Number</span>
+				</label>
+				<input formControlName="phone_number"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="phone_number" type="text" placeholder="Enter Event Phone Number">
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="website">
+					<span>Event Website</span>
+				</label>
+				<input formControlName="website"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="website" type="text" placeholder="Enter Event Website">
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+					type="submit" [disabled]="eventUpdatedForm && eventUpdatedForm.invalid">
+					Update Event
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
