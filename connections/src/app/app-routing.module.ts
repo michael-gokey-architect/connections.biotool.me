@@ -15,6 +15,10 @@ import { GetOrganizationComponent } from './organization/get-organization/get-or
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
+import { CreateEventsComponent } from './events/create-events/create-events.component';
+import { GetEventsComponent } from './events/get-events/get-events.component';
+import { UpdateEventsComponent } from './events/update-events/update-events.component';
+import { DeleteEventsComponent } from './events/delete-events/delete-events.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { CreateRolesComponent } from './shared/roles/create-roles/create-roles.component';
 import { GetRolesComponent } from './shared/roles/get-roles/get-roles.component';
@@ -50,6 +54,10 @@ const routes: Routes = [
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
   { path: 'events', component: EventsLandingComponent },
+  { path: 'get-event', component: GetEventsComponent },
+  { path: 'create-event', component: CreateEventsComponent },
+  { path: 'delete-event', component: DeleteEventsComponent },
+  { path: 'update-event', component: UpdateEventsComponent },
   { path: 'organization', component: OrganizationLandingComponent },
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },
