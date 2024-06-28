@@ -5,6 +5,7 @@ import { CreateEventsComponent } from './create-events/create-events.component';
 import { GetEventsComponent } from './get-events/get-events.component';
 import { UpdateEventsComponent } from './update-events/update-events.component';
 import { DeleteEventsComponent } from './delete-events/delete-events.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { DeleteEventsComponent } from './delete-events/delete-events.component';
     DeleteEventsComponent
   ],
   imports: [
-    CommonModule
+		CommonModule,
+		ReactiveFormsModule
   ]
 })
 export class EventsModule { }
