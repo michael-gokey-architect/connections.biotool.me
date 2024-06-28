@@ -1,1 +1,74 @@
-<p>create-connections works!</p>
+<div class="flex items-center justify-center min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>CONNECTION DETAILS</span></h1>
+		<form [formGroup]="connectionForm" (ngSubmit)="onSubmit($event)">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="user_id">
+					<span>Connection User ID</span>
+				</label>
+				<input formControlName="user_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="user_id" type="number" placeholder="Enter User ID">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('user_id')?.invalid && (connectionForm?.get('user_id')?.dirty || connectionForm?.get('user_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Connection User ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="username">
+					<span>Connection Username</span>
+				</label>
+				<input formControlName="username"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="username" type="text" placeholder="Enter Connection Username">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('username')?.invalid && (connectionForm?.get('username')?.dirty || connectionForm?.get('username')?.touched)">
+					<p class="text-red-500 text-xs italic">Username is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="first_name">
+					<span>Connection First Name</span>
+				</label>
+				<input formControlName="first_name"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="first_name" type="text" placeholder="Enter Connection First Name">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('first_name')?.invalid && (connectionForm?.get('first_name')?.dirty || connectionForm?.get('first_name')?.touched)">
+					<p class="text-red-500 text-xs italic">First Name is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="last_name">
+					<span>Connection Last Name</span>
+				</label>
+				<input formControlName="last_name"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="last_name" type="text" placeholder="Enter Connection Last Name">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('last_name')?.invalid && (connectionForm?.get('last_name')?.dirty || connectionForm?.get('last_name')?.touched)">
+					<p class="text-red-500 text-xs italic">Last Name is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="email">
+					<span>Connection Email</span>
+				</label>
+				<input formControlName="email"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="email" type="email" placeholder="Enter Connection Email">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('email')?.invalid && (connectionForm?.get('email')?.dirty || connectionForm?.get('email')?.touched)">
+					<p class="text-red-500 text-xs italic">Valid Email is required.</p>
+				</div>
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+					type="submit" [disabled]="connectionForm && connectionForm.invalid">
+					Create Connection
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrganizationModule } from './organization/organization.module';
 import { EventsModule } from './events/events.module';
+import { ConnectionsModule } from './connections/connections.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EventsModule } from './events/events.module';
     QuestModule,
 		OrganizationModule,
 		EventsModule,
+		ConnectionsModule,
     AppRoutingModule,
     HttpClientModule
   ],

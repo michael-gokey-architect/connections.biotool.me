@@ -11,6 +11,7 @@ import { RemoveConnectionsComponent } from './remove-connections/remove-connecti
 import { GetGroupsComponent } from './get-groups/get-groups.component';
 import { CreateGroupsComponent } from './create-groups/create-groups.component';
 import { DeleteConnectionsComponent } from './delete-connections/delete-connections.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -32,7 +33,8 @@ import { DeleteConnectionsComponent } from './delete-connections/delete-connecti
   ],
   imports: [
     CommonModule,
-    SharedModule,
+		SharedModule,
+		ReactiveFormsModule
   ]
 })
 export class ConnectionsModule { }
