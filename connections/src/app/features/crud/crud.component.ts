@@ -46,12 +46,22 @@ export class CrudComponent {
     //using router to navigate on same page
     this.router.navigateByUrl('/pii')
   }
+  onQuest() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/quest')
+  }
+  onTrigger() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/trigger')
+  }
+  onJourney() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/journey')
+  }
   onQRCode() {
     //using router to navigate on same page
     this.router.navigateByUrl('/qrcode')
   }
- 
-
 
 }
 

@@ -37,6 +37,11 @@ import { GetTriggerComponent } from './trigger/get-trigger/get-trigger.component
 import { UpdateTriggerComponent } from './trigger/update-trigger/update-trigger.component';
 import { CreateTriggerComponent } from './trigger/create-trigger/create-trigger.component';
 import { DeleteTriggerComponent } from './trigger/delete-trigger/delete-trigger.component';
+import { QuestLandingComponent } from './quest/quest-landing/quest-landing.component';
+import { GetQuestComponent } from './quest/get-quest/get-quest.component';
+import { CreateQuestComponent } from './quest/create-quest/create-quest.component';
+import { UpdateQuestComponent } from './quest/update-quest/update-quest.component';
+import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +78,12 @@ import { DeleteTriggerComponent } from './trigger/delete-trigger/delete-trigger.
     GetTriggerComponent,
     UpdateTriggerComponent,
     CreateTriggerComponent,
-    DeleteTriggerComponent
+    DeleteTriggerComponent,
+    QuestLandingComponent,
+    GetQuestComponent,
+    CreateQuestComponent,
+    UpdateQuestComponent,
+    DeleteQuestComponent
   ],
   exports: [  
     FooterComponent,
