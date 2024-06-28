@@ -10,7 +10,7 @@ describe('OrganizationService', () => {
     service = TestBed.inject(OrganizationService);
   });
 
-  it('should be created', () => {
+  it('should be created, OrganizationService', () => {
     expect(service).toBeTruthy();
   });
 });
