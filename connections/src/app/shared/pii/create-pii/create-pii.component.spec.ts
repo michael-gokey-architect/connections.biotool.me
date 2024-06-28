@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CreatePiiComponent } from './create-pii.component';
 
 describe('CreatePiiComponent', () => {
@@ -8,6 +8,7 @@ describe('CreatePiiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ CreatePiiComponent ]
     })
     .compileComponents();
