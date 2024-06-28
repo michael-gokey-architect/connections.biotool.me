@@ -19,36 +19,28 @@ export class LinksService {
   constructor(private httpClient: HttpClient) { }
 
   getLink(user_id: number): Observable<any> {
-
     return this.httpClient.get(this.apiURL + '/GetSocialMediaLinks/' + user_id)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   createLink(link: Links): Observable<any> {
-
     return this.httpClient.post(this.apiURL + '/AddSocialMediaLink/', JSON.stringify(link), this.httpOptions)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   deleteLink(user_id: number): Observable<any> {
-
     return this.httpClient.delete(this.apiURL + '/DeleteSocialMediaLInk/'+ user_id)
-
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   updateLink(link: Links): Observable<any> {
-
     return this.httpClient.put(this.apiURL + '/UpdateSocialMediaLink/', JSON.stringify(link), this.httpOptions)
-
       .pipe(
         catchError(this.errorHandler)
       )
