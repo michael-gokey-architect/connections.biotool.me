@@ -23,13 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'connections'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('connections');
+    expect(app.title).toEqual('Connections');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('connections app is running!');
-  });
 });

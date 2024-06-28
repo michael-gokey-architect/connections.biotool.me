@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DeleteOrganizationComponent } from './delete-organization.component';
 
 describe('DeleteOrganizationComponent', () => {
@@ -8,6 +8,7 @@ describe('DeleteOrganizationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ DeleteOrganizationComponent ]
     })
     .compileComponents();

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UpdateOrganizationComponent } from './update-organization.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('UpdateOrganizationComponent', () => {
   let component: UpdateOrganizationComponent;
@@ -8,6 +8,7 @@ describe('UpdateOrganizationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ UpdateOrganizationComponent ]
     })
     .compileComponents();

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { DeletePiiComponent } from './delete-pii.component';
 
 describe('DeletePiiComponent', () => {
@@ -8,6 +8,7 @@ describe('DeletePiiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ DeletePiiComponent ]
     })
     .compileComponents();
