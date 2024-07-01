@@ -1,0 +1,26 @@
+<div class="mt-6 min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h2 class="text-xl text-center font-bold mb-4">
+			<span> Delete Connection </span>
+		</h2>
+		<form [formGroup]="deleteForm" (ngSubmit)="deleteConnection()">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="connId">
+					<span>Connection ID</span>
+				</label>
+				<input formControlName="connId"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="connId" type="number" placeholder="Enter Conn ID" />
+				<div
+					*ngIf="deleteForm?.get('connId')?.invalid && (deleteForm?.get('connId')?.dirty || deleteForm.get('connId')?.touched)">
+					<p class="text-red-500 text-xs italic">Valid Connection ID is required.</p>
+				</div>
+			</div>
+			<button
+				class="bg-red-400 hover:bg-red-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				type="submit" [disabled]="deleteForm && deleteForm.invalid">
+				Delete Connection
+			</button>
+		</form>
+	</div>
+</div>

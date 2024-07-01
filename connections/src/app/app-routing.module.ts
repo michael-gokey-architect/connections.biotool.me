@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { GuestPublicLandingComponent } from './guest/guest-public-landing/guest-public-landing.component';
 import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-found.component';
 import { ConnectionCentralComponent } from './connections/connection-central/connection-central.component';
+import { CreateConnectionsComponent } from './connections/create-connections/create-connections.component';
+import { GetConnectionsComponent } from './connections/get-connections/get-connections.component';
+import { UpdateConnectionsComponent } from './connections/update-connections/update-connections.component';
+import { DeleteConnectionsComponent } from './connections/delete-connections/delete-connections.component';
 import { QuestRewardsPageComponent } from './quest/quest-rewards-page/quest-rewards-page.component';
 import { ThemeSwitcherComponent } from './features/theme-switcher/theme-switcher.component';
 import { PageRedComponent } from './features-epris/page-red/page-red.component';
@@ -15,6 +19,10 @@ import { GetOrganizationComponent } from './organization/get-organization/get-or
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
 import { EventsLandingComponent } from './events/events-landing/events-landing.component';
+import { CreateEventsComponent } from './events/create-events/create-events.component';
+import { GetEventsComponent } from './events/get-events/get-events.component';
+import { UpdateEventsComponent } from './events/update-events/update-events.component';
+import { DeleteEventsComponent } from './events/delete-events/delete-events.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { CreateRolesComponent } from './shared/roles/create-roles/create-roles.component';
 import { GetRolesComponent } from './shared/roles/get-roles/get-roles.component';
@@ -44,6 +52,10 @@ const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: 'connections', component: ConnectionCentralComponent },
+  { path: 'get-connection', component: GetConnectionsComponent },
+  { path: 'create-connection', component: CreateConnectionsComponent },
+  { path: 'delete-connection', component: DeleteConnectionsComponent },
+  { path: 'update-connection', component: UpdateConnectionsComponent },
   { path: 'quests', component: QuestRewardsPageComponent },
   { path: 'theme', component: ThemeSwitcherComponent },
   { path: 'gray', component: PageGrayComponent },
@@ -52,6 +64,10 @@ const routes: Routes = [
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
   { path: 'events', component: EventsLandingComponent },
+  { path: 'get-event', component: GetEventsComponent },
+  { path: 'create-event', component: CreateEventsComponent },
+  { path: 'delete-event', component: DeleteEventsComponent },
+  { path: 'update-event', component: UpdateEventsComponent },
   { path: 'organization', component: OrganizationLandingComponent },
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },

@@ -10,6 +10,8 @@ import { BlockConnectionsComponent } from './block-connections/block-connections
 import { RemoveConnectionsComponent } from './remove-connections/remove-connections.component';
 import { GetGroupsComponent } from './get-groups/get-groups.component';
 import { CreateGroupsComponent } from './create-groups/create-groups.component';
+import { DeleteConnectionsComponent } from './delete-connections/delete-connections.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,14 +25,16 @@ import { CreateGroupsComponent } from './create-groups/create-groups.component';
     BlockConnectionsComponent,
     RemoveConnectionsComponent,
     GetGroupsComponent,
-    CreateGroupsComponent
+    CreateGroupsComponent,
+    DeleteConnectionsComponent
   ],
   exports: [
     ConnectionCentralComponent
   ],
   imports: [
     CommonModule,
-    SharedModule,
+		SharedModule,
+		ReactiveFormsModule
   ]
 })
 export class ConnectionsModule { }

@@ -9,6 +9,8 @@ import { QuestModule } from './quest/quest.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrganizationModule } from './organization/organization.module';
+import { EventsModule } from './events/events.module';
+import { ConnectionsModule } from './connections/connections.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { OrganizationModule } from './organization/organization.module';
     SharedModule,
     GuestModule,
     QuestModule,
-    OrganizationModule,
+		OrganizationModule,
+		EventsModule,
+		ConnectionsModule,
     AppRoutingModule,
     HttpClientModule
   ],
