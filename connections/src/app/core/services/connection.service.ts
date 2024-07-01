@@ -4,13 +4,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Connection } from '../models/connection.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ConnectionService {
-  private apiURL = 'http://api.mozli.com/Biodata';
+
+  envName!: string;
+    private apiURL = 'http://api.mozli.com/Biodata';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -66,5 +69,10 @@ export class ConnectionService {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     return throwError(() => new Error(error.message || 'Server Error'));
+  }
+  
+  getEnvironment(){
+    this.envName = environment.environmentName;
+    return this.envName
   }
 }

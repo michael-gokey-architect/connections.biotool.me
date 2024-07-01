@@ -20,16 +20,19 @@
 			<p class="text-xl mb-4 text-white uppercase title-text font-bold">{{userFullName}}</p>
 			<div class="grid grid-cols-4 top-1">
 				<a href="https://www.facebook.com/john.bianchi221" target="blank" title="Facebook">
-					<img class="w-8 h-8 mr-2" alt="Facebook logo" src="../assets/images/onboarding-images/Facebook.png" />
+					<img class="w-8 h-8 mr-2" alt="Facebook logo"
+						src="../assets/images/onboarding-images/Facebook.png" />
 				</a>
 				<a href="https://www.linkedin.com/in/bianchijohn/" target="blank" title="LinkedIn">
-					<img class="w-8 h-8 mr-2" alt="LinkedIn logo" src="../assets/images/onboarding-images/Linkedin.tif.png" />
+					<img class="w-8 h-8 mr-2" alt="LinkedIn logo"
+						src="../assets/images/onboarding-images/Linkedin.tif.png" />
 				</a>
 				<a href="https://x.com/BTCJohnnyB" target="blank" title="Twitter X">
 					<img class="w-8 h-8 mr-2" alt="Twitter X logo" src="../assets/images/onboarding-images/X.tif.png" />
 				</a>
 				<a href="https://www.instagram.com/bianchidoingthings/" target="blank" title="Instagram">
-					<img class="w-8 h-8" alt="Instagram logo" src="../assets/images/onboarding-images/Instagram.tif.png" />
+					<img class="w-8 h-8" alt="Instagram logo"
+						src="../assets/images/onboarding-images/Instagram.tif.png" />
 				</a>
 			</div>
 		</div>
@@ -53,7 +56,7 @@
 		<button type="button" (click)="onQRCode()"
 			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
 			QR Code generator
-		</button>	
+		</button>
 		<button type="button" (click)="onConnections()"
 			class="w-full border-1 border-[#353535] bg-neutral-500 truncate shadow-gray text-center py-3 mt-0 mb-0 rounded-full mx-auto">
 			Connections
@@ -81,7 +84,7 @@
 		<button type="button" (click)="onPii()"
 			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
 			PII
-		</button>				
+		</button>
 	</div>
 </div>
 
@@ -144,7 +147,8 @@
 		<nav class="-mb-6 columns-1 text-center grid grid-cols-4" aria-label="Footer">
 			<div class="pb-6">
 				<a title="Home page" href="#" class="">
-					<img alt="Home icon" class="w-8 h-auto mx-auto" src="../assets/icon/home-icon.png" alt="home icon" />
+					<img alt="Home icon" class="w-8 h-auto mx-auto" src="../assets/icon/home-icon.png"
+						alt="home icon" />
 				</a>
 			</div>
 			<div class="pb-6">
@@ -155,15 +159,19 @@
 			</div>
 			<div class="pb-6">
 				<a title="Your profiles page" href="#" class="">
-					<img alt="Profile id icon" class="w-8 h-auto mx-auto" src="../assets/icon/biotool.png" alt="biotool icon" />
+					<img alt="Profile id icon" class="w-8 h-auto mx-auto" src="../assets/icon/biotool.png"
+						alt="biotool icon" />
 				</a>
 			</div>
 			<div class="pb-6">
 				<a title="Connections to freinds page" href="#" class="">
-					<img alt="Connections comment chat icon" class="w-8 h-auto mx-auto" src="../assets/icon/connections-icon.png"
-						alt="connections icon" />
+					<img alt="Connections comment chat icon" class="w-8 h-auto mx-auto"
+						src="../assets/icon/connections-icon.png" alt="connections icon" />
 				</a>
 			</div>
 		</nav>
 	</div>
+	
+	<!-- this is to check which environment we're in currently -->
+	<div class="text-center font-bold">This app is running in the {{ envName }}.</div>
 </footer>

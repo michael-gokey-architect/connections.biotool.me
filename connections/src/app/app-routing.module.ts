@@ -45,6 +45,8 @@ import { GetLinksComponent } from './shared/links/get-links/get-links.component'
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
+import { JourneyLandingComponent } from './shared/journey/journey-landing/journey-landing.component';
+import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -91,6 +93,9 @@ const routes: Routes = [
   { path: 'create-pii', component: CreatePiiComponent },
   { path: 'delete-pii', component: DeletePiiComponent },
   { path: 'update-pii', component: UpdatePiiComponent },
+  { path: 'quest', component: PiiLandingComponent },
+  { path: 'journey', component: JourneyLandingComponent },
+  { path: 'trigger', component: TriggerLandingComponent },
   { path: 'qrcode', component: QrcodeGenerateComponent },
 
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
