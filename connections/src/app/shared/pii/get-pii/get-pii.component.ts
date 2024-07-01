@@ -10,6 +10,7 @@ import { PiiService } from 'src/app/core/services/pii.service';
 })
 export class GetPiiComponent {
   getForm: FormGroup;
+  piiArray: Pii[] = [];
 
   constructor(private piiService: PiiService, private fb: FormBuilder) {
     this.getForm = this.fb.group({
@@ -23,6 +24,7 @@ export class GetPiiComponent {
       const id = this.getForm.value.userId;
       this.piiService.getUserPii(id).subscribe({
         next: response => {
+          this.piiArray = response;
           console.log('User pii get successfully:', response);
           this.getForm.reset();
         },
