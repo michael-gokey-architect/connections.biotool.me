@@ -17,6 +17,7 @@ export class UpdateLinksComponent {
       user_id: ['', Validators.required],
       link_type: ['', Validators.required],
       link_active: ['', Validators.required],
+      url_label: ['', Validators.required],
       url_link: ['', Validators.required]
     });
   }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Links } from 'src/app/core/models/links';
 import { LinksService } from 'src/app/core/services/links.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { LinksService } from 'src/app/core/services/links.service';
 })
 export class GetLinksComponent {
   getForm: FormGroup;
+  linksArray: Links[] = [];
 
   constructor(private linkService: LinksService, private fb: FormBuilder) {
     this.getForm = this.fb.group({
@@ -22,6 +24,7 @@ export class GetLinksComponent {
       const id = this.getForm.value.userId;
       this.linkService.getLink(id).subscribe({
         next: response => {
+          this.linksArray = response;
           console.log('link get successfully:', response);
           this.getForm.reset();
         },
