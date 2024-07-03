@@ -17,7 +17,7 @@ describe('ManageAliasComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, ManageAliasComponent', () => {
     expect(component).toBeTruthy();
   });
 });

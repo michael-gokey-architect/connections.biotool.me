@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,10 +7,10 @@ import { SharedModule } from './shared/shared.module';
 import { GuestModule } from './guest/guest.module';
 import { QuestModule } from './quest/quest.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 import { OrganizationModule } from './organization/organization.module';
 import { EventsModule } from './events/events.module';
 import { ConnectionsModule } from './connections/connections.module';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { ConnectionsModule } from './connections/connections.module';
 		EventsModule,
 		ConnectionsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FeaturesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

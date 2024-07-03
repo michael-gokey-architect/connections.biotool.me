@@ -40,13 +40,13 @@ import { GetTagsComponent } from './shared/tags/get-tags/get-tags.component';
 import { UpdateTagsComponent } from './shared/tags/update-tags/update-tags.component';
 import { DeleteTagsComponent } from './shared/tags/delete-tags/delete-tags.component';
 import { CrudComponent } from './features/crud/crud.component';
-import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
 import { GetLinksComponent } from './shared/links/get-links/get-links.component';
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
 import { JourneyLandingComponent } from './shared/journey/journey-landing/journey-landing.component';
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
+import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -96,8 +96,7 @@ const routes: Routes = [
   { path: 'quest', component: PiiLandingComponent },
   { path: 'journey', component: JourneyLandingComponent },
   { path: 'trigger', component: TriggerLandingComponent },
-  { path: 'qrcode', component: QrcodeGenerateComponent },
-
+  { path: 'qrcode', component: QrCodeGeneratorComponent },
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];
