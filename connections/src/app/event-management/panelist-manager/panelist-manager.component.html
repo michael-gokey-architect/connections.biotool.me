@@ -1,0 +1,34 @@
+<div>
+    <h2>Manage Panelists for {{ event?.name }}</h2>
+    <form (ngSubmit)="addPanelist()">
+        <div class="mb-4">
+            <label for="panelistName" class="block text-gray-700 text-sm font-bold mb-2">Panelist Name</label>
+            <input id="panelistName" [(ngModel)]="newPanelistName" name="newPanelistName" required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text">
+        </div>
+        <div class="mb-4">
+            <label for="eventDescription" class="block text-gray-700 text-sm font-bold mb-2">Event Description</label>
+            <input id="eventDescription" [(ngModel)]="newEventDescription" name="newEventDescription" required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text">
+        </div>
+        <div class="flex items-center justify-between">
+            <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit">
+                Add Panelist
+            </button>
+        </div>
+    </form>
+
+    <div *ngIf="event?.panelists.length > 0">
+        <h3>Panelists</h3>
+        <ul>
+            <li *ngFor="let panelist of event?.panelists">
+                {{ panelist.name }}: {{ panelist.description }}
+                <ngx-qrcode [value]="panelist.qrData"></ngx-qrcode>
+            </li>
+        </ul>
+    </div>
+</div>

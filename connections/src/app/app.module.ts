@@ -11,10 +11,18 @@ import { OrganizationModule } from './organization/organization.module';
 import { EventsModule } from './events/events.module';
 import { ConnectionsModule } from './connections/connections.module';
 import { FeaturesModule } from './features/features.module';
+import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
+import { EventManagerComponent } from './event-management/event-manager/event-manager.component';
+import { PanelistManagerComponent } from './event-management/panelist-manager/panelist-manager.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OrganizationManagerComponent,
+    EventManagerComponent,
+    PanelistManagerComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +34,15 @@ import { FeaturesModule } from './features/features.module';
 		ConnectionsModule,
     AppRoutingModule,
     HttpClientModule,
-    FeaturesModule
+    FeaturesModule,
+    NgxQRCodeModule,
+    FormsModule
   ],
   providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA  
+    // Add CUSTOM_ELEMENTS_SCHEMA here for web based components 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

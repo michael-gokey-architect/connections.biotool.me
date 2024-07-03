@@ -1,0 +1,32 @@
+<div>
+    <h2>Manage Events for {{ organization?.name }}</h2>
+    <form (ngSubmit)="addEvent()">
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="newEventName">
+                Event Name
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="newEventName" type="text" [(ngModel)]="newEventName" name="newEventName" required>
+        </div>
+        <div class="flex items-center justify-between">
+            <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit">
+                Add Event
+            </button>
+        </div>
+    </form>
+
+    <div *ngIf="organization?.events.length > 0">
+        <h3>Events</h3>
+        <ul>
+            <li *ngFor="let event of organization?.events">
+                {{ event.name }}
+                <button mat-raised-button (click)="selectEvent(event)">Manage Panelists</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<app-panelist-manager *ngIf="selectedEvent" [event]="selectedEvent"></app-panelist-manager>
