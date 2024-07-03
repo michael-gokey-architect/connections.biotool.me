@@ -1,5 +1,24 @@
-<ngx-qrcode
-  [elementType]="elementType"
-  [errorCorrectionLevel]="correctionLevel"
-  [value]="value"
+<!-- using ngx-qrcode2 -->
+
+<ngx-qrcode [elementType]="elementType" [errorCorrectionLevel]="correctionLevel" [value]="value"
   cssClass="bshadow"></ngx-qrcode>
+
+<!-- using angularx-qrcode -->
+
+<qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+<!-- customized css qrcode  -->
+
+<div class="qrcodeImage">
+  <qrcode
+    [qrdata]="myQrCode"
+    [allowEmptyString]="true"
+    [ariaLabel]="'QR Code image with the following content...'"
+    [cssClass]="'right'"
+    [errorCorrectionLevel]="'M'"
+    [margin]="4"
+    [scale]="1"
+    [title]="'A custom title attribute'"
+    [width]="256"
+  ></qrcode>
+</div>

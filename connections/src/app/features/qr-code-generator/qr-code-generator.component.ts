@@ -12,12 +12,12 @@ export class QrCodeGeneratorComponent {
   elementType = NgxQrcodeElementTypes.URL;
   correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
   value = 'google.com';
-  // qrData: string = '';
-  // qrCodeUrl: string | null = null;
 
-  // constructor(private qrCodeService: QrCodeGeneratorService) {}
+  myQrCode: string = '';
 
-  // generateQrCode(): void {
-  //   this.qrCodeUrl = this.qrCodeService.generateQrCode(this.qrData);
-  // }
+  constructor() {
+    // assign a value
+    this.myQrCode = 'QR code data';
+  }
+
 }
