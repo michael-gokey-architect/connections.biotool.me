@@ -17,7 +17,7 @@ describe('QrCodeGeneratorComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, QrCodeGeneratorComponent', () => {
     expect(component).toBeTruthy();
   });
 });

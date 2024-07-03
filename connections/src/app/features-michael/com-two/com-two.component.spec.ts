@@ -17,7 +17,7 @@ describe('ComTwoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, ComTwoComponent', () => {
     expect(component).toBeTruthy();
   });
 });

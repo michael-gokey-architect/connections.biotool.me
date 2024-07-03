@@ -10,7 +10,7 @@ describe('QrCodeGeneratorService', () => {
     service = TestBed.inject(QrCodeGeneratorService);
   });
 
-  it('should be created', () => {
+  it('should be created, QrCodeGeneratorService', () => {
     expect(service).toBeTruthy();
   });
 });

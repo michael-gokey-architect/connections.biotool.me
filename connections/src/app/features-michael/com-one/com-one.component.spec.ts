@@ -17,7 +17,7 @@ describe('ComOneComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, ComOneComponent', () => {
     expect(component).toBeTruthy();
   });
 });
