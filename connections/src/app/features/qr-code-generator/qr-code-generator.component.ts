@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+import { QrCodeGeneratorService } from '../../core/services/qr-code-generator.service'
+import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+
+@Component({
+  selector: 'app-qr-code-generator',
+  templateUrl: './qr-code-generator.component.html',
+  styleUrls: ['./qr-code-generator.component.css']
+})
+export class QrCodeGeneratorComponent {
+
+  elementType = NgxQrcodeElementTypes.URL;
+  correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
+  value = 'google.com';
+  // qrData: string = '';
+  // qrCodeUrl: string | null = null;
+
+  // constructor(private qrCodeService: QrCodeGeneratorService) {}
+
+  // generateQrCode(): void {
+  //   this.qrCodeUrl = this.qrCodeService.generateQrCode(this.qrData);
+  // }
+}

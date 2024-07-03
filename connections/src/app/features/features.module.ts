@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { FeatureLandingComponent } from './feature-landing/feature-landing.component';
 import { UserAvatarUploaderComponent } from './user-avatar-uploader/user-avatar-uploader.component';
 import { ManageAliasComponent } from './manage-alias/manage-alias.component';
 import { CrudComponent } from './crud/crud.component';
-import { QrcodeGenerateComponent } from './qrcode-generate/qrcode-generate.component';
+import { QrCodeGeneratorComponent } from './qr-code-generator/qr-code-generator.component';
+import { FormsModule } from '@angular/forms';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
 
 
@@ -16,10 +18,15 @@ import { QrcodeGenerateComponent } from './qrcode-generate/qrcode-generate.compo
     UserAvatarUploaderComponent,
     ManageAliasComponent,
     CrudComponent,
-    QrcodeGenerateComponent
+    QrCodeGeneratorComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    NgxQRCodeModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA  // Add CUSTOM_ELEMENTS_SCHEMA here
+  ],
 })
 export class FeaturesModule { }
