@@ -19,14 +19,21 @@
     </form>
 
     <div *ngIf="organizations.length > 0">
-        <h3>Organizations</h3>
+        <h3>Organizations Name</h3>
         <ul>
             <li *ngFor="let org of organizations">
                 {{ org.name }}
-                <button mat-raised-button (click)="selectOrganization(org)">Manage Events</button>
+                <br/>
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    (click)="selectOrganization(org)">Manage Events</button>
             </li>
         </ul>
     </div>
 </div>
 
-<app-event-manager *ngIf="selectedOrganization" [organization]="selectedOrganization"></app-event-manager>
+<br/>
+
+<div>
+    <app-event-manager *ngIf="selectedOrganization" [organization]="selectedOrganization"></app-event-manager>
+</div>

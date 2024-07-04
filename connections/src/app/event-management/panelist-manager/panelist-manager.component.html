@@ -23,10 +23,11 @@
     </form>
 
     <div *ngIf="event?.panelists.length > 0">
-        <h3>Panelists</h3>
+        <h3>Panelists in Event</h3>
         <ul>
             <li *ngFor="let panelist of event?.panelists">
                 {{ panelist.name }}: {{ panelist.description }}
+                <br />
                 <ngx-qrcode [value]="panelist.qrData"></ngx-qrcode>
             </li>
         </ul>
