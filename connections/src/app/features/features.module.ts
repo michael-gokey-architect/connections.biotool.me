@@ -9,6 +9,7 @@ import { QrCodeGeneratorComponent } from './qr-code-generator/qr-code-generator.
 import { FormsModule } from '@angular/forms';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QRCodeModule } from 'angularx-qrcode';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     CommonModule,
     FormsModule,
     NgxQRCodeModule,
-    QRCodeModule
+    QRCodeModule,
+    RouterModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA  

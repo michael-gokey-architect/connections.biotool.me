@@ -10,15 +10,11 @@
 <!-- customized css qrcode  -->
 <h1>customized angularx-qrcode</h1>
 <div class="qrcodeImage">
-  <qrcode
-    [qrdata]="myQrCode"
-    [allowEmptyString]="true"
-    [ariaLabel]="'QR Code image with the following content...'"
-    [cssClass]="'right'"
-    [errorCorrectionLevel]="'M'"
-    [margin]="4"
-    [scale]="1"
-    [title]="'A custom title attribute'"
-    [width]="256"
-  ></qrcode>
+  <qrcode [qrdata]="myQrCode" [allowEmptyString]="true" [ariaLabel]="'QR Code image with the following content...'"
+    [cssClass]="'right'" [errorCorrectionLevel]="'M'" [margin]="4" [scale]="1" [title]="'A custom title attribute'"
+    [width]="256" [colorDark]="'#3f51b5'"></qrcode>
 </div>
+
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  [routerLink]="[ '/', 'org-event' ]">Generate QR for Panelist</button>

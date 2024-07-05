@@ -47,6 +47,7 @@ import { UpdateLinksComponent } from './shared/links/update-links/update-links.c
 import { JourneyLandingComponent } from './shared/journey/journey-landing/journey-landing.component';
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
+import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -97,6 +98,7 @@ const routes: Routes = [
   { path: 'journey', component: JourneyLandingComponent },
   { path: 'trigger', component: TriggerLandingComponent },
   { path: 'qrcode', component: QrCodeGeneratorComponent },
+  { path: 'org-event', component: OrganizationManagerComponent },
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];
