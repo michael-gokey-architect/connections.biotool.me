@@ -64,6 +64,18 @@ export class CrudComponent {
     //using router to navigate on same page
     this.router.navigateByUrl('/qrcode')
   } 
+  onQR_Code_Reader() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/qrcode-reader')
+  } 
+  onProfile_Loader() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/profile-loader')
+  } 
+  onProfile_Reader() {
+    //using router to navigate on same page
+    this.router.navigateByUrl('/profile-reader')
+  } 
 
 }
 
