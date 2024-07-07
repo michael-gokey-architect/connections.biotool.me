@@ -26,4 +26,6 @@ export class EventManagerComponent {
   selectEvent(event: Event) {
     this.selectedEvent = event;
   }
+
+  // TODO: Sid lets talk about these
 }

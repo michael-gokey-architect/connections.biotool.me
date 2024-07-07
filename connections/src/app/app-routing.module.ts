@@ -48,6 +48,9 @@ import { JourneyLandingComponent } from './shared/journey/journey-landing/journe
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
+import { ProfileDisplayComponent } from './features-michael/profile-display/profile-display.component';
+import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
+import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -94,11 +97,15 @@ const routes: Routes = [
   { path: 'create-pii', component: CreatePiiComponent },
   { path: 'delete-pii', component: DeletePiiComponent },
   { path: 'update-pii', component: UpdatePiiComponent },
-  { path: 'quest', component: PiiLandingComponent },
+  // { path: 'quest', component: PiiLandingComponent },
   { path: 'journey', component: JourneyLandingComponent },
   { path: 'trigger', component: TriggerLandingComponent },
   { path: 'qrcode', component: QrCodeGeneratorComponent },
   { path: 'org-event', component: OrganizationManagerComponent },
+  { path: 'qrcode-reader', component: QrReaderComponent },
+  { path: 'profile-loader', component: ProfileLoaderComponent },
+  { path: 'profile-reader', component: ProfileDisplayComponent },
+
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];

@@ -30,4 +30,7 @@ export class PanelistManagerComponent {
     // For simplicity, we're just concatenating the strings. You can implement any compacting algorithm you need.
     return `${name}:${description}`;
   }
+
+
+  // TODO: Sid lets talk about these
 }
