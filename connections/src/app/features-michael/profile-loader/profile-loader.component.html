@@ -22,6 +22,10 @@
                 </button>
             </div>
             <p>Bio: {{bio}}</p>
+            <div *ngIf="links.length > 0;">
+                <li *ngFor="let link of links">{{ link.link_type }}
+                    , {{link.url_link}}</li>
+            </div>
         </form>
     </div>
 </div>

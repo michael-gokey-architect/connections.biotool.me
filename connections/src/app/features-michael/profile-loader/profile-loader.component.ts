@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Links } from 'src/app/core/models/links';
+import { LinksService } from 'src/app/core/services/links.service';
 import { PiiService } from 'src/app/core/services/pii.service';
 
 @Component({
@@ -10,8 +12,9 @@ import { PiiService } from 'src/app/core/services/pii.service';
 export class ProfileLoaderComponent {
   inputForm: FormGroup;
   bio: string;
+  links: Links[] = [];
 
-  constructor(private fb: FormBuilder, private piiService: PiiService,){
+  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService){
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
     });
@@ -35,7 +38,16 @@ export class ProfileLoaderComponent {
         console.error('Error:', error);
       }
     })
-
+    this.linkService.getLink(id).subscribe({
+      next: response => {
+        this.links = response;
+        console.log('Links get successfully:', this.links);
+        this.inputForm.reset();
+      },
+      error: error => {
+        console.error('Error:', error);
+      }
+    })
     //create pii call 
     //use subscribe with next and error object as per new standard
     
