@@ -1,4 +1,31 @@
-<p>profile-loader works!</p>
-Please build an input here, for loading a userID, such as 105, or 106.
-
-With a button to go see the profile of that user.
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>PROFILE LOADER</span></h1>
+        <form [formGroup]="inputForm" (ngSubmit)="onSubmit($event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="userId">
+                    <span>User Id</span>
+                </label>
+                <input formControlName="userId"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="userId" type="text" placeholder="Enter User Id">
+                <div
+                    *ngIf="inputForm && inputForm.get('userId')?.invalid && (inputForm.get('userId')?.dirty || inputForm.get('userId')?.touched)">
+                    <p class="text-red-500 text-xs italic">User Id is required.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="inputForm && inputForm.invalid">
+                    Load Profile
+                </button>
+            </div>
+            <p>Bio: {{bio}}</p>
+            <div *ngIf="links.length > 0;">
+                <li *ngFor="let link of links">{{ link.link_type }}
+                    , {{link.url_link}}</li>
+            </div>
+        </form>
+    </div>
+</div>

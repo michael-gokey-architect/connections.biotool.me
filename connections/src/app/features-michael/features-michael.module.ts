@@ -5,8 +5,7 @@ import { ComTwoComponent } from './com-two/com-two.component';
 import { QrReaderComponent } from './qr-reader/qr-reader.component';
 import { ProfileLoaderComponent } from './profile-loader/profile-loader.component';
 import { ProfileDisplayComponent } from './profile-display/profile-display.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +13,13 @@ import { ProfileDisplayComponent } from './profile-display/profile-display.compo
     ComTwoComponent,
     QrReaderComponent,
     ProfileLoaderComponent,
-    ProfileDisplayComponent
+    ProfileDisplayComponent,
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class FeaturesMichaelModule { }

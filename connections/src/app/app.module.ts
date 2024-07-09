@@ -16,6 +16,7 @@ import { EventManagerComponent } from './event-management/event-manager/event-ma
 import { PanelistManagerComponent } from './event-management/panelist-manager/panelist-manager.component';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FormsModule } from '@angular/forms';
+import { FeaturesMichaelModule } from './features-michael/features-michael.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FeaturesModule,
     NgxQRCodeModule,
-    FormsModule
+    FormsModule,
+    FeaturesMichaelModule
   ],
   providers: [],
   schemas: [
