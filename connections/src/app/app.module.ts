@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-d
     FeaturesModule,
     NgxQRCodeModule,
     FormsModule,
-    FeaturesMichaelModule
+    FeaturesMichaelModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   schemas: [
