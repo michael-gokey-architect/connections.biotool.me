@@ -17,6 +17,8 @@ import { PanelistManagerComponent } from './event-management/panelist-manager/pa
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
+import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
+import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     OrganizationManagerComponent,
     EventManagerComponent,
-    PanelistManagerComponent
+    PanelistManagerComponent,
+    QrCodeSaveComponent,
+    QrCodeDisplayComponent
   ],
   imports: [
     BrowserModule,
