@@ -1,0 +1,9 @@
+<div>
+  <h2>Saved QR Codes</h2>
+  <div *ngFor="let qrCode of qrCodes">
+    <img [src]="'http://localhost:3000/' + qrCode.image" alt="QR Code">
+    <div>{{ qrCode.caption }}</div>
+  </div>
+</div>
+
+<button type="button" (click)="goToGenerateQR()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Generate QR Code</button>
