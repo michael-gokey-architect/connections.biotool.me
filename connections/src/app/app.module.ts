@@ -17,6 +17,8 @@ import { PanelistManagerComponent } from './event-management/panelist-manager/pa
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { FeaturesMichaelModule } from './features-michael/features-michael.modul
     FeaturesModule,
     NgxQRCodeModule,
     FormsModule,
-    FeaturesMichaelModule
+    FeaturesMichaelModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   schemas: [

@@ -52,17 +52,22 @@
                 <label class="block text-gray-700 text-sm mb-2" for="url_label">
                     <span>Url Label</span>
                 </label>
-                <input formControlName="url_label"
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="url_link" type="text" placeholder="Enter url label">
+                <mat-form-field>
+                    <mat-label>Social Media Type</mat-label>
+                    <mat-select (selectionChange)="onDropdownChange($event)">
+                        <mat-option *ngFor="let socialMediaType of socialMediaTypes" [value]="socialMediaType.value">
+                            {{socialMediaType.viewValue}}
+                          </mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="url_link">
                     <span>Url Link</span>
                 </label>
-                <input formControlName="url_label"
+                <input formControlName="url_link"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="url_label" type="text" placeholder="Enter url label">
+                    id="url_link" type="text" placeholder="Enter url link">
             </div>
             <div
                 *ngIf="linkForm && linkForm?.get('url_link')?.invalid && (linkForm?.get('url_link')?.dirty || linkForm.get('url_link')?.touched)">

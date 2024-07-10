@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
@@ -42,6 +42,7 @@ import { GetQuestComponent } from './quest/get-quest/get-quest.component';
 import { CreateQuestComponent } from './quest/create-quest/create-quest.component';
 import { UpdateQuestComponent } from './quest/update-quest/update-quest.component';
 import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,9 @@ import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.componen
   imports: [
     CommonModule,
 		RouterModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+    MatSelectModule,
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule { }

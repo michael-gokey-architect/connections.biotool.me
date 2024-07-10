@@ -10,7 +10,7 @@ import { LinksService } from 'src/app/core/services/links.service';
 })
 export class GetLinksComponent {
   getForm: FormGroup;
-  linksArray: Links[] = [];
+  links: Links[] = [];
 
   constructor(private linkService: LinksService, private fb: FormBuilder) {
     this.getForm = this.fb.group({
@@ -24,7 +24,7 @@ export class GetLinksComponent {
       const id = this.getForm.value.userId;
       this.linkService.getLink(id).subscribe({
         next: response => {
-          this.linksArray = response;
+          this.links = response;
           console.log('link get successfully:', response);
           this.getForm.reset();
         },

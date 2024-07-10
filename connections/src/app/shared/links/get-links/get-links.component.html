@@ -21,6 +21,10 @@
                 type="submit" [disabled]="getForm && getForm.invalid">
                 Get User Link
             </button>
+            <div *ngIf="links.length > 0;">
+                <li *ngFor="let link of links">{{ link.link_type }}
+                    , {{link.url_link}}</li>
+            </div>
         </form>
     </div>
 </div>
