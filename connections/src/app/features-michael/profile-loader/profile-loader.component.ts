@@ -13,12 +13,18 @@ export class ProfileLoaderComponent {
   inputForm: FormGroup;
   bio: string;
   links: Links[] = [];
+  linksS: Links[] = []
+  linksW: Links[] = [];
+  linksSAdjusted: number;
+  linksWAdjusted: number;
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService){
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
     });
     this.bio = '';
+    this.linksSAdjusted = 0;
+    this.linksWAdjusted = 0;
   }
 
   onSubmit(event: Event): void {
@@ -42,6 +48,7 @@ export class ProfileLoaderComponent {
       next: response => {
         this.links = response;
         console.log('Links get successfully:', this.links);
+        this.sortLinks();
         this.inputForm.reset();
       },
       error: error => {
@@ -51,5 +58,12 @@ export class ProfileLoaderComponent {
     //create pii call 
     //use subscribe with next and error object as per new standard
     
+  }
+
+  sortLinks(): void{
+      this.linksS = this.links.filter((link) => link.link_type == 'S');
+      this.linksW = this.links.filter((link) => link.link_type == 'W');
+      this.linksSAdjusted = this.linksS.length - 4;
+      this.linksWAdjusted = this.linksW.length - 3;
   }
 }
