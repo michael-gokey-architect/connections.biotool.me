@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Links } from 'src/app/core/models/links';
+import { InitialsPipe } from 'src/app/core/pipes/initials.pipe';
 import { LinksService } from 'src/app/core/services/links.service';
 import { PiiService } from 'src/app/core/services/pii.service';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-profile-loader',
   templateUrl: './profile-loader.component.html',
-  styleUrls: ['./profile-loader.component.css']
+  styleUrls: ['./profile-loader.component.css'],
+  providers: [InitialsPipe]
 })
 export class ProfileLoaderComponent {
   inputForm: FormGroup;
@@ -17,14 +20,21 @@ export class ProfileLoaderComponent {
   linksW: Links[] = [];
   linksSAdjusted: number;
   linksWAdjusted: number;
+  profileInitials: string = '';
+  firstName: string;
+  lastName: string;
 
-  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService){
+  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
     });
     this.bio = '';
     this.linksSAdjusted = 0;
     this.linksWAdjusted = 0;
+    this.firstName = '';
+    this.lastName = '';
+
+   
   }
 
   onSubmit(event: Event): void {
@@ -55,8 +65,16 @@ export class ProfileLoaderComponent {
         console.error('Error:', error);
       }
     })
-    //create pii call 
-    //use subscribe with next and error object as per new standard
+    this.userService.getUserProfile(id).subscribe({
+      next: response => {
+        this.firstName = response.first_name;
+        this.lastName = response.last_name
+        const givenName = this.firstName + " " + this.lastName;
+        this.profileInitials = this.initialPipe.transform(givenName);
+        console.log(givenName);
+      }
+    })
+
     
   }
 

@@ -1,6 +1,7 @@
 <div class="flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
         <h1 class="text-lg font-bold text-center mb-3"><span>PROFILE LOADER</span></h1>
+        <div>{{profileInitials}}</div>
         <form [formGroup]="inputForm" (ngSubmit)="onSubmit($event)">
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="userId">
