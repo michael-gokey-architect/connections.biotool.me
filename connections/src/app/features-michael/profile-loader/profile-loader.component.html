@@ -1,6 +1,7 @@
 <div class="flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
         <h1 class="text-lg font-bold text-center mb-3"><span>PROFILE LOADER</span></h1>
+        <div>{{profileInitials}}</div>
         <form [formGroup]="inputForm" (ngSubmit)="onSubmit($event)">
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="userId">
@@ -22,9 +23,21 @@
                 </button>
             </div>
             <p>Bio: {{bio}}</p>
-            <div *ngIf="links.length > 0;">
-                <li *ngFor="let link of links">{{ link.link_type }}
+            <div *ngIf="linksS.length > 0">
+                <b>S Links</b>
+                <li *ngFor="let link of linksS | slice:0:4">{{ link.link_type }}
                     , {{link.url_link}}</li>
+                    <div *ngIf="linksS.length > 4">
+                        <p>+ {{linksSAdjusted}} more</p>
+                    </div>
+            </div>
+            <div *ngIf="linksW.length > 0">
+                <b>W Links</b>
+                <li *ngFor="let link of linksW | slice:0:3">{{ link.link_type }}
+                    , {{link.url_link}}</li>
+                    <div *ngIf="linksW.length > 3">
+                        <p>+ {{linksWAdjusted}} more</p>
+                    </div>
             </div>
         </form>
     </div>
