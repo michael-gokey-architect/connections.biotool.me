@@ -4,6 +4,7 @@ export interface Links {
     link_type: string,
     link_active: string,
     url_link: string,
+    url_label: string,
     last_update_date: string,
     last_update_by: string
 }

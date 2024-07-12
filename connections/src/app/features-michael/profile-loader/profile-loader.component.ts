@@ -23,6 +23,7 @@ export class ProfileLoaderComponent {
   profileInitials: string = '';
   firstName: string;
   lastName: string;
+  imgSrc: string = '';
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
@@ -33,8 +34,6 @@ export class ProfileLoaderComponent {
     this.linksWAdjusted = 0;
     this.firstName = '';
     this.lastName = '';
-
-   
   }
 
   onSubmit(event: Event): void {
@@ -83,5 +82,24 @@ export class ProfileLoaderComponent {
       this.linksW = this.links.filter((link) => link.link_type == 'W');
       this.linksSAdjusted = this.linksS.length - 4;
       this.linksWAdjusted = this.linksW.length - 3;
+  }
+
+  showImage(url_label: string): String{
+    if(url_label == "Facebook"){
+      return '/assets/images/onboarding-images/Facebook.png'
+    }
+    if(url_label == "Instagram")
+    {
+      return '/assets/images/onboarding-images/Instagram.tif.png'
+    }
+    if(url_label == "LinkedIn")
+      {
+        return '/assets/images/onboarding-images/Linkedin.tif.png'
+      }
+    if(url_label == "Twitter X")
+      {
+        return '/assets/images/onboarding-images/X.tif.png'
+      }
+    return ''
   }
 }
