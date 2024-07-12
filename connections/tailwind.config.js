@@ -3,6 +3,10 @@ const plugin = require("tailwindcss/plugin");
 import { resolveTwcConfig } from "./src/app/core/theme.ts";
 
 const themeFontFamily = {
+  grey: {
+    body: "Montserrat",
+    display: "Roboto Slab",
+  },
   forest: {
     body: '"Tenor Sans", sans-serif',
     display: '"Merienda", cursive',
