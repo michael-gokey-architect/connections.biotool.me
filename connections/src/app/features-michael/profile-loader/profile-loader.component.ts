@@ -24,6 +24,7 @@ export class ProfileLoaderComponent {
   firstName: string;
   lastName: string;
   imgSrc: string = '';
+  givenName : string = '';
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
@@ -68,9 +69,9 @@ export class ProfileLoaderComponent {
       next: response => {
         this.firstName = response.first_name;
         this.lastName = response.last_name
-        const givenName = this.firstName + " " + this.lastName;
-        this.profileInitials = this.initialPipe.transform(givenName);
-        console.log(givenName);
+        this.givenName = this.firstName + " " + this.lastName;
+        this.profileInitials = this.initialPipe.transform(this.givenName);
+        console.log(this.givenName);
       }
     })
 
@@ -124,6 +125,8 @@ export class ProfileLoaderComponent {
         return '/assets/images/social-logos/telegram.png';
       case "TikTok":
         return '/assets/images/social-logos/tiktok.png';
+      case "Tumblr":
+        return '/assets/images/social-logos/tumblr.png';
       case "Twitch":
         return '/assets/images/social-logos/twitch.png';
       case "Twitter X":
