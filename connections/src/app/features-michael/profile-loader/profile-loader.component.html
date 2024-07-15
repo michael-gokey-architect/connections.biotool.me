@@ -25,7 +25,7 @@
             <p>Bio: {{bio}}</p>
             <div *ngIf="linksS.length > 0">
                 <b>S Links</b>
-                <li *ngFor="let link of linksS | slice:0:4">{{ link.link_type }}
+                <li *ngFor="let link of linksS | slice:0:4" ><img class="image" [src]="showImage(link.url_label)">{{ link.link_type }}
                     , {{link.url_link}}</li>
                     <div *ngIf="linksS.length > 4">
                         <p>+ {{linksSAdjusted}} more</p>

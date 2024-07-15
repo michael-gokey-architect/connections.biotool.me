@@ -23,6 +23,7 @@ export class ProfileLoaderComponent {
   profileInitials: string = '';
   firstName: string;
   lastName: string;
+  imgSrc: string = '';
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
@@ -33,8 +34,6 @@ export class ProfileLoaderComponent {
     this.linksWAdjusted = 0;
     this.firstName = '';
     this.lastName = '';
-
-   
   }
 
   onSubmit(event: Event): void {
@@ -83,5 +82,60 @@ export class ProfileLoaderComponent {
       this.linksW = this.links.filter((link) => link.link_type == 'W');
       this.linksSAdjusted = this.linksS.length - 4;
       this.linksWAdjusted = this.linksW.length - 3;
+  }
+
+  showImage(url_label: string): String{
+    switch (url_label) {
+      case "Classmates":
+        return '/assets/images/social-logos/classmates.png';
+      case "Discord":
+        return '/assets/images/social-logos/discord.png';
+      case "Facebook":
+        return '/assets/images/social-logos/facebook.png';
+      case "Flikr":
+        return '/assets/images/social-logos/flikr.png';
+      case "Goodreads":
+        return '/assets/images/social-logos/goodreads.png';
+      case "Instagram":
+        return '/assets/images/social-logos/instagram.png';
+      case "Kuaishou":
+        return '/assets/images/social-logos/kuaishou.png';
+      case "LinkedIn":
+        return '/assets/images/social-logos/linkedin.png';
+      case "Mastodon":
+        return '/assets/images/social-logos/mastodon.png';
+      case "Medium":
+        return '/assets/images/social-logos/medium.png';
+      case "Myspace":
+        return '/assets/images/social-logos/myspace.png';
+      case "Pinterest":
+        return '/assets/images/social-logos/pinterest.png';
+      case "QQ ~??":
+        return '/assets/images/social-logos/qq.png';
+      case "Quora":
+        return '/assets/images/social-logos/quora.png';
+      case "Reddit":
+        return '/assets/images/social-logos/reddit.png';
+      case "Sina Weibo":
+        return '/assets/images/social-logos/sina-weibo.png';
+      case "Snapchat":
+        return '/assets/images/social-logos/snapchat.png';
+      case "Telegram":
+        return '/assets/images/social-logos/telegram.png';
+      case "TikTok":
+        return '/assets/images/social-logos/tiktok.png';
+      case "Twitch":
+        return '/assets/images/social-logos/twitch.png';
+      case "Twitter X":
+        return '/assets/images/social-logos/twitter-x.png';
+      case "WeChat":
+        return '/assets/images/social-logos/wechat.png';
+      case "Whatsapp":
+        return '/assets/images/social-logos/whats-app.png';
+      case "Youtube":
+        return '/assets/images/social-logos/youtube.png';
+      default:
+        return '';
+    }
   }
 }
