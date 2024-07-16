@@ -40,13 +40,19 @@ import { GetTagsComponent } from './shared/tags/get-tags/get-tags.component';
 import { UpdateTagsComponent } from './shared/tags/update-tags/update-tags.component';
 import { DeleteTagsComponent } from './shared/tags/delete-tags/delete-tags.component';
 import { CrudComponent } from './features/crud/crud.component';
-import { QrcodeGenerateComponent } from './features/qrcode-generate/qrcode-generate.component';
 import { GetLinksComponent } from './shared/links/get-links/get-links.component';
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
 import { JourneyLandingComponent } from './shared/journey/journey-landing/journey-landing.component';
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
+import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
+import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
+import { ProfileDisplayComponent } from './features-michael/profile-display/profile-display.component';
+import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
+import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.component';
+import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
+import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -93,10 +99,16 @@ const routes: Routes = [
   { path: 'create-pii', component: CreatePiiComponent },
   { path: 'delete-pii', component: DeletePiiComponent },
   { path: 'update-pii', component: UpdatePiiComponent },
-  { path: 'quest', component: PiiLandingComponent },
+  // { path: 'quest', component: PiiLandingComponent },
   { path: 'journey', component: JourneyLandingComponent },
   { path: 'trigger', component: TriggerLandingComponent },
-  { path: 'qrcode', component: QrcodeGenerateComponent },
+  { path: 'qrcode', component: QrCodeGeneratorComponent },
+  { path: 'org-event', component: OrganizationManagerComponent },
+  { path: 'qrcode-reader', component: QrReaderComponent },
+  { path: 'profile-loader', component: ProfileLoaderComponent },
+  { path: 'profile-reader', component: ProfileDisplayComponent },
+  { path: 'qr-code-save', component: QrCodeSaveComponent },
+  { path: 'qr-code-display', component: QrCodeDisplayComponent },
 
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },

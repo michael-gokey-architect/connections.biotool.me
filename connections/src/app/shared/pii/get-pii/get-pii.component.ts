@@ -10,11 +10,15 @@ import { PiiService } from 'src/app/core/services/pii.service';
 })
 export class GetPiiComponent {
   getForm: FormGroup;
+  piiUserId: number;
+  bio: string;
 
   constructor(private piiService: PiiService, private fb: FormBuilder) {
     this.getForm = this.fb.group({
       userId: ['', [Validators.required]]
     });
+    this.piiUserId = 0;
+    this.bio = "";
   }
 
   getPii(): void {
@@ -23,6 +27,8 @@ export class GetPiiComponent {
       const id = this.getForm.value.userId;
       this.piiService.getUserPii(id).subscribe({
         next: response => {
+          this.piiUserId = response.user_id;
+          this.bio = response.biography;
           console.log('User pii get successfully:', response);
           this.getForm.reset();
         },

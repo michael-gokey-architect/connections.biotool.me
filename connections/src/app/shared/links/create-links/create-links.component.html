@@ -39,6 +39,23 @@
                 <p class="text-red-500 text-xs italic">Link active is required.</p>
             </div>
             <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="url_label">
+                    <span>Url Label</span>
+                </label>
+                <mat-form-field>
+            <mat-label>Social Media Type</mat-label>
+            <mat-select (selectionChange)="onDropdownChange($event)">
+                <mat-option *ngFor="let socialMediaType of socialMediaTypes" [value]="socialMediaType.value">
+                    {{socialMediaType.viewValue}}
+                  </mat-option>
+            </mat-select>
+        </mat-form-field>
+            </div>
+            <div
+                *ngIf="linkForm && linkForm?.get('url_label')?.invalid && (linkForm?.get('url_label')?.dirty || linkForm.get('url_label')?.touched)">
+                <p class="text-red-500 text-xs italic">Url Label is required.</p>
+            </div>
+            <div class="mb-4">
                 <label class="block text-gray-700 text-sm mb-2" for="url_link">
                     <span>Url Link</span>
                 </label>
@@ -54,7 +71,7 @@
                 <button
                     class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
                     type="submit" [disabled]="linkForm && linkForm.invalid">
-                    Create Pii
+                    Create Link
                 </button>
             </div>
         </form>

@@ -1,0 +1,38 @@
+<!-- using ngx-qrcode2 -->
+<h1>ngx-qrcode2</h1>
+<ngx-qrcode [elementType]="elementType" [errorCorrectionLevel]="correctionLevel" [value]="value"
+  cssClass="bshadow"></ngx-qrcode>
+
+<!-- using angularx-qrcode -->
+<h1>angularx-qrcode</h1>
+<qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+<!-- customized css qrcode  -->
+<h1>customized angularx-qrcode</h1>
+<div class="qrcodeImage">
+  <qrcode [qrdata]="myQrCode" [allowEmptyString]="true" [ariaLabel]="'QR Code image with the following content...'"
+    [cssClass]="'right'" [errorCorrectionLevel]="'M'" [margin]="4" [scale]="1" [title]="'A custom title attribute'"
+    [width]="256" [colorDark]="'#3f51b5'"></qrcode>
+</div>
+
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  [routerLink]="[ '/', 'org-event' ]">Generate QR for Panelist
+</button>
+
+
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  [routerLink]="[ '/', 'LinkHere' ]">Generate QR for User ID (whatUserNumber)
+</button>
+<!-- // TODO: Sid lets talk about these. 
+    We need to create a way to save the QR code, with a little id-tag, like a caption at the bottom of the QR code.
+    Then we need to save it to the API so it can be saved to the db, so we can retrive it for Guest Display.
+    Then we need to figure a way to read it back, rather than recreating it-->
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  [routerLink]="[ '/', 'LinkHere' ]">Generate QR for a Quest (User a text box for a string for now)
+</button>
+
+
+

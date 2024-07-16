@@ -19,8 +19,12 @@
             <button
                 class="bg-cyan-400 hover:bg-cyan-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit" [disabled]="getForm && getForm.invalid">
-                Get User Pii
+                Get User Link
             </button>
+            <div *ngIf="links.length > 0;">
+                <li *ngFor="let link of links">{{ link.link_type }}
+                    , {{link.url_link}}</li>
+            </div>
         </form>
     </div>
 </div>
