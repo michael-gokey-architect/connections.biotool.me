@@ -3,13 +3,13 @@ production: false,
 environmentName: "development",
 
 apiUrl_user:            'http://localhost:2000/users',
-apiUrl_event:           'http://localhost:2000/events',
-apiUrl_organization:    'http://localhost:2000/organization',
+apiUrl_event:           'https://api.mozli.com/Event',
+apiUrl_organization:    'https://api.mozli.com/Organization',
 apiUrl_connection:      'http://localhost:2000/connection',
 apiUrl_profilePicture:  'http://localhost:2000/profile-picture',
-apiUrl_tags:            'http://localhost:2000/tags',
-apiUrl_userPii:         'https://api.mozli.com/BioData',
-apiUrl_socialMediLink:  'https://api.mozli.com/BioData',
+apiUrl_tags:            'https://api.mozli.com/Tag',
+apiUrl_userPii:         'https://api.mozli.com/Pii',
+apiUrl_socialMediLink:  'https://api.mozli.com/Link',
 }
 
 

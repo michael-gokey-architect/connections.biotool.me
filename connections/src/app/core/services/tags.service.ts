@@ -9,7 +9,7 @@ import { Tags } from '../models/tags.interface';
   providedIn: 'root',
 })
 export class TagsService {
-  private apiURL = 'http://api.mozli.com/Biodata';
+  private apiURL = 'http://api.mozli.com/Tag';
 
   httpOptions = {
     headers: new HttpHeaders({
