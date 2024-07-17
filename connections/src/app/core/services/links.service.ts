@@ -8,7 +8,7 @@ import { Links } from '../models/links';
 })
 export class LinksService {
 
-  private apiURL = "http://api.mozli.com/Biodata";
+  private apiURL = "http://api.mozli.com/Link";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -32,8 +32,8 @@ export class LinksService {
       )
   }
 
-  deleteLink(user_id: number): Observable<any> {
-    return this.httpClient.delete(this.apiURL + '/DeleteSocialMediaLInk/'+ user_id)
+  deleteLink(key_id: number): Observable<any> {
+    return this.httpClient.delete(this.apiURL + '/DeleteSocialMediaLink/'+ key_id)
       .pipe(
         catchError(this.errorHandler)
       )

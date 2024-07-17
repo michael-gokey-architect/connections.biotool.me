@@ -7,7 +7,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class UserService {
 
-  private apiURL = "http://api.mozli.com/Biodata";
+  private apiURL = "http://api.mozli.com/UserProfile";
 
   httpOptions = {
     headers: new HttpHeaders({
