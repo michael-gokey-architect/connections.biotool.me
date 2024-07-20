@@ -1,9 +1,9 @@
 <div data-theme="grey">
 	<!-- Header -->
-	<div class="theme-header flex justify-between items-center p-3 bg-primary font-bold">
+	<div class="flex justify-between items-center p-3 bg-primary">
 		<div class="flex items-center gap-4">
 			<!-- <img class="w-12" src="../assets/images/onboarding-images/JohnBianchi.png" alt="Profile image"> -->
-			<p class="uppercase text-main font-display">Profile Page</p>
+			<p class="uppercase text-infoLight font-display">Profile Page</p>
 		</div>
 		<div class="flex items-center gap-4">
 			<img class="header-icon w-8" src="/assets/images/onboarding-images/qr-icon.png" alt="QR icon">
@@ -14,11 +14,11 @@
 	
 	
 	<!-- User Bio -->
-	<div class="profile p-7 bg-cover bg-center bg-primary retro-diner:bg-accent-dark">
+	<div class="profile p-7 bg-cover bg-center bg-primary retroDiner:bg-accentDark">
 		<div class="flex items-center">
 			<img class="w-20" alt="John Bianchi" src="../assets/images/onboarding-images/JohnBianchi.png" />
 			<div class="ml-5">
-				<p class="text-xl mb-4 text-main uppercase font-display font-bold">{{userFullName}}</p>
+				<p class="text-xl mb-4 text-infoLight uppercase font-display">{{userFullName}}</p>
 				<div class="grid grid-cols-4 top-1">
 					<a href="https://www.facebook.com/john.bianchi221" target="blank" title="Facebook">
 						<img class="w-8 h-8 mr-2" alt="Facebook logo" src="../assets/images/onboarding-images/Facebook.png" />
@@ -40,8 +40,8 @@
 	
 	
 	<!-- About -->
-	<div class="about-me bg-inactive retro-diner:bg-tertiary px-8 text-center py-5">
-		<h1 class="text-sm uppercase text-center leading-10 text-[#212121] font-display font-bold">About Me:</h1>
+	<div class="about-me bg-inactive retroDiner:bg-tertiary px-8 text-center py-5">
+		<h1 class="text-sm uppercase text-center leading-10 text-[#212121] font-display">About Me:</h1>
 		<p class="pb-4 text-sm">
 			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
 			biscuit cake pastry candy candy danish.
@@ -57,15 +57,15 @@
 	<div id="links">
 		<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 font-semibold">
 			<button type="button" (click)="onLinkedInClick()"
-				class="w-full bg-primary truncate shadow-gray text-center text-main py-3 mt-0 mb-0 rounded-full mx-auto">
+				class="w-full bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
 				LinkedIn
 			</button>
 			<button type="button" (click)="onConnections()"
-				class="w-full border-1 border-[#353535] bg-secondary truncate shadow-gray text-center text-main py-3 mt-0 mb-0 rounded-full mx-auto">
+				class="w-full border-1 border-trimDark bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
 				Connections
 			</button>
 			<button type="button" (click)="onEvents()"
-				class="w-full border-1 border-trim-dark bg-tertiary truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
+				class="w-full border-1 border-trimDark bg-tertiary truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
 				Events
 			</button>
 			<button type="button" (click)="onCreateOrganization()"
@@ -78,11 +78,11 @@
 	
 	
 	<!-- User Badge -->
-	<div id="badges" class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 font-bold badges">
+	<div id="badges" class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
 		<div id="badgesQuests" class="flex flex-col items-center">
 			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-primary to-secondary retro-diner:from-accent-light retro-diner:to-primary border-3 border-info">
-				<div class="text-center w-full text-main z-30">
+				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
+				<div class="text-center w-full text-infoLight z-30">
 					<a href="#" title="quest badge"> <img class="w-auto h-14 mt-2 mx-auto"
 							src="../assets/images/onboarding-images/quest.png" alt="quest badge" /></a>
 				</div>
@@ -92,8 +92,8 @@
 	
 		<div id="badgesMine" class="flex flex-col items-center">
 			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-primary to-secondary retro-diner:from-accent-light retro-diner:to-primary border-3 border-info">
-				<div class="text-center w-full text-main z-30">
+				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
+				<div class="text-center w-full text-infoLight z-30">
 					<a href="#" title="my badges"> <img class="w-auto h-12 mx-auto mt-3"
 							src="../assets/images/onboarding-images/badges.png" alt="badges" /></a>
 				</div>
@@ -103,8 +103,8 @@
 	
 		<div id="badgesRewards" class="flex flex-col items-center">
 			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-primary to-secondary retro-diner:from-accent-light retro-diner:to-primary border-3 border-info">
-				<div class="text-center w-full text-main z-30">
+				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
+				<div class="text-center w-full text-infoLight z-30">
 					<a href="#" title="rewards badge"> <img class="w-auto h-16 mx-auto mt-3"
 							src="../assets/images/onboarding-images/rewards.png" alt="rewards badge" /> </a>
 				</div>
@@ -116,7 +116,7 @@
 	
 	
 	<!-- Footer -->
-	<footer class="bg-primary text-main">
+	<footer class="bg-primary text-infoLight">
 		<div class="mx-auto max-w-7xl overflow-hidden py-6 lg:px-8">
 			<nav class="-mb-6 columns-1 text-center grid grid-cols-4" aria-label="Footer">
 				<div class="pb-6">
