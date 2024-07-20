@@ -1,0 +1,70 @@
+{
+    "connections": [
+        {
+            "key_id": 10,
+            "user_id": 101,
+            "friends": [
+                {
+                    "user_id": 105,
+                    "request_date": "string",
+                    "connection_date": "string",
+                    "deleted_date": "string",
+                    "close_friend": "binary"
+                },
+                {
+                    "user_id": 106,
+                    "request_date": "string",
+                    "connection_date": "string",
+                    "deleted_date": "string",
+                    "close_friend": "binary"
+                }
+            ],
+            "following": [
+                {
+                    "user_id": 107,
+                    "connection_date": "string",
+                    "deleted_date": "string"
+                },
+                {
+                    "user_id": 108,
+                    "connection_date": "string",
+                    "deleted_date": "string"
+                }
+            ]
+        },
+        {
+            "key_id": 11,
+            "user_id": 102,
+            "friends": [
+                {
+                    "user_id": 104,
+                    "request_date": "string",
+                    "connection_date": "string",
+                    "deleted_date": "string",
+                    "close_friend": "binary"
+                },
+                {
+                    "user_id": 106,
+                    "request_date": "string",
+                    "connection_date": "string",
+                    "deleted_date": "string",
+                    "close_friend": "binary"
+                }
+            ],
+            "following": [
+                {
+                    "user_id": 105,
+                    "connection_date": "string",
+                    "deleted_date": "string"
+                },
+                {
+                    "user_id": 109,
+                    "connection_date": "string",
+                    "deleted_date": "string"
+                }
+            ]
+        },
+        }
+    ]
+}
+
