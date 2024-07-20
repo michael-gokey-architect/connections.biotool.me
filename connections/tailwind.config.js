@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
-import { resolveTwcConfig } from "./src/utils/index";
+import { resolveTwcConfig } from "./src/app/core/plugins/theme";
 
 const themeFontFamily = {
   patchWrk: {
