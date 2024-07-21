@@ -8,14 +8,16 @@
 		<img class="header-icon w-8" src="/assets/icon/hamburger.png" alt="Menu icon">
 	</div>
 </div> -->
-<mat-toolbar>
+<mat-toolbar class="bg-primary text-infoLight">
 	<span class="uppercase flex-1">Profile Page</span>
+
+	<img class="header-icon w-8" src="/assets/images/onboarding-images/qr-icon.png" alt="QR icon">
 
 	<button mat-icon-button [matMenuTriggerFor]="menu">
 		<mat-icon>menu</mat-icon>
 	</button>
 	
-	<mat-menu #menu="matMenu" xPosition="before">
+	<mat-menu #menu="matMenu" xPosition="before" class="w-[25vw]">
 		<div>
 			<label for="theme-options" class="absolute h-[1px] w-[1px] overflow-hidden">THEME PICKER</label>
 			<mat-label>Select a Theme</mat-label>
