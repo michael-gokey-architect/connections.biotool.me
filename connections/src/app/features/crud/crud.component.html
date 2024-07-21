@@ -22,8 +22,8 @@
 			<label for="theme-options" class="absolute h-[1px] w-[1px] overflow-hidden">THEME PICKER</label>
 			<mat-label>Select a Theme</mat-label>
 		
-			<mat-select name="theme-options" id="themeoptions" aria-label="ThemeOptions">
-				<mat-option value="patchWrk" [selected]="theme === 'patchWrk'">patchWrk</mat-option>
+			<mat-select name="theme-options" id="themeoptions" aria-label="ThemeOptions" [(value)]="selected" (selectionChange)="updateTheme($event.value)">
+				<mat-option value="patchWrk" [selected]="theme === 'patchWrk'">PatchWRK</mat-option>
 				<mat-option value="nyias" [selected]="theme === 'nyias'">NYIAS</mat-option>
 				<mat-option value="dragons" [selected]="theme === 'dragons'">DragonCon</mat-option>
 				<mat-option value="grey" [selected]="theme === 'grey'">Grey</mat-option>
