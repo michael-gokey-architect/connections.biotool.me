@@ -24,6 +24,7 @@ export class ProfileLoaderComponent {
   firstName: string;
   lastName: string;
   imgSrc: string = '';
+  theme: string = '';
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
@@ -67,10 +68,12 @@ export class ProfileLoaderComponent {
     this.userService.getUserProfile(id).subscribe({
       next: response => {
         this.firstName = response.first_name;
-        this.lastName = response.last_name
+        this.lastName = response.last_name;
+        this.theme = response.user_theme;
         const givenName = this.firstName + " " + this.lastName;
         this.profileInitials = this.initialPipe.transform(givenName);
         console.log(givenName);
+        console.log(this.theme)
       }
     })
 

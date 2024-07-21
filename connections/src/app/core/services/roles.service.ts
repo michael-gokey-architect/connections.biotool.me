@@ -8,7 +8,7 @@ import { Roles } from '../models/roles.interface';
   providedIn: 'root',
 })
 export class RolesService {
-  private apiURL = 'http://api.mozli.com/Biodata';
+  private apiURL = 'http://api.mozli.com/Role';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,7 @@ export class RolesService {
 
   getUserRoles(): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetUserRoles/')
+      .get(this.apiURL + '/GetAllUserRoles/')
 
       .pipe(catchError(this.errorHandler));
   }

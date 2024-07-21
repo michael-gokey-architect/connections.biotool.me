@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class EventService {
-  private apiURL = 'http://api.mozli.com/Biodata';
+  private apiURL = 'http://api.mozli.com/Event';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,7 @@ export class EventService {
 
   getEvents(): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetEvents/')
+      .get(this.apiURL + '/GetAllEvents/')
 
       .pipe(catchError(this.errorHandler));
   }

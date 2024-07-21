@@ -11,7 +11,7 @@ import { Organization } from '../models/organization.interface';
 })
 export class OrganizationService {
 
-  private apiURL = "http://api.mozli.com/Biodata";
+  private apiURL = "http://api.mozli.com/Organization";
 
   httpOptions = {
     headers: new HttpHeaders({

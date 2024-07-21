@@ -53,6 +53,7 @@ import { ProfileLoaderComponent } from './features-michael/profile-loader/profil
 import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.component';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
+import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -109,6 +110,7 @@ const routes: Routes = [
   { path: 'profile-reader', component: ProfileDisplayComponent },
   { path: 'qr-code-save', component: QrCodeSaveComponent },
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
+  { path: 'image-uploader', component: ImageUploaderComponent},
 
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },

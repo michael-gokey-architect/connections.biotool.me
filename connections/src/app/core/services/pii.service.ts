@@ -8,7 +8,7 @@ import { Pii } from '../models/pii.interface';
   providedIn: 'root',
 })
 export class PiiService {
-  private apiURL = 'http://api.mozli.com/Biodata';
+  private apiURL = 'http://api.mozli.com/Pii';
 
   httpOptions = {
     headers: new HttpHeaders({
