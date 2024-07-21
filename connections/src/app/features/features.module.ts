@@ -11,6 +11,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QRCodeModule } from 'angularx-qrcode';
 import { RouterModule } from '@angular/router';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -24,11 +25,12 @@ import { ImageUploaderComponent } from './image-uploader/image-uploader.componen
     ImageUploaderComponent
   ],
   imports: [
-    CommonModule,
+		CommonModule,
     FormsModule,
     NgxQRCodeModule,
     QRCodeModule,
-    RouterModule
+    RouterModule,
+		MaterialModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA  

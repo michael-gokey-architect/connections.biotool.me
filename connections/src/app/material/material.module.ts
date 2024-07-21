@@ -93,7 +93,11 @@ import { MatTreeModule } from '@angular/material/tree';
     ScrollingModule,
   ],
   imports: [
-    CommonModule
+		CommonModule,
+		MatButtonModule, 
+    MatIconModule, 
+    MatMenuModule,
+    MatToolbarModule,
   ]
 })
 export class MaterialModule { }
