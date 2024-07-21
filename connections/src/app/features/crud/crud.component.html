@@ -1,16 +1,42 @@
 <!-- Header -->
-<div class="theme-header flex justify-between items-center p-3 bg-neutral-700 font-bold">
+<!-- <div class="theme-header flex justify-between items-center p-3 bg-neutral-700 font-bold">
 	<div class="flex items-center gap-4">
-		<!-- <img class="w-12" src="../assets/images/onboarding-images/JohnBianchi.png" alt="Profile image"> -->
 		<p class="uppercase text-white title-text">Profile Page</p>
 	</div>
 	<div class="flex items-center gap-4">
 		<img class="header-icon w-8" src="/assets/images/onboarding-images/qr-icon.png" alt="QR icon">
 		<img class="header-icon w-8" src="/assets/icon/hamburger.png" alt="Menu icon">
 	</div>
-</div>
+</div> -->
+<mat-toolbar>
+	<span class="uppercase flex-1">Profile Page</span>
 
-
+	<button mat-icon-button [matMenuTriggerFor]="menu">
+		<mat-icon>menu</mat-icon>
+	</button>
+	
+	<mat-menu #menu="matMenu" xPosition="before">
+		<div>
+			<label for="theme-options" class="absolute h-[1px] w-[1px] overflow-hidden">THEME PICKER</label>
+			<mat-label>Select a Theme</mat-label>
+		
+			<mat-select name="theme-options" id="themeoptions" aria-label="ThemeOptions">
+				<mat-option value="patchWrk" [selected]="theme === 'patchWrk'">patchWrk</mat-option>
+				<mat-option value="nyias" [selected]="theme === 'nyias'">NYIAS</mat-option>
+				<mat-option value="dragons" [selected]="theme === 'dragons'">DragonCon</mat-option>
+				<mat-option value="grey" [selected]="theme === 'grey'">Grey</mat-option>
+				<mat-option value="forest" [selected]="theme === 'forest'">Forest</mat-option>
+				<mat-option value="racer" [selected]="theme === 'racer'">Left Turn Racer</mat-option>
+				<mat-option value="retroDiner" [selected]="theme === 'retroDiner'">Retro Diner</mat-option>
+				<mat-option value="duke" [selected]="theme === 'duke'">Duke</mat-option>
+				<mat-option value="raven" [selected]="theme === 'raven'">Raven</mat-option>
+				<mat-option value="slateGreen" [selected]="theme === 'slateGreen'">Slate Green</mat-option>
+				<mat-option value="roseAmber" [selected]="theme === 'roseAmber'">Rose Amber</mat-option>
+				<mat-option value="violetSky" [selected]="theme === 'violetSky'">Violet Sky</mat-option>
+			</mat-select>
+		</div>
+	</mat-menu>
+</mat-toolbar>
 
 <!-- User Bio -->
 <div class="profile p-7 bg-cover bg-center bg-neutral-400">

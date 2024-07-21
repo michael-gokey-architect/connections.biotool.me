@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QRCodeModule } from 'angularx-qrcode';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -19,14 +20,15 @@ import { RouterModule } from '@angular/router';
     UserAvatarUploaderComponent,
     ManageAliasComponent,
     CrudComponent,
-    QrCodeGeneratorComponent
+		QrCodeGeneratorComponent
   ],
   imports: [
-    CommonModule,
+		CommonModule,
     FormsModule,
     NgxQRCodeModule,
     QRCodeModule,
-    RouterModule
+    RouterModule,
+		MaterialModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA  
