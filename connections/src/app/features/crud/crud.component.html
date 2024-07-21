@@ -1,7 +1,7 @@
 <!-- Header -->
 <!-- <div class="theme-header flex justify-between items-center p-3 bg-neutral-700 font-bold">
 	<div class="flex items-center gap-4">
-		<p class="uppercase text-white title-text">Profile Page</p>
+		<p class="uppercase text-infoLight ">Profile Page</p>
 	</div>
 	<div class="flex items-center gap-4">
 		<img class="header-icon w-8" src="/assets/images/onboarding-images/qr-icon.png" alt="QR icon">
@@ -41,11 +41,11 @@
 </mat-toolbar>
 
 <!-- User Bio -->
-<div class="profile p-7 bg-cover bg-center bg-neutral-400">
+<div class="p-7 bg-cover bg-center bg-primary retroDiner:bg-accentDark">
 	<div class="flex items-center">
 		<img class="w-20" alt="John Bianchi" src="../assets/images/onboarding-images/JohnBianchi.png" />
 		<div class="ml-5">
-			<p class="text-xl mb-4 text-white uppercase title-text font-bold">{{userFullName}}</p>
+			<p class="text-xl mb-4 text-infoLight uppercase font-bold">{{userFullName}}</p>
 			<div class="grid grid-cols-4 top-1">
 				<a href="https://www.facebook.com/john.bianchi221" target="blank" title="Facebook">
 					<img class="w-8 h-8 mr-2" alt="Facebook logo"
@@ -70,8 +70,8 @@
 
 
 <!-- About -->
-<div class="about-me bg-neutral-200 px-8 text-left py-5">
-	<h1 class="text-sm uppercase text-center leading-10 text-[#212121] title-text font-bold">About Me:</h1>
+<div class="bg-inactive retroDiner:bg-tertiary px-8 text-left py-5">
+	<h1 class="text-sm uppercase text-center leading-10 font-bold">About Me:</h1>
 	<p class="pb-4 text-sm">
 		{{userBio}}
 	</p>
@@ -80,49 +80,49 @@
 
 <!-- Links -->
 <div id="links">
-	<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 text-white font-semibold">
+	<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 font-semibold">
 		<button type="button" (click)="onQRCode()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			QR Code generator
 		</button>
 		<button type="button" (click)="onConnections()"
-			class="w-full border-1 border-[#353535] bg-neutral-500 truncate shadow-gray text-center py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
 			Connections
 		</button>
 		<button type="button" (click)="onEvents()"
-			class="w-full border-1 border-[#353535] bg-white truncate shadow-gray text-center text-[#353535] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-main truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
 			Events
 		</button>
 		<button type="button" (click)="onCreateOrganization()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			Organization
 		</button>
 		<button type="button" (click)="onLinks()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			Links
 		</button>
 		<button type="button" (click)="onTags()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			Tags
 		</button>
 		<button type="button" (click)="onRoles()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			Roles
 		</button>
 		<button type="button" (click)="onPii()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			PII
 		</button>
 		<button type="button" (click)="onQR_Code_Reader()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			QR reader
 		</button>
 		<button type="button" (click)="onProfile_Loader()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			profile-loader
 		</button>
 		<button type="button" (click)="onProfile_Reader()"
-			class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			profile-reader
 		</button>				
 	</div>
@@ -138,8 +138,8 @@
 			<div class="absolute inset-0 flex items-center justify-center">
 				<div class="w-12 h-12 bg-neutral-400 blur-md rounded-full"></div>
 			</div>
-			<div class="text-center w-full text-white z-30">
-				<div class="text-center w-full text-white z-30">
+			<div class="text-center w-full text-infoLight z-30">
+				<div class="text-center w-full text-infoLight z-30">
 					<a href="#" title="quest badge"> <img class="w-auto h-14 mt-2 mx-auto"
 							src="../assets/images/onboarding-images/quest.png" alt="quest badge" /></a>
 				</div>
@@ -154,7 +154,7 @@
 			<div class="absolute inset-0 flex items-center justify-center">
 				<div class="w-12 h-12 bg-neutral-400 blur-md rounded-full"></div>
 			</div>
-			<div class="text-center w-full text-white z-30">
+			<div class="text-center w-full text-infoLight z-30">
 				<a href="#" title="my badges"> <img class="w-auto h-12 mx-auto mt-3"
 						src="../assets/images/onboarding-images/badges.png" alt="badges" /></a>
 			</div>
@@ -168,8 +168,8 @@
 			<div class="absolute inset-0 flex items-center justify-center">
 				<div class="w-12 h-12 bg-neutral-400 blur-md rounded-full"></div>
 			</div>
-			<div class="text-center w-full text-white z-30">
-				<div class="text-center w-full text-white z-30">
+			<div class="text-center w-full text-infoLight z-30">
+				<div class="text-center w-full text-infoLight z-30">
 					<a href="#" title="rewards badge"> <img class="w-auto h-16 mx-auto mt-3"
 							src="../assets/images/onboarding-images/rewards.png" alt="rewards badge" /> </a>
 				</div>
@@ -182,7 +182,7 @@
 
 
 <!-- Footer -->
-<footer class="bg-neutral-700 text-white">
+<footer class="bg-accentDark text-infoLight">
 	<div class="mx-auto max-w-7xl overflow-hidden py-6 lg:px-8">
 		<nav class="-mb-6 columns-1 text-center grid grid-cols-4" aria-label="Footer">
 			<div class="pb-6">
