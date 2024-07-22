@@ -1,7 +1,7 @@
 {
     "connections": [
         {
-            "key_id": 10,
+            "connections_key_id": 10,
             "user_id": 101,
             "friends": [
                 {
@@ -9,14 +9,14 @@
                     "request_date": "string",
                     "connection_date": "string",
                     "deleted_date": "string",
-                    "close_friend": "binary"
+                    "close_friend": "boolean"
                 },
                 {
                     "user_id": 106,
                     "request_date": "string",
                     "connection_date": "string",
                     "deleted_date": "string",
-                    "close_friend": "binary"
+                    "close_friend": "boolean"
                 }
             ],
             "following": [
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "key_id": 11,
+            "connections_key_id": 11,
             "user_id": 102,
             "friends": [
                 {
@@ -63,7 +63,6 @@
                     "deleted_date": "string"
                 }
             ]
-        },
         }
     ]
 }
