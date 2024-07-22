@@ -14,6 +14,7 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class ProfileLoaderComponent {
   inputForm: FormGroup;
+  id: number = 0;
   bio: string;
   links: Links[] = [];
   linksS: Links[] = []
@@ -25,6 +26,7 @@ export class ProfileLoaderComponent {
   lastName: string;
   imgSrc: string = '';
   theme: string = '';
+  givenName: string = '';
 
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
     this.inputForm = this.fb.group({
@@ -43,8 +45,8 @@ export class ProfileLoaderComponent {
     event.preventDefault();
 
     console.log("User Id Value", this.inputForm.value);
-    const id = this.inputForm.value.userId;
-    this.piiService.getUserPii(id).subscribe({
+    this.id = this.inputForm.value.userId;
+    this.piiService.getUserPii(this.id).subscribe({
       next: response => {
         this.bio = response.biography;
         console.log('Bio get successfully:', this.bio);
@@ -54,7 +56,7 @@ export class ProfileLoaderComponent {
         console.error('Error:', error);
       }
     })
-    this.linkService.getLink(id).subscribe({
+    this.linkService.getLink(this.id).subscribe({
       next: response => {
         this.links = response;
         console.log('Links get successfully:', this.links);
@@ -65,14 +67,14 @@ export class ProfileLoaderComponent {
         console.error('Error:', error);
       }
     })
-    this.userService.getUserProfile(id).subscribe({
+    this.userService.getUserProfile(this.id).subscribe({
       next: response => {
         this.firstName = response.first_name;
         this.lastName = response.last_name;
-        this.theme = response.user_theme;
-        const givenName = this.firstName + " " + this.lastName;
-        this.profileInitials = this.initialPipe.transform(givenName);
-        console.log(givenName);
+        this.theme = response.user_theme.theme_name ? response.user_theme.theme_name : 'N/A';
+        this.givenName = this.firstName + " " + this.lastName;
+        this.profileInitials = this.initialPipe.transform(this.givenName);
+        console.log(this.givenName);
         console.log(this.theme)
       }
     })
