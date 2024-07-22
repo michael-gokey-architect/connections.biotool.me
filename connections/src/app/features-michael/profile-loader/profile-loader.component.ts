@@ -127,6 +127,8 @@ export class ProfileLoaderComponent {
         return '/assets/images/social-logos/telegram.png';
       case "TikTok":
         return '/assets/images/social-logos/tiktok.png';
+      case "Tumblr":
+        return '/assets/images/social-logos/tumblr.png';
       case "Twitch":
         return '/assets/images/social-logos/twitch.png';
       case "Twitter X":
