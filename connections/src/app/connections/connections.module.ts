@@ -12,6 +12,7 @@ import { GetGroupsComponent } from './get-groups/get-groups.component';
 import { CreateGroupsComponent } from './create-groups/create-groups.component';
 import { DeleteConnectionsComponent } from './delete-connections/delete-connections.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConnectionLandingComponent } from './connection-landing/connection-landing.component';
 
 
 
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RemoveConnectionsComponent,
     GetGroupsComponent,
     CreateGroupsComponent,
-    DeleteConnectionsComponent
+    DeleteConnectionsComponent,
+    ConnectionLandingComponent
   ],
   exports: [
     ConnectionCentralComponent

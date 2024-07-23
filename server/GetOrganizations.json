@@ -1,0 +1,161 @@
+[
+    {
+        "organization_id": 1,
+        "organization_name": "ABC Events",
+        "description": "Organizing various cultural events",
+        "address_line1": "123 Main Street",
+        "address_line2": null,
+        "city": "New York",
+        "state_province": "NY",
+        "postal_code": "10001",
+        "country": "USA",
+        "email": "info@abcevents.com",
+        "phone_number": "+1 (123) 456-7890",
+        "website": "https://www.abcevents.com",
+        "point_of_contact_name": "John Smith",
+        "point_of_contact_email": "john@abcevents.com",
+        "point_of_contact_phone": "+1 (987) 654-3210",
+        "deleted_date": null,
+        "theme_id": null,
+        "organization_theme": {
+            "theme_id": 0,
+            "theme_name": null,
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    },
+    {
+        "organization_id": 2,
+        "organization_name": "XYZ Productions",
+        "description": "Producing concerts and music festivals",
+        "address_line1": "456 Broadway",
+        "address_line2": null,
+        "city": "Los Angeles",
+        "state_province": "CA",
+        "postal_code": "90001",
+        "country": "USA",
+        "email": "info@xyzproductions.com",
+        "phone_number": "+1 (234) 567-8901",
+        "website": "https://www.xyzproductions.com",
+        "point_of_contact_name": "Jane Doe",
+        "point_of_contact_email": "jane@xyzproductions.com",
+        "point_of_contact_phone": "+1 (876) 543-2109",
+        "deleted_date": null,
+        "theme_id": null,
+        "organization_theme": {
+            "theme_id": 0,
+            "theme_name": null,
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    },
+    {
+        "organization_id": 3,
+        "organization_name": "Citywide Expos",
+        "description": "Organizing trade shows and expos",
+        "address_line1": "789 Elm Street",
+        "address_line2": null,
+        "city": "Chicago",
+        "state_province": "IL",
+        "postal_code": "60601",
+        "country": "USA",
+        "email": "info@citywideexpos.com",
+        "phone_number": "+1 (345) 678-9012",
+        "website": "https://www.citywideexpos.com",
+        "point_of_contact_name": "Mike Johnson",
+        "point_of_contact_email": "mike@citywideexpos.com",
+        "point_of_contact_phone": "+1 (765) 432-1098",
+        "deleted_date": null,
+        "theme_id": null,
+        "organization_theme": {
+            "theme_id": 0,
+            "theme_name": null,
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    },
+    {
+        "organization_id": 9,
+        "organization_name": "Kolker Rope Konnections",
+        "description": "Shibori Rope Design Classes",
+        "address_line1": "PO Box 1582",
+        "address_line2": null,
+        "city": "Buford",
+        "state_province": "GA",
+        "postal_code": "30045",
+        "country": "USA",
+        "email": "nawashi23c@gmail.com",
+        "phone_number": "+1 (404) 6710721",
+        "website": "https://food-blog.kolkerrope.tech/",
+        "point_of_contact_name": "Michael Kolker",
+        "point_of_contact_email": "nawashi23c@gmail.com",
+        "point_of_contact_phone": "+1 (404) 6710721",
+        "deleted_date": null,
+        "theme_id": null,
+        "organization_theme": {
+            "theme_id": 0,
+            "theme_name": null,
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    },
+    {
+        "organization_id": 11,
+        "organization_name": "Myriad Technology Group",
+        "description": "Journey Quests for Businesses that Want to Engage",
+        "address_line1": "150 Fayetteville St",
+        "address_line2": "Ste 300",
+        "city": "Raleigh",
+        "state_province": "NC",
+        "postal_code": "27601",
+        "country": "USA",
+        "email": "john@myriadtechnologygroup.com",
+        "phone_number": null,
+        "website": null,
+        "point_of_contact_name": "John Bianchi",
+        "point_of_contact_email": "john@myriadtechnologygroup.com",
+        "point_of_contact_phone": null,
+        "deleted_date": "null",
+        "theme_id": 2,
+        "organization_theme": {
+            "theme_id": 2,
+            "theme_name": "patchWrk",
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    }
+
+
+
+    {
+        "organization_id": 15,
+        "organization_name": "Kolker Rope Konnections",
+        "description": "Shibori Rope Design Classes",
+        "address_line1": "PO Box 1582",
+        "address_line2": null,
+        "city": "Buford",
+        "state_province": "GA",
+        "postal_code": "30045",
+        "country": "USA",
+        "email": "nawashi23c@gmail.com",
+        "phone_number": "+1 (404) 6710721",
+        "website": "https://food-blog.kolkerrope.tech/",
+        "point_of_contact_name": "Michael Kolker",
+        "point_of_contact_email": "nawashi23c@gmail.com",
+        "point_of_contact_phone": "+1 (404) 6710721",
+        "deleted_date": null,
+        "theme_id": null,
+        "organization_theme": {
+            "theme_id": 0,
+            "theme_name": null,
+            "custom_owner_id": null
+        },
+        "events": [],
+        "organization_user_profiles": []
+    }
+]

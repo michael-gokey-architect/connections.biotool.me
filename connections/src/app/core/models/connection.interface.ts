@@ -10,14 +10,14 @@ export interface Connection {
 }
 
 export interface user_connections{
-    key_id: number,
+    connections_key_id: number,
     user_id: number,
     friends:[
         user_id: number,
-        request_date: string,
+        // request_date: string,
         connection_date: string,
         deleted_date: string,
-        close_friend: string,
+        close_friend: boolean,
     ],
     following:[
         user_id: number,
