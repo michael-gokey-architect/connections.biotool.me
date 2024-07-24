@@ -16,7 +16,6 @@ export class CreateEventsComponent {
   ) {
     //basic validators need to put check in UI
     this.eventForm = this.fb.group({
-      event_id: ['', Validators.required],
 			organization_id: ['', Validators.required],
 			event_name: [''],
 			description: [''],

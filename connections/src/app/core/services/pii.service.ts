@@ -3,13 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Pii } from '../models/pii.interface';
+import { environment } from 'src/environments/environment.dev';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PiiService {
-  private apiURL = 'http://api.mozli.com/Pii';
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -20,7 +19,7 @@ export class PiiService {
 
   getUserPii(user_id: number): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetUserPii/' + user_id)
+      .get(environment.apiUrl_userPii + '/GetUserPii/' + user_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -28,7 +27,7 @@ export class PiiService {
   createUserPii(pii: Pii): Observable<any> {
     return this.httpClient
       .post(
-        this.apiURL + '/AddUserPii/',
+        environment.apiUrl_userPii + '/AddUserPii',
         JSON.stringify(pii),
         this.httpOptions
       )
@@ -38,7 +37,7 @@ export class PiiService {
 
   deleteUserPii(user_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteUserPii/' + user_id)
+      .delete(environment.apiUrl_userPii + '/DeleteUserPii/' + user_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -48,7 +47,7 @@ export class PiiService {
   updateUserPii(pii: Pii): Observable<any> {
     return this.httpClient
       .put(
-        this.apiURL + '/UpdateUserPii/',
+        environment.apiUrl_userPii + '/UpdateUserPii/',
         JSON.stringify(pii),
         this.httpOptions
       )

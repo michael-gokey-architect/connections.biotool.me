@@ -1,13 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment.dev';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
-  private apiURL = "http://api.mozli.com/UserProfile";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -19,7 +18,7 @@ export class UserService {
 
   getUserProfile(user_id: number): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/GetUserProfile/' + user_id)
+    return this.httpClient.get(environment.apiUrl_user + '/GetUserProfile/' + user_id)
       .pipe(
         catchError(this.errorHandler)
       )

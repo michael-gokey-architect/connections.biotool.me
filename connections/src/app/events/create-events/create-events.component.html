@@ -4,15 +4,11 @@
 		<form [formGroup]="eventForm" (ngSubmit)="onSubmit($event)">
 			<div class="mb-4">
 				<label class="block text-gray-700 text-sm mb-2" for="event_id">
-					<span>Event ID</span>
+					<span>Event Name</span>
 				</label>
-				<input formControlName="event_id"
+				<input formControlName="event_name"
 					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					id="event_id" type="number" placeholder="Enter Event ID">
-				<div
-					*ngIf="eventForm && eventForm?.get('event_id')?.invalid && (eventForm?.get('event_id')?.dirty || eventForm?.get('event_id')?.touched)">
-					<p class="text-red-500 text-xs italic">Event ID is required.</p>
-				</div>
+					id="event_name" type="text" placeholder="Enter Event Name">
 			</div>
 			<div class="mb-4">
 				<label class="block text-gray-700 text-sm mb-2" for="organization_id">

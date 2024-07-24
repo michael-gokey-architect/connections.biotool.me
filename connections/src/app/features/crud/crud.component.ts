@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router  } from '@angular/router';
 import { ConnectionService } from 'src/app/core/services/connection.service';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.dev';
 
 @Component({
   selector: 'app-crud',

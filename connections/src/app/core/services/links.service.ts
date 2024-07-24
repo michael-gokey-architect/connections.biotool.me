@@ -2,14 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Links } from '../models/links';
+import { environment } from 'src/environments/environment.dev';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LinksService {
-
-  private apiURL = "http://api.mozli.com/Link";
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -19,28 +17,28 @@ export class LinksService {
   constructor(private httpClient: HttpClient) { }
 
   getLink(user_id: number): Observable<any> {
-    return this.httpClient.get(this.apiURL + '/GetSocialMediaLinks/' + user_id)
+    return this.httpClient.get(environment.apiUrl_socialMediLink + '/GetSocialMediaLinks/' + user_id)
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   createLink(link: Links): Observable<any> {
-    return this.httpClient.post(this.apiURL + '/AddSocialMediaLink/', JSON.stringify(link), this.httpOptions)
+    return this.httpClient.post(environment.apiUrl_socialMediLink + '/AddSocialMediaLink/', JSON.stringify(link), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   deleteLink(key_id: number): Observable<any> {
-    return this.httpClient.delete(this.apiURL + '/DeleteSocialMediaLink/'+ key_id)
+    return this.httpClient.delete(environment.apiUrl_socialMediLink + '/DeleteSocialMediaLink/'+ key_id)
       .pipe(
         catchError(this.errorHandler)
       )
   }
 
   updateLink(link: Links): Observable<any> {
-    return this.httpClient.put(this.apiURL + '/UpdateSocialMediaLink/', JSON.stringify(link), this.httpOptions)
+    return this.httpClient.put(environment.apiUrl_socialMediLink + '/UpdateSocialMediaLink/', JSON.stringify(link), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )

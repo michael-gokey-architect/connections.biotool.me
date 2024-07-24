@@ -2,14 +2,16 @@ export const environment = {
 production: false,
 environmentName: "development",
 
-apiUrl_user:            'http://localhost:2000/users',
-apiUrl_event:           'https://api.mozli.com/Event',
-apiUrl_organization:    'https://api.mozli.com/Organization',
-apiUrl_connection:      'http://localhost:2000/connection',
+apiUrl_user:            'http://api.mozli.com/UserProfile',
+apiUrl_event:           'http://api.mozli.com/Event',
+apiUrl_organization:    'http://api.mozli.com/Organization',
+apiUrl_connection:      'http://api.mozli.com/Social',
 apiUrl_profilePicture:  'http://localhost:2000/profile-picture',
-apiUrl_tags:            'https://api.mozli.com/Tag',
-apiUrl_userPii:         'https://api.mozli.com/Pii',
-apiUrl_socialMediLink:  'https://api.mozli.com/Link',
+apiUrl_tags:            'http://api.mozli.com/Tag',
+apiUrl_userPii:         'http://api.mozli.com/Pii',
+apiUrl_socialMediLink:  'http://api.mozli.com/Link',
+apiUrl_roles:           'http://api.mozli.com/Role',
+apiUrl_themes:          'http://api.mozli.com/Theme',
 }
 
 

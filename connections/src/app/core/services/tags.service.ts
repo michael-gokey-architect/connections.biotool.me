@@ -5,12 +5,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Tags } from '../models/tags.interface';
+import { environment } from 'src/environments/environment.dev';
 @Injectable({
   providedIn: 'root',
 })
 export class TagsService {
-  private apiURL = 'http://api.mozli.com/Tag';
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -21,21 +20,21 @@ export class TagsService {
 
   getTags(): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetTags/')
+      .get(environment.apiUrl_tags + '/GetTags/')
 
       .pipe(catchError(this.errorHandler));
   }
 
   createTag(tag: Tags): Observable<any> {
     return this.httpClient
-      .post(this.apiURL + '/AddTag/', JSON.stringify(tag), this.httpOptions)
+      .post(environment.apiUrl_tags + '/AddTag/', JSON.stringify(tag), this.httpOptions)
 
       .pipe(catchError(this.errorHandler));
   }
 
   deleteTags(tag_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteTag/' + tag_id)
+      .delete(environment.apiUrl_tags + '/DeleteTag/' + tag_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -44,7 +43,7 @@ export class TagsService {
   //right now tag id is given as req body
   updateTag(tag: Tags): Observable<any> {
     return this.httpClient
-      .put(this.apiURL + '/UpdateTag/', JSON.stringify(tag), this.httpOptions)
+      .put(environment.apiUrl_tags + '/UpdateTag/', JSON.stringify(tag), this.httpOptions)
 
       .pipe(catchError(this.errorHandler));
   }
