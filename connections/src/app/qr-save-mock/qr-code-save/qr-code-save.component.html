@@ -13,8 +13,8 @@
     </form>
     <div *ngIf="qrData" class="mt-4">
       <div id="qrCodeWithCaption" class="flex flex-col items-center">
-        <ngx-qrcode [value]="qrData"></ngx-qrcode>
-        <div class="mt-2 text-gray-700">{{ caption }}</div>
+        <ngx-qrcode [value]="qrData"></ngx-qrcode><br/>
+        <div>{{ caption }}</div>
       </div>
     </div>
     <div *ngIf="qrCodeImage" class="mt-4">
@@ -22,6 +22,16 @@
       <img [src]="qrCodeImage" alt="QR Code" class="mx-auto">
     </div>
   </div>
+
+  <!-- <div>
+    <input [(ngModel)]="caption" placeholder="Enter caption for QR code" />
+    <button (click)="generateQRCode()">Generate QR Code</button>
+    <div *ngIf="qrCodeImageUrl">
+      <img [src]="qrCodeImageUrl" alt="Generated QR Code" />
+      <p>{{ caption }}</p>
+    </div>
+    <button (click)="saveQRCode()">Save QR Code</button>
+  </div> -->
 
   <button type="button" (click)="goToDisplayQR()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button>
 

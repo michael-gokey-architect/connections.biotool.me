@@ -1,7 +1,7 @@
 <div>
   <h2>Saved QR Codes</h2>
   <div *ngFor="let qrCode of qrCodes">
-    <img [src]="'http://localhost:3000/' + qrCode.image" alt="QR Code">
+    <img class="w-32 h-35" [src]="'http://localhost:3000/' + qrCode.image" alt="QR Code">
     <div>{{ qrCode.caption }}</div>
   </div>
 </div>

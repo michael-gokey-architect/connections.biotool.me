@@ -27,20 +27,43 @@ export class QrCodeSaveComponent {
   captureQrCode() {
     const qrElement = document.getElementById('qrCodeWithCaption');
     if (qrElement) {
-      html2canvas(qrElement).then(canvas => {
+      // Create a temporary container to hold the QR code and caption
+      const tempContainer = document.createElement('div');
+      tempContainer.style.position = 'absolute';
+      tempContainer.style.top = '-9999px';
+      tempContainer.style.left = '-9999px';
+      tempContainer.style.padding = '5px';
+      tempContainer.style.backgroundColor = 'white'; // To ensure the background is white
+    
+      // Clone the QR code element and caption into the container
+      const clonedQrElement = qrElement.cloneNode(true);
+      // const captionElement = document.createElement('div');
+      // captionElement.innerText = this.caption; // Replace with your caption
+      // captionElement.style.marginTop = '10px';
+      // captionElement.style.textAlign = 'center';
+    
+      tempContainer.appendChild(clonedQrElement);
+      // tempContainer.appendChild(captionElement);
+      document.body.appendChild(tempContainer);
+    
+      // Use html2canvas to capture the temporary container
+      html2canvas(tempContainer).then(canvas => {
         canvas.toBlob(blob => {
           if (blob) { // Check if blob is not null
             const formData = new FormData();
             formData.append('image', blob, 'qr-code.png');
-            formData.append('caption', this.caption);
+            // formData.append('caption', this.caption);
             this.saveQrCode(formData);
           } else {
             console.error('Failed to create Blob from canvas');
           }
+    
+          // Clean up: Remove the temporary container from the DOM
+          document.body.removeChild(tempContainer);
         }, 'image/png');
       });
-    }
   }
+}
 
   saveQrCode(formData: FormData) {
     this.http.post('http://localhost:3000/save-qr-code', formData)
@@ -53,6 +76,80 @@ export class QrCodeSaveComponent {
         }
       });
   }
+
+  // qrCodeImageUrl: any;
+  // caption: string = '';
+  // generatedUrl: string = '';
+
+  // constructor(private sanitizer: DomSanitizer, private http: HttpClient,private router: Router) {}
+
+  // generateQRCode() {
+  //   const url = `http://localhost:4200/qr-code-display`; // Generate URL for the QR code
+  //   this.generatedUrl = url;
+
+  //   QRCode.toDataURL(url, { margin: 1 }, (err, url) => {
+  //     if (err) {
+  //       console.error('Error generating QR code:', err);
+  //       return;
+  //     }
+  //     this.qrCodeImageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  //   });
+  // }
+
+  // saveQRCode() {
+  //   const canvas = document.createElement('canvas');
+  //   const context = canvas.getContext('2d');
+
+  //   const qrImage = new Image();
+  //   qrImage.src = this.qrCodeImageUrl;
+
+  //   qrImage.onload = () => {
+  //     // Adjust canvas size to fit QR code and caption
+  //     canvas.width = qrImage.width;
+  //     canvas.height = qrImage.height + 30; // Adding space for the caption
+
+  //     if (context) {
+  //       // Draw the QR code onto the canvas
+  //       context.drawImage(qrImage, 0, 0);
+
+  //       // Add the caption below the QR code
+  //       context.font = '20px Arial';
+  //       context.textAlign = 'center';
+  //       context.fillText(this.caption, canvas.width / 2, qrImage.height + 20);
+
+  //       // Convert canvas to data URL
+  //       const dataUrl = canvas.toDataURL('image/png');
+
+  //       // Send the data URL to the backend
+  //       const formData = new FormData();
+  //       formData.append('image', this.dataURLtoBlob(dataUrl));
+  //       formData.append('caption', this.caption);
+
+  //       this.http.post('http://localhost:3000/save-qr-code', formData).subscribe(
+  //         response => {
+  //           console.log('QR code saved successfully:', response);
+  //         },
+  //         error => {
+  //           console.error('Error saving QR code:', error);
+  //         }
+  //       );
+  //     }
+  //   };
+  // }
+
+  // dataURLtoBlob(dataUrl: string) {
+  //   const parts = dataUrl.split(',');
+  //   const byteString = atob(parts[1]);
+  //   const mimeString = parts[0].split(':')[1].split(';')[0];
+
+  //   const ab = new ArrayBuffer(byteString.length);
+  //   const ia = new Uint8Array(ab);
+  //   for (let i = 0; i < byteString.length; i++) {
+  //     ia[i] = byteString.charCodeAt(i);
+  //   }
+
+  //   return new Blob([ab], { type: mimeString });
+  // }
 
   goToDisplayQR(){
     this.router.navigateByUrl('/qr-code-display')
