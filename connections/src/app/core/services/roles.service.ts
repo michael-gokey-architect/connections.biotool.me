@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Roles } from '../models/roles.interface';
+import { environment } from 'src/environments/environment.dev';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RolesService {
-  private apiURL = 'http://api.mozli.com/Role';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,7 @@ export class RolesService {
 
   getUserRoles(): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetAllUserRoles/')
+      .get(environment.apiUrl_roles + '/GetAllUserRoles/')
 
       .pipe(catchError(this.errorHandler));
   }
@@ -28,7 +28,7 @@ export class RolesService {
   createUserRole(role: Roles): Observable<any> {
     return this.httpClient
       .post(
-        this.apiURL + '/AddUserRole/',
+        environment.apiUrl_roles + '/AddUserRole/',
         JSON.stringify(role),
         this.httpOptions
       )
@@ -38,7 +38,7 @@ export class RolesService {
 
   deleteUserRoles(role_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteUserRole/' + role_id)
+      .delete(environment.apiUrl_roles + '/DeleteUserRole/' + role_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -48,7 +48,7 @@ export class RolesService {
   updateUserRole(role: Roles): Observable<any> {
     return this.httpClient
       .put(
-        this.apiURL + '/UpdateUserRole/',
+        environment.apiUrl_roles + '/UpdateUserRole/',
         JSON.stringify(role),
         this.httpOptions
       )

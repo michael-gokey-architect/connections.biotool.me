@@ -3,18 +3,6 @@
 		<h1 class="text-lg font-bold text-center mb-3"><span>ROLE DETAILS</span></h1>
 		<form [formGroup]="rolesForm" (ngSubmit)="onSubmit($event)">
 			<div class="mb-4">
-				<label class="block text-gray-700 text-sm mb-2" for="role_id">
-					<span>Role ID</span>
-				</label>
-				<input formControlName="role_id"
-					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					id="role_id" type="number" placeholder="Enter Role ID">
-				<div
-					*ngIf="rolesForm && rolesForm?.get('role_id')?.invalid && (rolesForm?.get('role_id')?.dirty || rolesForm?.get('role_id')?.touched)">
-					<p class="text-red-500 text-xs italic">Role ID is required.</p>
-				</div>
-			</div>
-			<div class="mb-4">
 				<label class="block text-gray-700 text-sm mb-2" for="role_type">
 					<span>Role Type</span>
 				</label>

@@ -14,7 +14,7 @@ export class CreatePiiComponent {
     //basic validators need to put check in UI
     this.piiForm = this.fb.group({
       user_id: ['', Validators.required],
-      date_of_birth: [''],
+      date_of_birth: [null],
       gender: [''],
       marital_status: [''],
       biography: ['']
