@@ -48,7 +48,6 @@ import { JourneyLandingComponent } from './shared/journey/journey-landing/journe
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
-import { ProfileDisplayComponent } from './features-michael/profile-display/profile-display.component';
 import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
 import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.component';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
@@ -110,7 +109,6 @@ const routes: Routes = [
   { path: 'org-event', component: OrganizationManagerComponent },
   { path: 'qrcode-reader', component: QrReaderComponent },
   { path: 'profile-loader', component: ProfileLoaderComponent },
-  { path: 'profile-reader', component: ProfileDisplayComponent },
   { path: 'qr-code-save', component: QrCodeSaveComponent },
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
   { path: 'image-uploader', component: ImageUploaderComponent},
