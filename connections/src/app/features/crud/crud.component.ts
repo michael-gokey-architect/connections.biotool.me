@@ -98,9 +98,9 @@ export class CrudComponent {
     //using router to navigate on same page
     this.router.navigateByUrl('/profile-loader');
   }
-  onProfile_Reader() {
+  onImageUploader() {
     //using router to navigate on same page
-    this.router.navigateByUrl('/profile-reader');
+    this.router.navigateByUrl('/image-uploader');
   }
 }
 
