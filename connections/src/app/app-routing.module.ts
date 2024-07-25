@@ -54,6 +54,9 @@ import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.compon
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
+import { BadgeLandingComponent } from './quest/badge-landing/badge-landing.component';
+import { CreateBadgeComponent } from './quest/create-badge/create-badge.component';
+import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -111,7 +114,9 @@ const routes: Routes = [
   { path: 'qr-code-save', component: QrCodeSaveComponent },
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
   { path: 'image-uploader', component: ImageUploaderComponent},
-
+  { path: 'badge', component: BadgeLandingComponent},
+  { path: 'create-badge', component: CreateBadgeComponent},
+  { path: 'get-badge', component: GetBadgeComponent},
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];
