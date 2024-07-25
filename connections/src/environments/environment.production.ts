@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    environmentName: "prod",
+    environmentName: "production",
 
     apiUrl_user:            'http://api.mozli.com/UserProfile',
     apiUrl_event:           'http://api.mozli.com/Event',
