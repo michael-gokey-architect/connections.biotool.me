@@ -2,11 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.dev';
+import { Badge } from '../models/badge.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class BadgeService {
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -16,9 +17,15 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getUserProfile(user_id: number): Observable<any> {
+  getBadge(badge_id: number): Observable<any> {
+    return this.httpClient.get(environment.apiUrl_badges + '/GetBadge/' + badge_id)
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
 
-    return this.httpClient.get(environment.apiUrl_user + '/GetUserProfile/' + user_id)
+  createBadge(badge: Badge): Observable<any> {
+    return this.httpClient.post(environment.apiUrl_badges + '/AddBadge/', JSON.stringify(badge), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       )

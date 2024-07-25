@@ -16,7 +16,6 @@ export class CreateRolesComponent {
   ) {
     //basic validators need to put check in UI
     this.rolesForm = this.fb.group({
-      role_id: ['', Validators.required],
       role_type: [''],
       organization_id: ['', Validators.required],
       role_status: [''],

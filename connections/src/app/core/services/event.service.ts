@@ -4,11 +4,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment.dev';
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
-  private apiURL = 'http://api.mozli.com/Event';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,7 +20,7 @@ export class EventService {
 
   getEvents(): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetAllEvents/')
+      .get(environment.apiUrl_event+ '/GetAllEvents/')
 
       .pipe(catchError(this.errorHandler));
   }
@@ -28,7 +28,7 @@ export class EventService {
   createEvent(event: Event): Observable<any> {
     return this.httpClient
       .post(
-        this.apiURL + '/AddEvent/',
+        environment.apiUrl_event + '/AddEvent/',
         JSON.stringify(event),
         this.httpOptions
       )
@@ -38,7 +38,7 @@ export class EventService {
 
   deleteEvents(event_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteEvent/' + event_id)
+      .delete(environment.apiUrl_event + '/DeleteEvent/' + event_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -48,7 +48,7 @@ export class EventService {
   updateEvent(event: Event): Observable<any> {
     return this.httpClient
       .put(
-        this.apiURL + '/UpdateEvent/',
+        environment.apiUrl_event + '/UpdateEvent/',
         JSON.stringify(event),
         this.httpOptions
       )

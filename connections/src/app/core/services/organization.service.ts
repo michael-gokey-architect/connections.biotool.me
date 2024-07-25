@@ -5,13 +5,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Organization } from '../models/organization.interface';
+import { environment } from 'src/environments/environment.dev';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrganizationService {
-
-  private apiURL = "http://api.mozli.com/Organization";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -23,7 +22,7 @@ export class OrganizationService {
 
   getOrganizations(): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/GetOrganizations/')
+    return this.httpClient.get(environment.apiUrl_organization + '/GetOrganizations/')
 
       .pipe(
         catchError(this.errorHandler)
@@ -32,7 +31,7 @@ export class OrganizationService {
 
   createOrganization(organization: Organization): Observable<any> {
 
-    return this.httpClient.post(this.apiURL + '/AddOrganization/', JSON.stringify(organization), this.httpOptions)
+    return this.httpClient.post(environment.apiUrl_organization + '/AddOrganization/', JSON.stringify(organization), this.httpOptions)
 
       .pipe(
         catchError(this.errorHandler)
@@ -41,7 +40,7 @@ export class OrganizationService {
 
   deleteOrganizations(organization_id: number): Observable<any> {
 
-    return this.httpClient.delete(this.apiURL + '/DeleteOrganization/'+ organization_id)
+    return this.httpClient.delete(environment.apiUrl_organization  + '/DeleteOrganization/'+ organization_id)
 
       .pipe(
         catchError(this.errorHandler)
@@ -52,7 +51,7 @@ export class OrganizationService {
   //right now org id is given as req body 
   updateOrganization(organization: Organization): Observable<any> {
 
-    return this.httpClient.put(this.apiURL + '/UpdateOrganization/', JSON.stringify(organization), this.httpOptions)
+    return this.httpClient.put(environment.apiUrl_organization  + '/UpdateOrganization/', JSON.stringify(organization), this.httpOptions)
 
       .pipe(
         catchError(this.errorHandler)
