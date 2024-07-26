@@ -14,7 +14,6 @@ export class QrCodeSaveComponent {
   instagramHandle: string = '';
   qrData: string | null = null;
   caption: string = '';
-  qrCodeImage: string | null = null;
 
   constructor(private router: Router, private http: HttpClient) {}
 
