@@ -87,12 +87,11 @@ export class CrudComponent {
     this.router.navigateByUrl('/qrcode-reader')
   } 
   onProfile_Loader() {
-    this.router.navigateByUrl('/profile-loader')
-  } 
-  onProfile_Reader() {
-    this.router.navigateByUrl('/profile-reader')
-  } 
-
+    this.router.navigateByUrl('/profile-loader');
+  }
+  onImageUploader() {
+    this.router.navigateByUrl('/image-uploader');
+  }
 }
 
 
