@@ -38,6 +38,7 @@ export class ImageUploaderComponent implements OnInit {
         reader.onload = (e: any) => {
           this.preview = e.target.result;
         
+          //Michael this is removing the header from the image file so we can JUST have base64. This header needs to go back in to show the image
           this.strImage = e.target.result.replace(/^data:image\/[a-z]+;base64,/, "");
           
           console.log(this.strImage);

@@ -12,7 +12,7 @@ apiUrl_userPii:         'http://api.mozli.com/Pii',
 apiUrl_socialMediLink:  'http://api.mozli.com/Link',
 apiUrl_roles:           'http://api.mozli.com/Role',
 apiUrl_themes:          'http://api.mozli.com/Theme',
-apiUrl_badges:          'http://api.mozli.com/Badge'
+apiUrl_badges:          'http://api.mozli.com/Badge',
 }
 
 
