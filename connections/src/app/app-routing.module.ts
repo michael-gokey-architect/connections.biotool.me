@@ -48,12 +48,14 @@ import { JourneyLandingComponent } from './shared/journey/journey-landing/journe
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
-import { ProfileDisplayComponent } from './features-michael/profile-display/profile-display.component';
 import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
 import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.component';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
+import { BadgeLandingComponent } from './quest/badge-landing/badge-landing.component';
+import { CreateBadgeComponent } from './quest/create-badge/create-badge.component';
+import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -107,11 +109,12 @@ const routes: Routes = [
   { path: 'org-event', component: OrganizationManagerComponent },
   { path: 'qrcode-reader', component: QrReaderComponent },
   { path: 'profile-loader', component: ProfileLoaderComponent },
-  { path: 'profile-reader', component: ProfileDisplayComponent },
   { path: 'qr-code-save', component: QrCodeSaveComponent },
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
   { path: 'image-uploader', component: ImageUploaderComponent},
-
+  { path: 'badge', component: BadgeLandingComponent},
+  { path: 'create-badge', component: CreateBadgeComponent},
+  { path: 'get-badge', component: GetBadgeComponent},
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];

@@ -45,6 +45,10 @@ export class CrudComponent {
     this.router.navigateByUrl('/organization');
   }
 
+  onBadges() {
+    this.router.navigateByUrl('/badge')
+  }
+
   onEvents() {
     this.router.navigateByUrl('/events')
   }

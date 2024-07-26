@@ -4,7 +4,6 @@ import { ComOneComponent } from './com-one/com-one.component';
 import { ComTwoComponent } from './com-two/com-two.component';
 import { QrReaderComponent } from './qr-reader/qr-reader.component';
 import { ProfileLoaderComponent } from './profile-loader/profile-loader.component';
-import { ProfileDisplayComponent } from './profile-display/profile-display.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 
@@ -13,9 +12,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     ComOneComponent,
     ComTwoComponent,
     QrReaderComponent,
-    ProfileLoaderComponent,
-    ProfileDisplayComponent,
-    
+    ProfileLoaderComponent,    
   ],
   imports: [
     CommonModule,
