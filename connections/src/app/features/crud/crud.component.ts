@@ -45,58 +45,52 @@ export class CrudComponent {
     this.router.navigateByUrl('/organization');
   }
 
+  onBadges() {
+    this.router.navigateByUrl('/badge')
+  }
+
   onEvents() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/events');
+    this.router.navigateByUrl('/events')
   }
   onConnections() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/connections');
+    this.router.navigateByUrl('/connections')
   }
 
   onLinks() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/links');
+    this.router.navigateByUrl('/links')
   }
   onTags() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/tags');
+    this.router.navigateByUrl('/tags')
   }
   onRoles() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/roles');
+    this.router.navigateByUrl('/roles')
   }
   onPii() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/pii');
+    this.router.navigateByUrl('/pii')
   }
   onQuest() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/quest');
+    this.router.navigateByUrl('/quest')
   }
   onTrigger() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/trigger');
+    this.router.navigateByUrl('/trigger')
   }
   onJourney() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/journey');
+    this.router.navigateByUrl('/journey')
   }
   onQRCode() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/qrcode');
+    this.router.navigateByUrl('/qrcode')
+  } 
+  onQRCodeSave() {
+    this.router.navigateByUrl('/qr-code-save')
   }
   onQR_Code_Reader() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/qrcode-reader');
-  }
+    this.router.navigateByUrl('/qrcode-reader')
+  } 
   onProfile_Loader() {
-    //using router to navigate on same page
     this.router.navigateByUrl('/profile-loader');
   }
-  onProfile_Reader() {
-    //using router to navigate on same page
-    this.router.navigateByUrl('/profile-reader');
+  onImageUploader() {
+    this.router.navigateByUrl('/image-uploader');
   }
 }
 
