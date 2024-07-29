@@ -43,6 +43,7 @@ import { CreateQuestComponent } from './quest/create-quest/create-quest.componen
 import { UpdateQuestComponent } from './quest/update-quest/update-quest.component';
 import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GetQuestComponent,
     CreateQuestComponent,
     UpdateQuestComponent,
-    DeleteQuestComponent
+    DeleteQuestComponent,
+    BadgeLandingComponent
   ],
   exports: [  
     FooterComponent,

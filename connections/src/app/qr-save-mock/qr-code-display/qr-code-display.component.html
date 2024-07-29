@@ -1,9 +1,9 @@
-<div>
+<div class="p-4 text-center">
   <h2>Saved QR Codes</h2>
-  <div *ngFor="let qrCode of qrCodes">
-    <img [src]="'http://localhost:3000/' + qrCode.image" alt="QR Code">
+  <div *ngFor="let qrCode of qrCodes" class="flex justify-center items-center">
+    <img class="w-32 h-35" [src]="'http://localhost:3000/' + qrCode.image" alt="QR Code">
     <div>{{ qrCode.caption }}</div>
   </div>
+  <button type="button" (click)="goToGenerateQR()"
+    class="px-4 py-2 mt-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Generate QR Code</button>
 </div>
-
-<button type="button" (click)="goToGenerateQR()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Generate QR Code</button>

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { response } from 'express';
 import { Links } from 'src/app/core/models/links';
 import { InitialsPipe } from 'src/app/core/pipes/initials.pipe';
 import { LinksService } from 'src/app/core/services/links.service';
+import { OrganizationService } from 'src/app/core/services/organization.service';
 import { PiiService } from 'src/app/core/services/pii.service';
+import { ThemeService } from 'src/app/core/services/theme.service';
 import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
@@ -27,8 +30,10 @@ export class ProfileLoaderComponent {
   imgSrc: string = '';
   theme: string = '';
   givenName: string = '';
+  orgId: number = 0;
+  themeId: number = 0;
 
-  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService){
+  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService, private orgService: OrganizationService, private themeService: ThemeService){
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
     });
@@ -69,17 +74,59 @@ export class ProfileLoaderComponent {
     })
     this.userService.getUserProfile(this.id).subscribe({
       next: response => {
+        console.log(response)
         this.firstName = response.first_name;
         this.lastName = response.last_name;
-        this.theme = response.user_theme.theme_name ? response.user_theme.theme_name : 'N/A';
+        this.theme = response.user_theme.theme_name ? (response.user_theme.theme_name + ", P") : '';
+        this.orgId = response.org.organization_id;
         this.givenName = this.firstName + " " + this.lastName;
         this.profileInitials = this.initialPipe.transform(this.givenName);
         console.log(this.givenName);
         console.log(this.theme)
+        console.log(this.orgId)
+        console.log("User theme " + response.user_theme.theme_name);
+        if(this.theme == '' && this.orgId > 0){
+          this.GetOrgTheme();
+        }
+        else if(this.theme == '' && this.orgId == 0)
+        {
+          this.theme = "patchWrk, D";
+        }
       }
     })
+  }
 
+  GetOrgTheme(): void {
+    this.orgService.getOrganization(this.orgId).subscribe({
+      next: response => {
+        this.themeId = response.theme_id
+        if(this.themeId != 0)
+        {
+          this.GetThemes();
+        }
+        else
+        {
+          this.theme = "patchWrk, D";
+        }
+        console.log(response.theme_id);
+      }
+    })
     
+  }
+
+  GetThemes(): void {
+    this.themeService.getThemes().subscribe({
+      next: response => {
+        if(response.theme_id == this.themeId)
+        {
+          this.theme = response.theme_name + ', O'
+        }
+        else
+        {
+          this.theme = "patchWrk, D";
+        }
+      }
+    })
   }
 
   sortLinks(): void{

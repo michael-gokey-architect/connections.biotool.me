@@ -9,6 +9,7 @@ import { GetBadgeComponent } from './get-badge/get-badge.component';
 import { CreateBadgeComponent } from './create-badge/create-badge.component';
 import { DeleteBadgeComponent } from './delete-badge/delete-badge.component';
 import { UpdateBadgeComponent } from './update-badge/update-badge.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +27,7 @@ import { UpdateBadgeComponent } from './update-badge/update-badge.component';
   imports: [
     CommonModule,
     SharedModule,
+    ReactiveFormsModule,
   ],
   exports: [
     QuestBadgesPanelComponent,

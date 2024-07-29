@@ -29,6 +29,13 @@ export class OrganizationService {
       )
   }
 
+  getOrganization(org_id: number): Observable<any> {
+    return this.httpClient.get(environment.apiUrl_organization + '/GetOrganization/' + org_id)
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
+
   createOrganization(organization: Organization): Observable<any> {
 
     return this.httpClient.post(environment.apiUrl_organization + '/AddOrganization/', JSON.stringify(organization), this.httpOptions)
