@@ -11,15 +11,15 @@ import { Router } from '@angular/router';
 })
 export class QrCodeSaveComponent {
 
-  instagramHandle: string = '';
+  urlHandle: string = '';
   qrData: string | null = null;
   caption: string = '';
 
   constructor(private router: Router, private http: HttpClient) {}
 
   generateQrCode() {
-    const instagramUrl = `https://www.instagram.com/${this.instagramHandle}/`;
-    this.qrData = instagramUrl;
+    const urlHandle = `https://${this.urlHandle}/`;
+    this.qrData = urlHandle;
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 
