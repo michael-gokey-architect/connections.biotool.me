@@ -21,6 +21,7 @@ import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.co
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EventManagerComponent,
     PanelistManagerComponent,
     QrCodeSaveComponent,
-    QrCodeDisplayComponent
+    QrCodeDisplayComponent,
+    QrUserProfileComponent
   ],
   imports: [
     BrowserModule,

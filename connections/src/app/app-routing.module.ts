@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GuestPublicLandingComponent } from './guest/guest-public-landing/guest-public-landing.component';
 import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-found.component';
@@ -54,6 +54,7 @@ import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.compon
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
+import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -110,6 +111,7 @@ const routes: Routes = [
   { path: 'profile-reader', component: ProfileDisplayComponent },
   { path: 'qr-code-save', component: QrCodeSaveComponent },
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
+  {path: 'qr-user-profile', component: QrUserProfileComponent } , 
   { path: 'image-uploader', component: ImageUploaderComponent},
 
   { path: '', redirectTo: 'guest', pathMatch: 'full' },

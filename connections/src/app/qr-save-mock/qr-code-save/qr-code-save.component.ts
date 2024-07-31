@@ -19,8 +19,8 @@ export class QrCodeSaveComponent {
   constructor(private router: Router, private http: HttpClient) {}
 
   generateQrCode() {
-    const instagramUrl = `https://www.instagram.com/${this.instagramHandle}/`;
-    this.qrData = instagramUrl;
+    // const urlHandle = `https://${this.urlHandle}/`;
+    this.qrData = `https://5a3c-205-254-171-98.ngrok-free.app/qr-user-profile?profileId=123&action=update`;
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 
