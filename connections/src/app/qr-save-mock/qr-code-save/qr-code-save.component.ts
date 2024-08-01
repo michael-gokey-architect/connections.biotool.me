@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class QrCodeSaveComponent {
 
-  urlHandle: string = '';
+  // urlHandle: string = '';
   qrData: string | null = null;
   caption: string = '';
 
@@ -19,7 +19,7 @@ export class QrCodeSaveComponent {
 
   generateQrCode() {
     // const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = `https://5a3c-205-254-171-98.ngrok-free.app/qr-user-profile?profileId=123&action=update`;
+    this.qrData = `http://localhost:4200/qr-user-profile?profileId=123&action=update`;
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 
