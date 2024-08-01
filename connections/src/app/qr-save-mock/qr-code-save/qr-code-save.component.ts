@@ -18,13 +18,8 @@ export class QrCodeSaveComponent {
   constructor(private router: Router, private http: HttpClient) {}
 
   generateQrCode() {
-<<<<<<< HEAD
     // const urlHandle = `https://${this.urlHandle}/`;
     this.qrData = `https://5a3c-205-254-171-98.ngrok-free.app/qr-user-profile?profileId=123&action=update`;
-=======
-    const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = urlHandle;
->>>>>>> b7af0ea474015a277a8add7a55ee447ed8f0dab8
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 

@@ -53,13 +53,10 @@ import { QrReaderComponent } from './features-michael/qr-reader/qr-reader.compon
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
-<<<<<<< HEAD
 import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
-=======
 import { BadgeLandingComponent } from './quest/badge-landing/badge-landing.component';
 import { CreateBadgeComponent } from './quest/create-badge/create-badge.component';
 import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
->>>>>>> b7af0ea474015a277a8add7a55ee447ed8f0dab8
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
