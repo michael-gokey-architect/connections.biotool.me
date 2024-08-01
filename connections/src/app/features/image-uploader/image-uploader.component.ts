@@ -11,6 +11,7 @@ export class ImageUploaderComponent implements OnInit {
   currentFile?: File;
   message = '';
   preview = '';
+  strImage = '';
 
   imageInfos?: Observable<any>;
 
@@ -35,14 +36,19 @@ export class ImageUploaderComponent implements OnInit {
         const reader = new FileReader();
 
         reader.onload = (e: any) => {
-          console.log(e.target.result);
           this.preview = e.target.result;
-        };
         
+          //Michael this is removing the header from the image file so we can JUST have base64. This header needs to go back in to show the image
+          this.strImage = e.target.result.replace(/^data:image\/[a-z]+;base64,/, "");
+          
+          console.log(this.strImage);
+        };
         reader.readAsDataURL(this.currentFile);
       }
     }
   }
+
+
 
   upload(): void {
     if(this.selectedFiles){
@@ -57,4 +63,5 @@ export class ImageUploaderComponent implements OnInit {
     }
   }
 
+  
 }

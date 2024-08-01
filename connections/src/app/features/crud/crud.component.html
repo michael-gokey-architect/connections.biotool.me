@@ -85,9 +85,17 @@
 			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			QR Code generator
 		</button>
+		<button type="button" (click)="onQRCodeSave()"
+		class="w-full border-1 border-[#353535] bg-neutral-200 truncate shadow-gray text-center text-[#212121] py-3 mt-0 mb-0 rounded-full mx-auto">
+		QR Code Save Caption
+	    </button>
 		<button type="button" (click)="onConnections()"
 			class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
 			Connections
+		</button>
+		<button type="button" (click)="onBadges()"
+			class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
+			Badges
 		</button>
 		<button type="button" (click)="onEvents()"
 			class="w-full border-1 border-info bg-main truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
@@ -121,9 +129,9 @@
 			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
 			profile-loader
 		</button>
-		<button type="button" (click)="onProfile_Reader()"
+		<button type="button" (click)="onImageUploader()"
 			class="w-full border-1 border-info bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto duke:text-info">
-			profile-reader
+			ImageUploader
 		</button>				
 	</div>
 </div>
