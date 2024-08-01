@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-qr-user-profile',
@@ -29,8 +29,14 @@ export class QrUserProfileComponent {
   }
 
   loadUserProfile(profileId: string): void {
-    this.http.get(`http://localhost:3000/user-details?profileId=${profileId}`).subscribe(
+    this.http.get(`https://7cf7-205-254-171-6.ngrok-free.app/user-details?profileId=${profileId}`, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true'
+      })
+    }).subscribe(
       (data) => {
+        console.log(data)
         this.userDetails = data;
       },
       (error) => {
@@ -53,7 +59,12 @@ export class QrUserProfileComponent {
       action: 'updateProfileVisit'
     };
 
-    this.http.post('http://localhost:3000/update-profile-visit', payload).subscribe(
+    this.http.post('https://7cf7-205-254-171-6.ngrok-free.app/update-profile-visit', payload,{
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true'
+      })
+    }).subscribe(
       (response) => {
         console.log('Profile updated successfully:', response);
       },
@@ -65,6 +76,7 @@ export class QrUserProfileComponent {
 
   toggleFollow(): void {
     this.isFollowing = !this.isFollowing;
+    alert("Followed/Unfollowed")
     // Optionally send follow/unfollow status to backend
   }
 }

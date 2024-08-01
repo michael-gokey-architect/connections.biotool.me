@@ -23,13 +23,14 @@ const qrCodesFilePath = './qr-codes.json';
 
 // Mock database
 const users = {
-  '123': { name: 'John Bianchi', about: 'Lorem ipsum...' },
+  '123': { name: 'John', about: "Hi I'm John happy to have you here" },
   // Add more users as needed
 };
 
 app.get('/user-details', (req, res) => {
   const profileId = req.query.profileId;
   const userDetails = users[profileId];
+  console.log("Profile Id",profileId);
   if (userDetails) {
     res.json(userDetails);
   } else {
