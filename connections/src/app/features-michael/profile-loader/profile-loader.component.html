@@ -22,40 +22,50 @@
                 </button>
             </div>
             <mat-accordion>
-            <div *ngIf="bio != ''">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>Bio</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p>Bio: {{bio}}</p>
-                </mat-expansion-panel>
-                
-            </div>
-            <div *ngIf="linksS.length > 0">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>S Links</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <li *ngFor="let link of linksS | slice:0:4" ><img class="image" [src]="showImage(link.url_label)">{{ link.link_type }}
-                        , {{link.url_link}}</li>
+                <div *ngIf="bio != ''">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>Bio</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Bio: {{bio}}</p>
+                    </mat-expansion-panel>
+
+                </div>
+                <div *ngIf="linksS.length > 0">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>S Links</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <li *ngFor="let link of linksS | slice:0:4"><img class="image"
+                                [src]="showImage(link.url_label)">{{ link.link_type }}
+                            , {{link.url_link}}</li>
                         <div *ngIf="linksS.length > 4">
                             <p>+ {{linksSAdjusted}} more</p>
                         </div>
-                </mat-expansion-panel>
-            </div>
-            <div *ngIf="linksW.length > 0">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>W Links</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <li *ngFor="let link of linksW | slice:0:3">{{ link.link_type }}
-                        , {{link.url_link}}</li>
+                    </mat-expansion-panel>
+                </div>
+                <div *ngIf="linksW.length > 0">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>W Links</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <li *ngFor="let link of linksW | slice:0:3">{{ link.link_type }}
+                            , {{link.url_link}}</li>
                         <div *ngIf="linksW.length > 3">
                             <p>+ {{linksWAdjusted}} more</p>
                         </div>
-                </mat-expansion-panel>
-            </div>
-        </mat-accordion>
+                    </mat-expansion-panel>
+                </div>
+            </mat-accordion>
         </form>
+        <div *ngIf="bio != '' || linksS.length > 0 || linksW.length > 0">
+            <input type="image" src="./../../../assets/images/scan_me_qr_code.jpg" class="w-16 h-22 ml-36" (click)="generateQrCode()"/>
+            <div *ngIf="qrData" class="mt-4">
+                <div id="qrCodeWithCaption" class="flex flex-col items-center">
+                    <ngx-qrcode [value]="qrData"></ngx-qrcode>
+                    <!-- <div class="mt-[-18px] text-[14px] text-gray-700 font-bold">{{ caption }}</div> -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>

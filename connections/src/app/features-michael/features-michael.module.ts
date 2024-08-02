@@ -6,6 +6,7 @@ import { QrReaderComponent } from './qr-reader/qr-reader.component';
 import { ProfileLoaderComponent } from './profile-loader/profile-loader.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgxQRCodeModule
   ]
 })
 export class FeaturesMichaelModule { }

@@ -33,6 +33,9 @@ export class ProfileLoaderComponent {
   orgId: number = 0;
   themeId: number = 0;
 
+  qrData: string | null = null;
+
+
   constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService, private orgService: OrganizationService, private themeService: ThemeService){
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
@@ -192,4 +195,14 @@ export class ProfileLoaderComponent {
         return '';
     }
   }
+
+  generateQrCode() {
+    // const urlHandle = `https://${this.urlHandle}/`;
+
+    // need to edit this url as per environment
+    this.qrData = `https://425d-205-254-171-6.ngrok-free.app/qr-user-profile?profileId=${this.id}&action=update`;
+    // this.qrData = 'www.google.com'
+    // setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
+  }
+  
 }

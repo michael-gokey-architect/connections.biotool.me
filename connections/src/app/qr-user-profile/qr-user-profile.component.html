@@ -1,4 +1,4 @@
-<!-- <div data-theme="grey">
+<div data-theme="grey" *ngIf="bio != ''">
 	<div class="flex justify-between items-center p-3 bg-primary">
 		<div class="flex items-center gap-4">
 			<p class="uppercase text-infoLight font-display">Profile Page</p>
@@ -8,113 +8,98 @@
 			<img class="header-icon w-8" src="/assets/icon/hamburger.png" alt="Menu icon">
 		</div>
 	</div>
-	
-	
-	
+
+
+
 	<div class="profile p-7 bg-cover bg-center bg-primary retroDiner:bg-accentDark">
 		<div class="flex items-center">
 			<img class="w-20" alt="John Bianchi" src="../assets/images/onboarding-images/JohnBianchi.png" />
 			<div class="ml-5">
-				<p class="text-xl mb-4 text-infoLight uppercase font-display">{{userFullName}}</p>
+				<p class="text-xl mb-4 text-infoLight uppercase font-display">{{firstName}} {{lastName}}</p>
 				<div class="grid grid-cols-4 top-1">
 					<a href="https://www.facebook.com/john.bianchi221" target="blank" title="Facebook">
-						<img class="w-8 h-8 mr-2" alt="Facebook logo" src="../assets/images/onboarding-images/Facebook.png" />
+						<img class="w-8 h-8 mr-2" alt="Facebook logo"
+							src="../assets/images/onboarding-images/Facebook.png" />
 					</a>
-					<a href="https://www.linkedin.com/in/bianchijohn/" target="blank" title="LinkedIn">
-						<img class="w-8 h-8 mr-2" alt="LinkedIn logo" src="../assets/images/onboarding-images/Linkedin.tif.png" />
+					<a href="{{linkedinLink}}" target="blank" title="LinkedIn">
+						<img class="w-8 h-8 mr-2" alt="LinkedIn logo"
+							src="../assets/images/onboarding-images/Linkedin.tif.png" />
 					</a>
-					<a href="https://x.com/BTCJohnnyB" target="blank" title="Twitter X">
-						<img class="w-8 h-8 mr-2" alt="Twitter X logo" src="../assets/images/onboarding-images/X.tif.png" />
+					<a href="{{twitterLink}}" target="blank" title="Twitter X">
+						<img class="w-8 h-8 mr-2" alt="Twitter X logo"
+							src="../assets/images/onboarding-images/X.tif.png" />
 					</a>
-					<a href="https://www.instagram.com/bianchidoingthings/" target="blank" title="Instagram">
-						<img class="w-8 h-8" alt="Instagram logo" src="../assets/images/onboarding-images/Instagram.tif.png" />
+					<a href="{{instaLink}}" target="blank" title="Instagram">
+						<img class="w-8 h-8" alt="Instagram logo"
+							src="../assets/images/onboarding-images/Instagram.tif.png" />
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	<div class="about-me bg-inactive retroDiner:bg-tertiary px-8 text-center py-5">
+
+
+	<div *ngIf="!bio" class="text-center font-bold mt-6">
+		<p>Loading details...</p>
+	</div>
+	<div class="about-me bg-inactive retroDiner:bg-tertiary px-8 text-center py-5" *ngIf="bio">
 		<h1 class="text-sm uppercase text-center leading-10 text-[#212121] font-display">About Me:</h1>
 		<p class="pb-4 text-sm">
-			Cupcake ipsum dolor sit amet macaroon jelly beans. Wafer danish biscuit shortbread chupa chups. Jelly tart jujubes
-			biscuit cake pastry candy candy danish.
+			{{bio}}
 		</p>
 		<p class="pb-4 text-sm">
-			Pudding cheesecake toffee ice cream soufflé. Caramels sugar plum jelly cupcake gummi bears. Icing tiramisu halvah
-			biscuit pie brownie chocolate cake jelly.
+			{{bio}} ? {{bio[1]}} : ''
 		</p>
+
+		<!-- Follow -->
+		<div class="flex items-center justify-center w-full mt-2">
+			<label for="follow" class="flex items-center cursor-pointer">
+				<div class="mr-2 text-black font-bold">
+					{{ isFollowing ? 'Unfollow' : 'Follow' }} {{firstName}} {{lastName}}!
+				</div>
+				<!-- toggle -->
+				<div class="relative">
+					<!-- input -->
+					<input id="follow" type="checkbox" class="sr-only" (click)="toggleFollow()">
+					<!-- line -->
+					<div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+					<!-- dot -->
+					<div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+				</div>
+				<!-- label -->
+			</label>
+		</div>
 	</div>
-	
-	
+
 	<div id="links">
 		<div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 font-semibold">
 			<button type="button"
 				class="w-full bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
-				LinkedIn
+				Website 1
 			</button>
 			<button type="button"
 				class="w-full border-1 border-trimDark bg-secondary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
-				Connections
+				Website 2
 			</button>
 			<button type="button"
 				class="w-full border-1 border-trimDark bg-tertiary truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
-				Events
+				Website 3
 			</button>
 			<button type="button"
 				class="w-full bg-inactive truncate shadow-gray text-center text-info py-3 mt-0 mb-0 rounded-full mx-auto">
-				Organization
+				Website 4
 			</button>
 		</div>
 	</div>
-	
-	
-	
-	<div id="badges" class="grid grid-cols-3 gap-4 w-10/12 mx-auto mt-12 mb-10 badges">
-		<div id="badgesQuests" class="flex flex-col items-center">
-			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
-				<div class="text-center w-full text-infoLight z-30">
-					<a href="#" title="quest badge"> <img class="w-auto h-14 mt-2 mx-auto"
-							src="../assets/images/onboarding-images/quest.png" alt="quest badge" /></a>
-				</div>
-			</div>
-			<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Quest</p>
-		</div>
-	
-		<div id="badgesMine" class="flex flex-col items-center">
-			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
-				<div class="text-center w-full text-infoLight z-30">
-					<a href="#" title="my badges"> <img class="w-auto h-12 mx-auto mt-3"
-							src="../assets/images/onboarding-images/badges.png" alt="badges" /></a>
-				</div>
-			</div>
-			<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Badges</p>
-		</div>
-	
-		<div id="badgesRewards" class="flex flex-col items-center">
-			<div
-				class="relative shadow-blue w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-b from-accentDark to-primary retroDiner:from-accentLight retroDiner:to-primary border-3 border-info">
-				<div class="text-center w-full text-infoLight z-30">
-					<a href="#" title="rewards badge"> <img class="w-auto h-16 mx-auto mt-3"
-							src="../assets/images/onboarding-images/rewards.png" alt="rewards badge" /> </a>
-				</div>
-			</div>
-			<p class="text-center text-xs uppercase pt-1 mt-2 w-full">My Rewards</p>
-		</div>
-	</div>
-	
-	
-	
+
+
 	<footer class="bg-primary text-infoLight">
 		<div class="mx-auto max-w-7xl overflow-hidden py-6 lg:px-8">
 			<nav class="-mb-6 columns-1 text-center grid grid-cols-4" aria-label="Footer">
 				<div class="pb-6">
 					<a title="Home page" href="#" class="">
-						<img alt="Home icon" class="w-8 h-auto mx-auto" src="../assets/icon/home-icon.png" alt="home icon" />
+						<img alt="Home icon" class="w-8 h-auto mx-auto" src="../assets/icon/home-icon.png"
+							alt="home icon" />
 					</a>
 				</div>
 				<div class="pb-6">
@@ -125,25 +110,24 @@
 				</div>
 				<div class="pb-6">
 					<a title="Your profiles page" href="#" class="">
-						<img alt="Profile id icon" class="w-8 h-auto mx-auto" src="../assets/icon/biotool.png" alt="biotool icon" />
+						<img alt="Profile id icon" class="w-8 h-auto mx-auto" src="../assets/icon/biotool.png"
+							alt="biotool icon" />
 					</a>
 				</div>
 				<div class="pb-6">
 					<a title="Connections to freinds page" href="#" class="">
-						<img alt="Connections comment chat icon" class="w-8 h-auto mx-auto" src="../assets/icon/connections-icon.png"
-							alt="connections icon" />
+						<img alt="Connections comment chat icon" class="w-8 h-auto mx-auto"
+							src="../assets/icon/connections-icon.png" alt="connections icon" />
 					</a>
 				</div>
 			</nav>
 		</div>
 	</footer>
-</div> -->
+</div>
 
 
-
-
-<!-- details from backend -->
-<div *ngIf="userDetails">
+<!-- details from node js backend -->
+<!-- <div *ngIf="userDetails">
     <h1>{{ userDetails.name }}</h1>
     <p>{{ userDetails.about }}</p>
     <button (click)="toggleFollow()">
@@ -152,4 +136,4 @@
   </div>
   <div *ngIf="!userDetails">
     <p>Loading user details...</p>
-  </div>
+  </div> -->
