@@ -59,11 +59,21 @@
             </mat-accordion>
         </form>
         <div *ngIf="bio != '' || linksS.length > 0 || linksW.length > 0">
-            <input type="image" src="./../../../assets/images/scan_me_qr_code.jpg" class="w-16 h-22 ml-36" (click)="generateQrCode()"/>
+            <input type="image" src="./../../../assets/scan_me_qr_code.jpg" class="w-16 h-22 ml-36"
+                (click)="generateQrCode()" />
             <div *ngIf="qrData" class="mt-4">
                 <div id="qrCodeWithCaption" class="flex flex-col items-center">
                     <ngx-qrcode [value]="qrData"></ngx-qrcode>
                     <!-- <div class="mt-[-18px] text-[14px] text-gray-700 font-bold">{{ caption }}</div> -->
+                </div>
+            </div>
+            <div id="links">
+                <div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 font-semibold">
+                    <button type="button"
+                        class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
+                        Scan QR Code
+                    </button>
+                    //scanner
                 </div>
             </div>
         </div>
