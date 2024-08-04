@@ -73,9 +73,13 @@
                         class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
                         Scan QR Code
                     </button>
-                    //scanner
+                    <!-- //scanner -->
+                    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+

@@ -7,6 +7,7 @@ import { ProfileLoaderComponent } from './profile-loader/profile-loader.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { ZXingScannerModule } from '@zxing/ngx-scanner'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
     FormsModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    ZXingScannerModule
   ]
 })
 export class FeaturesMichaelModule { }
