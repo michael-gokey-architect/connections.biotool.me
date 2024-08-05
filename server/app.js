@@ -21,6 +21,32 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 const qrCodesFilePath = './qr-codes.json';
 
+// Mock database
+const users = {
+  '123': { name: 'John', about: "Hi I'm John happy to have you here" },
+  // Add more users as needed
+};
+
+app.get('/user-details', (req, res) => {
+  const profileId = req.query.profileId;
+  const userDetails = users[profileId];
+  console.log("Profile Id",profileId);
+  if (userDetails) {
+    res.json(userDetails);
+  } else {
+    res.status(404).send('User not found');
+  }
+});
+
+app.post('/update-profile-visit', (req, res) => {
+  const { profileId, updateTimestamp, action } = req.body;
+
+  // Logic to update the profile visit count or log visit in the database
+  console.log(`Profile ${profileId} visited at ${updateTimestamp} with action ${action}`);
+
+  res.status(200).send({ message: 'Profile visit updated successfully' });
+});
+
 app.post('/save-qr-code', upload.single('image'), (req, res) => {
   try {
     const caption = req.body.caption;

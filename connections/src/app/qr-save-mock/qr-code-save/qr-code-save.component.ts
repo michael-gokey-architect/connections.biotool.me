@@ -11,15 +11,15 @@ import { Router } from '@angular/router';
 })
 export class QrCodeSaveComponent {
 
-  urlHandle: string = '';
+  // urlHandle: string = '';
   qrData: string | null = null;
   caption: string = '';
 
   constructor(private router: Router, private http: HttpClient) {}
 
   generateQrCode() {
-    const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = urlHandle;
+    // const urlHandle = `https://${this.urlHandle}/`;
+    this.qrData = `https://425d-205-254-171-6.ngrok-free.app/qr-user-profile?profileId=123&action=update`;
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 

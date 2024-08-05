@@ -22,40 +22,77 @@
                 </button>
             </div>
             <mat-accordion>
-            <div *ngIf="bio != ''">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>Bio</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p>Bio: {{bio}}</p>
-                </mat-expansion-panel>
-                
-            </div>
-            <div *ngIf="linksS.length > 0">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>S Links</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <li *ngFor="let link of linksS | slice:0:4" ><img class="image" [src]="showImage(link.url_label)">{{ link.link_type }}
-                        , {{link.url_link}}</li>
+                <div *ngIf="bio != ''">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>Bio</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Bio: {{bio}}</p>
+                    </mat-expansion-panel>
+
+                </div>
+                <div *ngIf="linksS.length > 0">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>S Links</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <li *ngFor="let link of linksS | slice:0:4"><img class="image"
+                                [src]="showImage(link.url_label)">{{ link.link_type }}
+                            , {{link.url_link}}</li>
                         <div *ngIf="linksS.length > 4">
                             <p>+ {{linksSAdjusted}} more</p>
                         </div>
-                </mat-expansion-panel>
-            </div>
-            <div *ngIf="linksW.length > 0">
-                <mat-expansion-panel hideToggle>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>W Links</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <li *ngFor="let link of linksW | slice:0:3">{{ link.link_type }}
-                        , {{link.url_link}}</li>
+                    </mat-expansion-panel>
+                </div>
+                <div *ngIf="linksW.length > 0">
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>W Links</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <li *ngFor="let link of linksW | slice:0:3">{{ link.link_type }}
+                            , {{link.url_link}}</li>
                         <div *ngIf="linksW.length > 3">
                             <p>+ {{linksWAdjusted}} more</p>
                         </div>
-                </mat-expansion-panel>
-            </div>
-        </mat-accordion>
+                    </mat-expansion-panel>
+                </div>
+            </mat-accordion>
         </form>
+        <!-- *ngIf="bio != '' || linksS.length > 0 || linksW.length > 0" -->
+        <div *ngIf="bio != '' || linksS.length > 0 || linksW.length > 0"> 
+            <input type="image" src="./../../../assets/scan_me_qr_code.jpg" class="w-16 h-22 ml-36"
+                (click)="generateQrCode()" />
+            <div *ngIf="qrData" class="mt-4">
+                <div id="qrCodeWithCaption" class="flex flex-col items-center">
+                    <ngx-qrcode [value]="qrData"></ngx-qrcode>
+                    <!-- <div class="mt-[-18px] text-[14px] text-gray-700 font-bold">{{ caption }}</div> -->
+                </div>
+            </div>
+            <div id="links">
+                <div class="flex flex-col w-9/12 mx-auto mt-8 space-y-6 font-semibold">
+                    <!-- <button type="button"
+                        class="w-full border-1 border-info bg-primary truncate shadow-gray text-center text-infoLight py-3 mt-0 mb-0 rounded-full mx-auto">
+                        Scan QR Code
+                    </button> -->
+                    <!-- ngx-scanner-qrcode -->
+                    <ngx-scanner-qrcode #action="scanner" [config]="config" [canvasStyles] = "[{ lineWidth: 1, strokeStyle: 'green', fillStyle: '#55f02880' },{ font: '15px serif', strokeStyle: '#fff0', fillStyle: '#ff0000' }]"[isBeep]="false" class="w-50% h-50%"
+                        (event)="onEvent($event, action)"></ngx-scanner-qrcode>
+                    <p *ngIf="action.isLoading">⌛ Loading...</p>
+
+                    <button class="btn" [class.btn-info]="!action.isStart" [class.btn-warning]="action.isStart"
+                        [disabled]="action.isLoading" (click)="handle(action, action.isStart ? 'stop' : 'start')">
+                        <img class="ml-28" [src]="action.isStart ? 'https://id1945.github.io/images/svg/camera-off.svg' : 'https://id1945.github.io/images/svg/camera-on.svg'"
+                            width="30px" /> Scan any QR code 
+                    </button>
+                    <!-- //scanner -->
+                    <!-- <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner> -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- <div class="w-2/4 h-3/4 text-center mt-4 ml-32">
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+    <a href="qrResultString" target="_self">Click for results</a>
+</div> -->
