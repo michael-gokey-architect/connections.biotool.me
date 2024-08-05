@@ -81,5 +81,8 @@
     </div>
 </div>
 
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+<div class="w-2/4 h-3/4 text-center mt-4 ml-32">
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+    <a href="qrResultString" target="_self">Click for results</a>
+</div>
 

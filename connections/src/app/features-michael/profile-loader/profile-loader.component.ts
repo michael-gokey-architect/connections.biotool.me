@@ -208,7 +208,7 @@ export class ProfileLoaderComponent {
 
   onCodeResult(resultString: string) {
     this.qrResultString = resultString;
-    window.open(this.qrResultString,'_blank');
+    // window.open(this.qrResultString,'_self');
   }
   
 }
