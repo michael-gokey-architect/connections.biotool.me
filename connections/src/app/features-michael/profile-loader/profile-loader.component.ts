@@ -36,8 +36,14 @@ export class ProfileLoaderComponent {
   qrData: string | null = null;
   qrResultString!: string;
 
-
-  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService, private orgService: OrganizationService, private themeService: ThemeService){
+  public config: any = {
+    constraints: {
+      video: {
+        width: window.innerWidth
+      },
+    }
+  }
+  constructor(private fb: FormBuilder, private piiService: PiiService, private linkService: LinksService, private initialPipe: InitialsPipe, private userService: UserService, private orgService: OrganizationService, private themeService: ThemeService) {
     this.inputForm = this.fb.group({
       userId: ['', Validators.required]
     });
@@ -89,11 +95,10 @@ export class ProfileLoaderComponent {
         console.log(this.theme)
         console.log(this.orgId)
         console.log("User theme " + response.user_theme.theme_name);
-        if(this.theme == '' && this.orgId > 0){
+        if (this.theme == '' && this.orgId > 0) {
           this.GetOrgTheme();
         }
-        else if(this.theme == '' && this.orgId == 0)
-        {
+        else if (this.theme == '' && this.orgId == 0) {
           this.theme = "patchWrk, D";
         }
       }
@@ -104,43 +109,39 @@ export class ProfileLoaderComponent {
     this.orgService.getOrganization(this.orgId).subscribe({
       next: response => {
         this.themeId = response.theme_id
-        if(this.themeId != 0)
-        {
+        if (this.themeId != 0) {
           this.GetThemes();
         }
-        else
-        {
+        else {
           this.theme = "patchWrk, D";
         }
         console.log(response.theme_id);
       }
     })
-    
+
   }
 
   GetThemes(): void {
     this.themeService.getThemes().subscribe({
       next: response => {
-        if(response.theme_id == this.themeId)
-        {
+        if (response.theme_id == this.themeId) {
           this.theme = response.theme_name + ', O'
         }
-        else
-        {
+        else {
           this.theme = "patchWrk, D";
         }
       }
     })
   }
 
-  sortLinks(): void{
-      this.linksS = this.links.filter((link) => link.link_type == 'S');
-      this.linksW = this.links.filter((link) => link.link_type == 'W');
-      this.linksSAdjusted = this.linksS.length - 4;
-      this.linksWAdjusted = this.linksW.length - 3;
+  sortLinks(): void {
+    this.linksS = this.links.filter((link) => link.link_type == 'S');
+    this.linksW = this.links.filter((link) => link.link_type == 'W');
+    this.linksSAdjusted = this.linksS.length - 4;
+    this.linksWAdjusted = this.linksW.length - 3;
   }
 
-  showImage(url_label: string): String{
+  showImage(url_label: string): String {
     switch (url_label) {
       case "Classmates":
         return '/assets/images/social-logos/classmates.png';
@@ -201,14 +202,47 @@ export class ProfileLoaderComponent {
     // const urlHandle = `https://${this.urlHandle}/`;
 
     // need to edit this url as per environment
-    this.qrData = `https://425d-205-254-171-6.ngrok-free.app/qr-user-profile?profileId=${this.id}&action=update`;
+    this.qrData = `https://e439-205-254-171-106.ngrok-free.app/qr-user-profile?profileId=${this.id}&action=update`;
     // this.qrData = 'www.google.com'
     // setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 
-  onCodeResult(resultString: string) {
-    this.qrResultString = resultString;
-    // window.open(this.qrResultString,'_self');
-  }
+  //zxing scanner function
+
+  // onCodeResult(resultString: string) {
+  //   this.qrResultString = resultString;
+  //   // window.open(this.qrResultString,'_self');
+  // }
   
+  public onEvent(e: any, action?: any): void {
+    // e && action && action.pause();
+    console.log(e[0].value);
+    window.open(e[0].value, '_blank');
+  }
+
+  public handle(action: any, fn: string): void {
+    const playDeviceFacingBack = (devices: any[]) => {
+      // front camera or back camera check here!
+      const device = devices.find(f => (/back|rear|environment/gi.test(f.label))); // Default Back Facing Camera
+      action.playDevice(device ? device.deviceId : devices[0].deviceId);
+    }
+
+    if (fn === 'start') {
+      action[fn](playDeviceFacingBack).subscribe((r: any) => console.log(fn, r), alert);
+    } else {
+      action[fn]().subscribe((r: any) => console.log(fn, r), alert);
+    }
+  }
+
+  // This method is called when the QR code is successfully scanned
+  onCodeResult(resultString: string) {
+    console.log(resultString); // For debugging
+    if (resultString.startsWith('http://') || resultString.startsWith('https://')) {
+      window.open(resultString, '_blank');
+    } else {
+      // Handle non-URL QR codes if necessary
+      console.error('Scanned data is not a URL:', resultString);
+    }
+  }
+
 }

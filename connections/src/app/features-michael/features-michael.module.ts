@@ -8,6 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { ZXingScannerModule } from '@zxing/ngx-scanner'
+import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
+
+// Necessary to solve the problem of losing internet connection
+LOAD_WASM().subscribe();
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner'
     ReactiveFormsModule,
     MatExpansionModule,
     NgxQRCodeModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    NgxScannerQrcodeModule
   ]
 })
 export class FeaturesMichaelModule { }
