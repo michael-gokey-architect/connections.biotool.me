@@ -16,7 +16,8 @@
   </form>
   <div *ngIf="qrData" class="mt-4">
     <div id="qrCodeWithCaption" class="flex flex-col items-center">
-      <ngx-qrcode [value]="qrData"></ngx-qrcode>
+      <!-- <ngx-qrcode [value]="qrData"></ngx-qrcode> -->
+      <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
       <div class="mt-[-18px] text-[14px] text-gray-700 font-bold">{{ caption }}</div>
     </div>
   </div>

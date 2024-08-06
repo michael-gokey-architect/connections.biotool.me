@@ -7,12 +7,11 @@ import { ManageAliasComponent } from './manage-alias/manage-alias.component';
 import { CrudComponent } from './crud/crud.component';
 import { QrCodeGeneratorComponent } from './qr-code-generator/qr-code-generator.component';
 import { FormsModule } from '@angular/forms';
-import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
-import { QRCodeModule } from 'angularx-qrcode';
+// import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { RouterModule } from '@angular/router';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 import { MaterialModule } from '../material/material.module';
-
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,7 @@ import { MaterialModule } from '../material/material.module';
   imports: [
 		CommonModule,
     FormsModule,
-    NgxQRCodeModule,
+    // NgxQRCodeModule,
     QRCodeModule,
     RouterModule,
 		MaterialModule
