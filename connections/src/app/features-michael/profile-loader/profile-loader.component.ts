@@ -217,7 +217,7 @@ export class ProfileLoaderComponent {
   public onEvent(e: any, action?: any): void {
     // e && action && action.pause();
     console.log(e[0].value);
-    window.open(e[0].value, '_blank');
+    window.open(e[0].value, '_self');
   }
 
   public handle(action: any, fn: string): void {
