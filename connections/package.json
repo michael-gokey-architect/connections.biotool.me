@@ -1,6 +1,31 @@
 {
   "name": "connections",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "a tool for working on CRUD and sandbox operations supporting Biotool",
+  "keywords": [
+    "auth",
+    "create read update delete",
+    "CRUD",
+    "events",
+    "guest",
+    "profile",
+    "QR Code",
+    "tailwindcss"
+  ],
+  "owner": "Michael Gokey <michael.gokey.architect@gmail.com>",
+  "license": "(MIT OR Apache-2.0)",
+  "contributors": [
+    "Michael Gokey <michael.gokey.architect@gmail.com>",
+    "Sunny Rajdeep <247sunny@gmail.com>",
+    "Emily Dugan <eyln123@gmail.com>",
+    "Siddharth Tiwari <sid17tiwari@gmail.com>",
+    "Epris Richardson <eharrisburnett@gmail.com>"
+  ],
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michael-gokey-architect/connections.biotool.me"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,6 +36,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest --coverage"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.12",
@@ -50,5 +76,7 @@
     "tailwindcss-aspect-ratio": "^3.0.0",
     "tailwindcss-container-query": "^1.1.0",
     "typescript": "~5.1.6"
+  },
+  "jest": {
   }
 }
