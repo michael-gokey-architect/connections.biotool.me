@@ -2,7 +2,7 @@ export const environment = {
     production: false,
     environmentName: "staging",
     
-    apiUrl_badge:           'http://api.mozli.com/Badge',
+    apiUrl_badges:           'http://api.mozli.com/Badge',
     apiUrl_biodata:         'http://api.mozli.com/Biodata',
     apiUrl_connection:      'http://api.mozli.com/Connection',
     apiUrl_event:           'http://api.mozli.com/Event',
@@ -13,7 +13,7 @@ export const environment = {
     apiUrl_orgUser:         'http://api.mozli.com/OrgUser',
     apiUrl_userPii:         'http://api.mozli.com/Pii',
     apiUrl_qrCode:          'http://api.mozli.com/QRCode',
-    apiUrl_userRole:        'http://api.mozli.com/Role',
+    apiUrl_userRoles:        'http://api.mozli.com/Role',
     apiUrl_tags:            'http://api.mozli.com/Tag',
     apiUrl_themes:          'http://api.mozli.com/Theme',
     apiUrl_user:            'http://api.mozli.com/UserProfile',
