@@ -20,7 +20,7 @@ export class RolesService {
 
   getUserRoles(): Observable<any> {
     return this.httpClient
-      .get(environment.apiUrl_roles + '/GetAllUserRoles/')
+      .get(environment.apiUrl_userRoles + '/GetAllUserRoles/')
 
       .pipe(catchError(this.errorHandler));
   }
@@ -28,7 +28,7 @@ export class RolesService {
   createUserRole(role: Roles): Observable<any> {
     return this.httpClient
       .post(
-        environment.apiUrl_roles + '/AddUserRole/',
+        environment.apiUrl_userRoles + '/AddUserRole/',
         JSON.stringify(role),
         this.httpOptions
       )
@@ -38,7 +38,7 @@ export class RolesService {
 
   deleteUserRoles(role_id: number): Observable<any> {
     return this.httpClient
-      .delete(environment.apiUrl_roles + '/DeleteUserRole/' + role_id)
+      .delete(environment.apiUrl_userRoles + '/DeleteUserRole/' + role_id)
 
       .pipe(catchError(this.errorHandler));
   }
@@ -48,7 +48,7 @@ export class RolesService {
   updateUserRole(role: Roles): Observable<any> {
     return this.httpClient
       .put(
-        environment.apiUrl_roles + '/UpdateUserRole/',
+        environment.apiUrl_userRoles + '/UpdateUserRole/',
         JSON.stringify(role),
         this.httpOptions
       )

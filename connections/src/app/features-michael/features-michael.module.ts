@@ -6,8 +6,9 @@ import { QrReaderComponent } from './qr-reader/qr-reader.component';
 import { ProfileLoaderComponent } from './profile-loader/profile-loader.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+// import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
+import { QRCodeModule } from 'angularx-qrcode';
 
 // Necessary to solve the problem of losing internet connection
 LOAD_WASM().subscribe();
@@ -24,8 +25,9 @@ LOAD_WASM().subscribe();
     FormsModule,
     ReactiveFormsModule,
     MatExpansionModule,
-    NgxQRCodeModule,
-    NgxScannerQrcodeModule
+    // NgxQRCodeModule,
+    NgxScannerQrcodeModule,
+    QRCodeModule
   ]
 })
 export class FeaturesMichaelModule { }
