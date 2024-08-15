@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.4px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <path class="cls-1" d="M399.2,304.8h0M404.7,304.8h0M410.2,304.8h0M417.1,304.8c0,6.7-5.5,12.1-12.4,12.1s-4.1-.5-5.9-1.4l-6.5,1.4,1.9-5.6c-1.2-1.9-1.9-4.1-1.9-6.5,0-6.7,5.5-12.1,12.4-12.1s12.4,5.4,12.4,12.1Z"/>
+      <g id="S86KJD.tif">
+        <image id="Layer_0" width="53" height="52" transform="translate(-91 238)" xlink:href="home-icon-black-1.png"/>
+      </g>
+      <g id="_x38_vVSwy.tif">
+        <image id="Layer_0-2" data-name="Layer_0" width="53" height="52" transform="translate(-244.6 243.3)" xlink:href="home-icon-black-2.png"/>
+      </g>
+      <g id="oKg9Lv.tif">
+        <image id="Layer_0-3" data-name="Layer_0" width="53" height="51" transform="translate(-164 242)" xlink:href="home-icon-black-3.png"/>
+      </g>
+      <g id="X1Qckj.tif">
+        <image id="Layer_0-4" data-name="Layer_0" width="53" height="52" transform="translate(-350 247)" xlink:href="home-icon-black-4.png"/>
+      </g>
+    </g>
+  </g>
+</svg>
