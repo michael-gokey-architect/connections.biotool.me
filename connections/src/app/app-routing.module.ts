@@ -57,6 +57,8 @@ import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.compon
 import { BadgeLandingComponent } from './quest/badge-landing/badge-landing.component';
 import { CreateBadgeComponent } from './quest/create-badge/create-badge.component';
 import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
+import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.component';
+import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -105,7 +107,11 @@ const routes: Routes = [
   { path: 'update-pii', component: UpdatePiiComponent },
   // { path: 'quest', component: PiiLandingComponent },
   { path: 'journey', component: JourneyLandingComponent },
+
   { path: 'trigger', component: TriggerLandingComponent },
+  { path: 'get-trigger', component: GetTriggerComponent },
+  { path: 'create-trigger', component: CreateTriggerComponent },
+
   { path: 'qrcode', component: QrCodeGeneratorComponent },
   { path: 'org-event', component: OrganizationManagerComponent },
   { path: 'qrcode-reader', component: QrReaderComponent },

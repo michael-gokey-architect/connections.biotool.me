@@ -71,9 +71,17 @@ export class CrudComponent {
   onQuest() {
     this.router.navigateByUrl('/quest')
   }
+
   onTrigger() {
     this.router.navigateByUrl('/trigger')
   }
+  onCreateTrigger() {
+    this.router.navigateByUrl('/create-trigger')
+  }
+  onGetTrigger() {
+    this.router.navigateByUrl('/get-trigger')
+  }
+
   onJourney() {
     this.router.navigateByUrl('/journey')
   }
