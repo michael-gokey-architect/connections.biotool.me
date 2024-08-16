@@ -17,10 +17,9 @@
   <div *ngIf="qrData" class="mt-4">
     <div id="qrCodeWithCaption" class="flex flex-col items-center">
       <!-- <ngx-qrcode [value]="qrData"></ngx-qrcode> -->
-      <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-      <div class="mt-[-18px] text-[14px] text-gray-700 font-bold">{{ caption }}</div>
+      <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'" [imageSrc]="'assets/QuestCircleLogo.png'"></qrcode>
     </div>
   </div>
-  <button type="button" (click)="goToDisplayQR()"
-    class="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button>
+  <!-- <button type="button" (click)="goToDisplayQR()"
+    class="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button> -->
 </div>
