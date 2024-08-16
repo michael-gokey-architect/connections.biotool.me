@@ -19,7 +19,8 @@ export class QrCodeSaveComponent {
 
   generateQrCode() {
     // const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = `https://425d-205-254-171-6.ngrok-free.app/qr-user-profile?profileId=123&action=update`;
+    this.qrData = `${this.caption}`;
+    console.log(this.qrData)
     setTimeout(() => this.captureQrCode(), 100); // Wait for QR code to render
   }
 
