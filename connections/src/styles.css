@@ -6,14 +6,41 @@
 html, body { height: 100%; }
 body { 
     margin: 0; 
-    font-family: Montserrat, "Helvetica Neue", sans-serif; 
-    font-style: normal;
-    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
     width: 425px;
     overflow-y: scroll;
     margin-left: auto !important;
     min-height: 100%;
+		height: fit-content; /** temp fix borders cutting off **/
     margin-right: auto !important;
+    
+}
+
+#background-gradient{
+    background: 
+      radial-gradient(
+        circle at top left,
+        hsl(199, 100%, 91%), 
+        transparent 100px
+      ),
+      radial-gradient(
+        circle at top right,
+        rgb(109, 155, 252), 
+        transparent 100px
+      ),
+      radial-gradient(
+        at bottom left,
+        rgb(71, 111, 220), 
+        transparent 400px
+      ),
+      radial-gradient(
+        at bottom right,
+        rgb(21, 60, 177), 
+        transparent 400px
+      );
+      margin-top:-5rem;
+      padding-top:5rem;
+    display: block;
     border-right: #063771 2px solid;
     border-left: #063771 2px solid;
 }

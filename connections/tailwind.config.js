@@ -51,6 +51,14 @@ const themeFontFamily = {
     body: '"Montserrat", sans-serif',
     display: '"Delius", cursive',
   },
+  cnet: {
+    body: '"Roboto”, sans-serif',
+    display: '"Raleway", sans-serif;',
+  },
+  charlOz: {
+    body: '"Source Serif 4", serif',
+    display: '"Arial Narrow", sans serif',
+  },
 };
 
 const tailwindColors = {
@@ -167,7 +175,7 @@ const tailwindColors = {
     warning: "#dc2626",
   },
   duke: {
-    main: "#ffffff",
+    main: "#FEFAEB",
     tertiary: "#fffbeb",
     inactive: "#fef3c7",
     secondary: "#fcd34d",
@@ -246,6 +254,38 @@ const tailwindColors = {
     error: "#f97316",
     warning: "#dc2626",
   },
+  cnet: {
+    main: "#F0FAFF",
+    tertiary: "#f9fafb",
+    inactive: "#bfdbfe",
+    secondary: "#61ce70",
+    accentLight: "#d22429",
+    trimLight: "#58b0e3",
+    accentDark: "#58b0e3",
+    primary: "#403d8a",
+    trimDark: "#403d8a",
+    info: "#0a0a0a",
+    infoLight: "#ffffff",
+    success: "#22c55e",
+    error: "#f97316",
+    warning: "#dc2626",
+  },
+  charlOz: {
+    main: "#ffffff",
+    tertiary: "#f9fafb",
+    inactive: "#f0e6b3",
+    secondary: "#6beb58",
+    accentLight: "#a49666",
+    trimLight: "#a49666",
+    accentDark: "#015033",
+    primary: "#00351b",
+    trimDark: "#00351b",
+    info: "#0a0a0a",
+    infoLight: "#ffffff",
+    success: "#22c55e",
+    error: "#f97316",
+    warning: "#dc2626",
+  },
 };
 
 const resolvedColors = resolveTwcConfig(tailwindColors, {
@@ -257,10 +297,12 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
 
   plugins: [
-    // require('@tailwindcss/forms'),
+    require('@tailwindcss/forms'),
     require("@tailwindcss/typography"),
     // require('tailwindcss/aspect-ratio'),
     // require('@tailwindcss/container-queries'),
+
+    
     // Based off of tw-colors plugin
     plugin(
       ({ addUtilities, addVariant }) => {
