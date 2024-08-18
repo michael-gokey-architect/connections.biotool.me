@@ -4,7 +4,7 @@ import { QuestBadgesPanelComponent } from './quest-badges-panel/quest-badges-pan
 import { QuestRewardsPageComponent } from './quest-rewards-page/quest-rewards-page.component';
 import { QuestRewardsPanelComponent } from './quest-rewards-panel/quest-rewards-panel.component';
 import { SharedModule } from '../shared/shared.module';
-import { QuestLandingComponent } from './quest-landing/quest-landing.component';
+// import { QuestLandingComponent } from './quest-landing/quest-landing.component';
 import { GetBadgeComponent } from './get-badge/get-badge.component';
 import { CreateBadgeComponent } from './create-badge/create-badge.component';
 import { DeleteBadgeComponent } from './delete-badge/delete-badge.component';
@@ -18,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     QuestBadgesPanelComponent,
     QuestRewardsPageComponent,
     QuestRewardsPanelComponent,
-    QuestLandingComponent,
+    // QuestLandingComponent,
     GetBadgeComponent,
     CreateBadgeComponent,
     DeleteBadgeComponent,
