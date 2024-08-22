@@ -2,6 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 import { resolveTwcConfig } from "./src/app/core/plugins/theme";
 
+
 const themeFontFamily = {
   patchWrk: {
     body: '"Montserrat", sans-serif',
@@ -301,7 +302,7 @@ module.exports = {
     require("@tailwindcss/typography"),
     // require('tailwindcss/aspect-ratio'),
     // require('@tailwindcss/container-queries'),
-
+    
     
     // Based off of tw-colors plugin
     plugin(
