@@ -17,7 +17,7 @@ describe('ImageUploaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, ImageUploaderComponent', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,32 +1,35 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { FeatureLandingComponent } from './feature-landing/feature-landing.component';
-import { UserAvatarUploaderComponent } from './user-avatar-uploader/user-avatar-uploader.component';
 import { ManageAliasComponent } from './manage-alias/manage-alias.component';
 import { CrudComponent } from './crud/crud.component';
 import { QrCodeGeneratorComponent } from './qr-code-generator/qr-code-generator.component';
 import { FormsModule } from '@angular/forms';
-// import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { RouterModule } from '@angular/router';
-import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 import { MaterialModule } from '../material/material.module';
 import { QRCodeModule } from 'angularx-qrcode';
+import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { ImageCropperComponent } from './image-cropper/image-cropper.component';
+import { ImageAvatarComponent } from './image-avatar/image-avatar.component';
+
 
 @NgModule({
   declarations: [
     ThemeSwitcherComponent,
     FeatureLandingComponent,
-    UserAvatarUploaderComponent,
+    ImageAvatarComponent,
     ManageAliasComponent,
     CrudComponent,
     QrCodeGeneratorComponent,
-    ImageUploaderComponent
+    ImageUploaderComponent,
+    ImageAvatarComponent,
+    ImageCropperComponent,
   ],
   imports: [
 		CommonModule,
     FormsModule,
-    // NgxQRCodeModule,
     QRCodeModule,
     RouterModule,
 		MaterialModule

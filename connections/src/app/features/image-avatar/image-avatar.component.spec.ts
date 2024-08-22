@@ -1,23 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserAvatarUploaderComponent } from './user-avatar-uploader.component';
+import { ImageAvatarComponent } from './image-avatar.component';
 
 describe('UserAvatarUploaderComponent', () => {
-  let component: UserAvatarUploaderComponent;
-  let fixture: ComponentFixture<UserAvatarUploaderComponent>;
+  let component: ImageAvatarComponent;
+  let fixture: ComponentFixture<ImageAvatarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserAvatarUploaderComponent ]
+      declarations: [ ImageAvatarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UserAvatarUploaderComponent);
+    fixture = TestBed.createComponent(ImageAvatarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create, ImageAvatarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// TODO: SID

@@ -14,7 +14,6 @@ import { FeaturesModule } from './features/features.module';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 import { EventManagerComponent } from './event-management/event-manager/event-manager.component';
 import { PanelistManagerComponent } from './event-management/panelist-manager/panelist-manager.component';
-// import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
@@ -45,7 +44,6 @@ import { QRCodeModule } from 'angularx-qrcode';
     AppRoutingModule,
     HttpClientModule,
     FeaturesModule,
-    // NgxQRCodeModule,
     FormsModule,
     FeaturesMichaelModule,
     MaterialModule,
