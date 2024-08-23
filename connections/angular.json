@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "qrcode", "html2canvas"
+              "qrcode", "html2canvas", "cropperjs"
             ],
             "outputPath": "dist/connections",
             "index": "src/index.html",
@@ -29,9 +29,12 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/cropperjs/dist/cropper.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/cropperjs/dist/cropper.js"
+            ]
           },
           "configurations": {
             "production": {

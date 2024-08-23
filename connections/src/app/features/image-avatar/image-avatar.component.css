@@ -5,6 +5,10 @@
 }
 
 /* .image-container */
+.box-shadow-avatar {
+    box-shadow: 0 10px 20px 20px #6c93001a;
+}
+
 .image-container {
     height: 200px;
     width: 200px;
@@ -16,7 +20,10 @@
     box-shadow: 0 10px 20px 20px #6c93001a;
 }
 
-/* .icon-wrapper */
+.avatar-placeholder {
+    background-image: url('../../../assets/QuestCircleLogo.png');
+}
+
 .icon-wrapper {
     position: absolute;
     height: 40px;
@@ -53,3 +60,7 @@
     display: none;
 }
 
+.label-position {
+    position: static !important;
+    margin-left: 100%;
+}

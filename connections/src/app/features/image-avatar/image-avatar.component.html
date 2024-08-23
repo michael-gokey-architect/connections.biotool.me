@@ -13,11 +13,15 @@
 TODO: SID -->
 
 <div class="avatar-container">
-    <div class="image-container" 
+    <div class="image-container" *ngIf="file; else placeholder"
+    [ngClass]="{'box-shadow-avatar': !!file}"
     [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
     </div>
-
-    <label for="avatar-input-file">
+    <ng-template #placeholder>
+        <div class="image-container avatar-placeholder">
+        </div>
+    </ng-template>
+    <label for="avatar-input-file" class="label-position mr-5">
         <div class="icon-wrapper">
             <input type="file" id="avatar-input-file" accept="image/*" (change)="onFileChange($event)" />
             <mat-icon class="icon" fontIcon="edit"></mat-icon>
