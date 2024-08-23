@@ -59,6 +59,7 @@ import { CreateBadgeComponent } from './quest/create-badge/create-badge.componen
 import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
 import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.component';
 import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
+import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -120,6 +121,7 @@ const routes: Routes = [
   { path: 'qr-code-display', component: QrCodeDisplayComponent },
   {path: 'qr-user-profile', component: QrUserProfileComponent } , 
   { path: 'image-uploader', component: ImageUploaderComponent},
+  { path: 'image-avatar', component: ImageAvatarComponent},
   { path: 'badge', component: BadgeLandingComponent},
   { path: 'create-badge', component: CreateBadgeComponent},
   { path: 'get-badge', component: GetBadgeComponent},

@@ -1,4 +1,4 @@
-<p>user-avatar-uploader works!</p>
+<!-- <p>user-avatar-uploader works!</p>
 
 <ul>
     <li><a title="create-an-avatar-uploader-with-angular" target="_blank"
@@ -10,4 +10,18 @@
         https://zrolson.medium.com/user-avatar-reusable-components-30ed45b9f605</a></li>
 </ul>
 
-TODO: SID
+TODO: SID -->
+
+<div class="avatar-container">
+    <div class="image-container" 
+    [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+    </div>
+
+    <label for="avatar-input-file">
+        <div class="icon-wrapper">
+            <input type="file" id="avatar-input-file" accept="image/*" (change)="onFileChange($event)" />
+            <mat-icon class="icon" fontIcon="edit"></mat-icon>
+        </div>
+    </label>
+</div>
+
