@@ -98,7 +98,7 @@ export class CrudComponent {
     this.router.navigateByUrl('/profile-loader');
   }
   onImageUploader() {
-    this.router.navigateByUrl('/image-uploader');
+    this.router.navigateByUrl('/image-avatar');
   }
 }
 
