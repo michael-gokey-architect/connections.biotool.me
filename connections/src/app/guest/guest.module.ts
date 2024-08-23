@@ -5,6 +5,7 @@ import { UserBadgePanelComponent } from './user-badge-panel/user-badge-panel.com
 import { UserBioPanelComponent } from './user-bio-panel/user-bio-panel.component';
 import { UserLinkPanelComponent } from './user-link-panel/user-link-panel.component';
 import { SharedModule } from '../shared/shared.module';
+import { SignComponent } from './sign/sign.component';
 
 
 
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
     GuestPublicLandingComponent,
     UserBadgePanelComponent,
     UserBioPanelComponent,
-    UserLinkPanelComponent
+    UserLinkPanelComponent,
+    SignComponent
   ],
   exports: [
     GuestPublicLandingComponent,

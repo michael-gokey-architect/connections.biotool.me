@@ -14,12 +14,12 @@ import { FeaturesModule } from './features/features.module';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 import { EventManagerComponent } from './event-management/event-manager/event-manager.component';
 import { PanelistManagerComponent } from './event-management/panelist-manager/panelist-manager.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { MaterialModule } from './material/material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
 import { QRCodeModule } from 'angularx-qrcode';
 
@@ -44,10 +44,10 @@ import { QRCodeModule } from 'angularx-qrcode';
     AppRoutingModule,
     HttpClientModule,
     FeaturesModule,
+    ReactiveFormsModule,
     FormsModule,
     FeaturesMichaelModule,
     MaterialModule,
-    BrowserAnimationsModule,
     QRCodeModule
   ],
   providers: [],

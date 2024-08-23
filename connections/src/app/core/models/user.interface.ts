@@ -24,3 +24,8 @@ export interface User {
     org: Organization | null
 
 }
+
+export interface userWithMessage {
+    message?:string;
+    user?:Array<User>;
+}

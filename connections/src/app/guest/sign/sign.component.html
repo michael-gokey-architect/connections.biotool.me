@@ -1,0 +1,215 @@
+<div class="min-h-screen bg-main pt-24 pb-8">
+     
+    <!-- P logo section
+    <div class="w-32 h-32 mx-auto">
+         <img src="../../../assets/images/onboarding-images/patchwrq.png" alt="patchWqr-logo" />
+    </div> -->
+    <div *ngIf="!showEmailSignUp">
+         <h2 class="uppercase mt-16 text-4xl text-center font-bold">Login</h2>
+
+         <p class="text-center font-light mt-4">Login with your email</p>
+
+         <form [formGroup]="loginForm" (submit)="onLogin()">
+              <div class="mt-8 w-9/12 mx-auto">
+                   <label for="email">Email/Username</label>
+                   <input 
+                        formControlName="userName"
+                        class="bg-main rounded-sm text-sm 
+                        ring-1 ring-trimDark  w-full
+                        font-bold text-trimDark py-3" type="email"
+                        placeholder="Your email" name="email" id="email">
+              </div>
+              <div class="mt-8 w-9/12 mx-auto">
+                   <label for="email">Password</label>
+                   <!-- <input class="bg-main rounded-sm text-sm 
+                   ring-1 ring-info  w-full
+                   font-bold text-info py-3" 
+                        id="pwd"> -->
+                   <input
+                   type="{{showPassword ? 'text' : 'password'}}" placeholder="Strong password" name="pwd"
+                   formControlName="password"
+                   class="bg-main rounded-sm text-sm 
+                   ring-1 ring-info  w-full
+                   font-bold text-info py-3"
+                   (ngModelChange)="logLogin()"
+                   
+              />
+              <button type="button" id="togglePassword" class="focus:outline-none -ml-8 align-middle" (click)="togglePasswordVisibility()">
+                   <span *ngIf="!showPassword" class="material-icons md-18">visibility</span>
+                   <span *ngIf="showPassword" class="material-icons md-18">visibility_off</span>
+              </button>
+                   <!-- <div class="red"
+                        class="invalid-feedback"
+                        *ngFor="let error of getErrorKeys('hashed_password')">
+                        {{ error }}
+                   </div> -->
+              </div>
+
+              <div class="mt-12 w-9/12 shadow mx-auto bg-primary rounded-full text-sm text-center text-infoLight">
+                   <button type="submit" class="shadow w-full py-3 
+                        bg-primary rounded-full text-sm 
+                        font-bold text-infoLight">
+                        Submit
+                   </button>
+              </div>
+         
+         </form>
+
+         <div class="mt-8 w-9/12 mx-auto">
+              <p class="mt-8 text-center uppercase text-info">Or</p>
+         </div>
+         <div class="mt-8 w-9/12 mx-auto">
+              <button (click)="showEmailSignUp = true" class="shadow w-full py-3 
+                             bg-secondary rounded-full text-sm 
+                             font-bold text-infoLight">
+                             Sign up
+                        </button>
+         </div>
+    </div>
+    
+    <div id="container" *ngIf="showEmailSignUp">
+         <!-- Sign in text -->
+         <h2 class="uppercase mt-16 text-4xl text-center font-bold">Sign Up</h2>
+         <p class="text-center text-xl font-light mt-2">Create your account</p>
+
+         <p class="text-center font-light mt-4">Signing up with your email</p>
+         
+
+         <!-- <div id="social_login_section" *ngIf="!showEmailSignUp"> -->
+              <!-- <div class="mt-8 w-9/12 mx-auto">
+                   <p class="mt-8 text-center">Or</p>
+              </div> -->
+              <!-- Google sign in section -->
+
+              <!-- <div id="g_id_onload"
+                   data-client_id="333043503600-05f50jbjlbo9mcmm41t8o9r7r9kpk3jg.apps.googleusercontent.com"
+                   data-context="signin" data-ux_mode="popup" data-auto_prompt="false"
+                   data-callback="handleOauthResponse">
+              </div>
+
+              <div class="mt-4 centered-button">
+                   <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="filled_black"
+                        data-text="signin_with" data-size="large" data-width="400px">
+                   </div>
+              </div> -->
+
+              <!-- <div
+                   class="mt-4 w-c-46 shadow mx-auto bg-blue-950 rounded-full text-sm text-center text-white py-3 ">
+                   Continue with Facebook</div> -->
+
+              <!-- <p class=" mt-16 text-center font-medium">Do you have an account?</p>
+              <div class="mt-4 w-c-46 shadow mx-auto bg-primary rounded-full text-sm text-center text-infoLight">
+                   <button (click)="showEmailSignUp = true" class="shadow w-full py-3 
+                        bg-primary rounded-full text-sm 
+                        font-bold text-infoLight">
+                        Login
+                   </button>
+              </div> -->
+              
+         <!-- </div> -->
+         
+
+         <div id="email_login" *ngIf="showEmailSignUp">
+              <form [formGroup]="formGroup" (submit)="onSubmit()">
+                   <div class="mt-8 w-9/12 mx-auto">
+                        <label for="first_name">First Name</label>
+                        <input 
+                             formControlName="first_name"
+                             class="bg-main rounded-sm text-sm 
+                             ring-1 ring-trimDark  w-full
+                             font-bold text-trimDark py-3 pl-2" type="email"
+                             placeholder="Your first name" name="first_name" id="first_name">
+                   </div>
+                   <div class="mt-8 w-9/12 mx-auto">
+                        <label for="last_name">Last Name</label>
+                        <input
+                             formControlName="last_name" 
+                             class="bg-main rounded-sm text-sm 
+                             ring-1 ring-trimDark  w-full
+                                  text-trimDark py-3" type="text"
+                             placeholder="Your last name" name="last_name" id="last_name">
+                   </div>
+                   <div class="mt-8 w-9/12 mx-auto">
+                        <label for="email">Email</label>
+                        <input 
+                             formControlName="email"
+                             class="bg-main rounded-sm text-sm 
+                             ring-1 ring-trimDark  w-full
+                             font-bold text-trimDark py-3" type="email"
+                             placeholder="Your email" name="email" id="email">
+                   </div>
+                   <div class="mt-8 w-9/12 mx-auto">
+                        <label for="email">Password</label>
+                        <!-- <input class="bg-main rounded-sm text-sm 
+                        ring-1 ring-info  w-full
+                        font-bold text-info py-3" 
+                             id="pwd"> -->
+                        <input
+                        type="{{showPassword ? 'text' : 'password'}}" placeholder="Strong password" name="pwd"
+                        formControlName="password"
+                        class="bg-main rounded-md text-sm 
+                        ring-1 ring-info  w-full
+                        font-bold text-info py-3"
+                        (ngModelChange)="logLogin()"
+                       
+                   />
+                        <button type="button" id="togglePassword" class="focus:outline-none -ml-8 align-middle" (click)="togglePasswordVisibility()">
+                             <span *ngIf="!showPassword" class="material-icons md-18">visibility</span>
+                             <span *ngIf="showPassword" class="material-icons md-18">visibility_off</span>
+                        </button>
+                        <div class="red"
+                             class="invalid-feedback"
+                             *ngFor="let error of getErrorKeys('hashed_password')">
+                             {{ error }}
+                        </div>
+                   </div>
+
+                   <!-- strong password section  -->
+                   <div class="bg-main p-4 border mt-4 ">
+                        
+                        <p class="text-success text-right">Strong password</p>
+                        <div class="text-success w-9/12 mx-auto">
+                             <ul>
+                                  <li><span class="material-icons">
+                                            check_circle
+                                       </span>
+                                       Minimum 8 characters</li>
+                                  <li>
+                                       <span class="material-icons">
+                                            check_circle
+                                       </span>
+                                       Minimum 1 letter
+                                  </li>
+                                  <li> <span class="material-icons">
+                                            check_circle
+                                       </span> Minimum 1 number</li>
+                                  <!-- <li><span class="material-icons">
+                                            check_circle
+                                       </span> New password must match</li> -->
+                             </ul>
+                        </div>
+                   </div>
+                   <!-- strong password section  -->
+
+                   <div class="mt-4 w-9/12 shadow mx-auto bg-primary rounded-full text-sm text-center text-infoLight">
+                        <button type="submit" class="shadow w-full py-3 
+                             bg-primary rounded-full text-sm 
+                             font-bold text-infoLight">
+                             Submit
+                        </button>
+                   </div>
+              </form>
+              <p class=" mt-16 text-center font-medium">Do you have an account?</p>
+              <div class="mt-4 w-9/12 shadow mx-auto bg-primary rounded-full text-sm text-center text-infoLight">
+                   <button (click)="showEmailSignUp = false" class="shadow w-full py-3 
+                        bg-secondary rounded-full text-sm 
+                        font-bold text-infoLight">
+                        Login
+                   </button>
+              </div>
+
+         </div>
+         <p class="text-center px-20 text-xs mt-8 ">By signing up, you accept Biotool's Terms of Service and Privacy Policy</p>
+    </div>
+    
+</div>
