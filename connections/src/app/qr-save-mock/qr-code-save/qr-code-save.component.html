@@ -2,7 +2,7 @@
   <h2 class="text-2xl font-bold mb-4">Generate Follow QR Code</h2>
   <form (ngSubmit)="generateQrCode()" class="space-y-4">
     <div class="mb-4">
-      <label class="block text-gray-700">Enter Url (Ex - www.google.com)</label>
+      <label  for="qrData" class="block text-gray-700">Enter Url (Ex - www.google.com)</label>
       <!-- <input type="text" [(ngModel)]="urlHandle" name="urlHandle" required
         class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"> -->
     </div>
@@ -17,22 +17,46 @@
 
   <div>
     <label>
+      <input type="radio" name="format" value="png" [(ngModel)]="format" /> PNG
+    </label>
+    <label>
+      <input type="radio" name="format" value="svg" [(ngModel)]="format" /> SVG
+    </label>
+  </div>
+
+  <div *ngIf="qrData" class="mt-4">
+    <div id="qrCodeWithCaption" class="flex flex-col items-center">
+      <!-- <ngx-qrcode [value]="qrData"></ngx-qrcode> -->
+      <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'" [imageSrc]="'assets/QuestCircleLogo.png'"></qrcode>      
+    </div>
+  </div>
+
+  <div #qrCodeContainer class="flex flex-col items-center"></div>
+
+  <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 mt-4" (click)="downloadQRCode1()">Download QR Code</button>
+  <!-- <button type="button" (click)="goToDisplayQR()"
+    class="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button> -->
+</div>
+
+<!-- <div class="qr-code-generator">
+  <h2>Generate QR Code</h2>
+  <div>
+    <label for="qrData">Enter Data:</label>
+    <input type="text" [(ngModel)]="qrData" id="qrData" placeholder="Enter text or URL" />
+  </div>
+
+  <div>
+    <label>
       <input type="radio" name="format" value="img" [(ngModel)]="format" /> PNG
     </label>
     <label>
       <input type="radio" name="format" value="svg" [(ngModel)]="format" /> SVG
     </label>
   </div>
-  
-  <div *ngIf="qrData" class="mt-4">
-    <div id="qrCodeWithCaption" class="flex flex-col items-center">
-      <!-- <ngx-qrcode [value]="qrData"></ngx-qrcode> -->
-      <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'" [imageSrc]="'assets/QuestCircleLogo.png'"></qrcode>
-    </div>
+
+  <div *ngIf="qrData">
+    <qrcode [qrdata]="qrData" [width]="256" [elementType]="format" [imageSrc]="'assets/QuestCircleLogo.png'"></qrcode>
   </div>
 
-  <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700" (click)="downloadQRCode()">Download QR Code</button>
-
-  <!-- <button type="button" (click)="goToDisplayQR()"
-    class="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button> -->
-</div>
+  <button (click)="downloadQRCode()">Download QR Code</button>
+</div> -->
