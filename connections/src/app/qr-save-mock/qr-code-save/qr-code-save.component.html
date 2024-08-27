@@ -14,12 +14,25 @@
     <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Generate & Save QR
       Code</button>
   </form>
+
+  <div>
+    <label>
+      <input type="radio" name="format" value="img" [(ngModel)]="format" /> PNG
+    </label>
+    <label>
+      <input type="radio" name="format" value="svg" [(ngModel)]="format" /> SVG
+    </label>
+  </div>
+  
   <div *ngIf="qrData" class="mt-4">
     <div id="qrCodeWithCaption" class="flex flex-col items-center">
       <!-- <ngx-qrcode [value]="qrData"></ngx-qrcode> -->
       <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'" [imageSrc]="'assets/QuestCircleLogo.png'"></qrcode>
     </div>
   </div>
+
+  <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700" (click)="downloadQRCode()">Download QR Code</button>
+
   <!-- <button type="button" (click)="goToDisplayQR()"
     class="px-4 py-2 mt-4 bg-blue-600 text-white rounded-md hover:bg-blue-700">Display Saved QR Code</button> -->
 </div>

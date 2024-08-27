@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import * as QRCode from 'qrcode'
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { QRCodeElementType } from 'angularx-qrcode';
 @Component({
   selector: 'app-qr-code-save',
   templateUrl: './qr-code-save.component.html',
@@ -14,6 +15,7 @@ export class QrCodeSaveComponent {
   // urlHandle: string = '';
   qrData: string | null = null;
   caption: string = '';
+  format: QRCodeElementType = 'img';  // Set default to 'img' (PNG)
 
   constructor(private router: Router, private http: HttpClient) {}
 
@@ -80,4 +82,38 @@ export class QrCodeSaveComponent {
   goToDisplayQR(){
     this.router.navigateByUrl('/qr-code-display')
   }
+
+  // Handles the user interaction to download the QR code.
+  // It bacquires the data URL of the QR code, creates a 
+  // temporary download link, and simulates a click to download the file.
+
+  downloadQRCode() {
+    const qrElement = document.querySelector('qrcode img, qrcode svg') as HTMLElement;
+
+    if (!qrElement) {
+      alert('QR Code is not generated yet.');
+      return;
+    }
+
+    const dataUrl = this.format === 'img' ? (qrElement as HTMLImageElement).src : this.getSVGDataUrl(qrElement);
+
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = `qr-code.${this.format === 'img' ? 'png' : 'svg'}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  // Converts the SVG QR code into a Base64-encoded data URL that can be used for downloading.
+
+  // An XMLSerializer object is created, which can convert an XML or SVG DOM tree into a string representation.
+  // serializeToString(svgElement) converts the SVG element (which is a part of the DOM) into a string of XML markup.
+
+  getSVGDataUrl(svgElement: HTMLElement): string {
+    const serializer = new XMLSerializer();
+    const svgString = serializer.serializeToString(svgElement);
+    return 'data:image/svg+xml;base64,' + btoa(svgString);
+  }
+
 }
