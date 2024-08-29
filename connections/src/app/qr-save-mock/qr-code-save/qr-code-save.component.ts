@@ -15,7 +15,8 @@ export class QrCodeSaveComponent {
   @ViewChild('qrCodeContainer', { static: false }) qrCodeContainer!: ElementRef;
   // urlHandle: string = '';
   qrData: string | null = null;
-  caption: string = '';
+  website: string = '';
+  idea: string = '';
   format = 'svg';  // Set default to 'img' (PNG)
 
   constructor(private router: Router, private http: HttpClient) { }
@@ -28,7 +29,7 @@ export class QrCodeSaveComponent {
       width: 200,
       height: 200,
       margin: 0,
-      data: this.caption,
+      data: `${this.website}/${this.idea}`,
       image: "assets/QuestCircleLogo.png",
       dotsOptions: {
         type: "square",
@@ -59,7 +60,7 @@ export class QrCodeSaveComponent {
 
   generateQrCode() {
     // const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = `${this.caption}`;
+    this.qrData = `${this.website}/${this.idea}`;
     console.log(this.qrData)
     setTimeout(() => this.captureQrCode(), 100);
     this.afterGenerateCode()
