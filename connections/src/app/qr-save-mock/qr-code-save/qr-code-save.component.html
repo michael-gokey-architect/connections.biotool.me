@@ -21,7 +21,7 @@
       Code</button>
   </form>
 
-  <div>
+  <div class="mt-4">
     <label>
       <input type="radio" name="format" value="png" [(ngModel)]="format" /> PNG
     </label>
@@ -39,7 +39,7 @@
     </div>
   </div>
 
-  <h2>QR Styling Library</h2>
+  <h2 *ngIf="qrData">QR Styling Library</h2>
   <br>
   <div #qrCodeContainer class="flex flex-col items-center"></div>
 
