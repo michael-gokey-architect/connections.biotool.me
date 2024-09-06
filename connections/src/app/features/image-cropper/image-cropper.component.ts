@@ -1,7 +1,9 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
 import Cropper from 'cropperjs';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-image-cropper',
@@ -15,7 +17,8 @@ export class ImageCropperComponent {
   constructor(
     public dialogRef: MatDialogRef<ImageCropperComponent>,
     @Inject(MAT_DIALOG_DATA) public image: string,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private httpClient: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -68,8 +71,14 @@ export class ImageCropperComponent {
     const roundedCanvas = this.getRoundedCanvas(croppedCanvas);
 
     let roundedImage = document.createElement('img');
-
+    //base64 image
+    console.log(roundedImage);
     if (roundedImage) {
+      // need to check this with dennis 
+      // need to save image as base64
+      this.addAvatar(roundedCanvas.toDataURL()).subscribe({
+        next: response=>console.log(response.status)
+      });
       this.dialogRef.close(roundedCanvas.toDataURL());
     } else {
       return this.dialogRef.close(null);
@@ -80,6 +89,20 @@ export class ImageCropperComponent {
   reset(){
     this.cropper.clear();
     this.cropper.crop();
+  }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'image/jpeg'
+    })
+  }
+
+  // sample api call need to add these to services
+  // save avatar api
+  addAvatar(baseImage: string):Observable<any> {
+
+    return this.httpClient.post('http://api.mozli.com/Picture/AddAvatar/' + baseImage, this.httpOptions)
+
   }
 }
 

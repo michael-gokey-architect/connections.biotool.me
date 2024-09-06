@@ -12,10 +12,11 @@
 
 TODO: SID -->
 
-<div class="avatar-container">
-    <div class="image-container" *ngIf="file; else placeholder"
-    [ngClass]="{'box-shadow-avatar': !!file}"
-    [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+<p class="ml-28 mt-4 mb-4">Default Avatar on Page load</p>
+
+<div class="avatar-container ml-28">
+    <div class="image-container" *ngIf="file; else placeholder" [ngClass]="{'box-shadow-avatar': !!file}"
+        [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
     </div>
     <ng-template #placeholder>
         <div class="image-container avatar-placeholder">
@@ -29,3 +30,59 @@ TODO: SID -->
     </label>
 </div>
 
+<br>
+<hr/>
+-----------------------------------------------------------------------------------------------
+<br>
+<p class="ml-28">Enter Avatar Id : Ex-63(Quest logo)</p>
+<input type="text" [(ngModel)]="avatarId"
+    class="w-full border mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white">
+<br>
+<button type="button"
+    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+    (click)="getAvatarId()">Get Avatar from Id</button>
+<br>
+<div class="avatar-container ml-28" *ngIf="fileIdFlag">
+    <div class="image-container" *ngIf="file; else placeholder" [ngClass]="{'box-shadow-avatar': !!file}"
+        [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+    </div>
+    <ng-template #placeholder>
+        <div class="image-container avatar-placeholder">
+        </div>
+    </ng-template>
+    <label for="avatar-input-file" class="label-position mr-5">
+        <div class="icon-wrapper">
+            <input type="file" id="avatar-input-file" accept="image/*" (change)="onFileChange($event)" />
+            <mat-icon class="icon" fontIcon="edit"></mat-icon>
+        </div>
+    </label>
+</div>
+
+<br />
+
+<hr/>
+-----------------------------------------------------------------------------------------------
+<br>
+<button type="button"
+    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 mt-4 rounded-full focus:outline-none focus:shadow-outline"
+    (click)="getAllAvatars()">Get All Avatars from backend</button>
+<div class="avatar-container ml-28" *ngIf="fileArray">
+    <div *ngFor="let file of fileArray">
+        <div class="image-container" *ngIf="file; else placeholder" [ngClass]="{'box-shadow-avatar': !!file}"
+            [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+        </div>
+        <ng-template #placeholder>
+            <div class="image-container avatar-placeholder">
+            </div>
+        </ng-template>
+        <label for={{file}} class="label-position-array mr-5">
+            <div class="icon-wrapper">
+                <input type="file" id={{file}} accept="image/*" (change)="onFileChange($event)" />
+                <mat-icon class="icon" fontIcon="edit"></mat-icon>
+            </div>
+        </label>
+    </div>
+
+
+
+</div>
