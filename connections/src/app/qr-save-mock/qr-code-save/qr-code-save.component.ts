@@ -5,7 +5,7 @@ import * as QRCode from 'qrcode'
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { QRCodeElementType } from 'angularx-qrcode';
-import  QRCodeStyling  from 'qr-code-styling';
+import QRCodeStyling from 'qr-code-styling';
 @Component({
   selector: 'app-qr-code-save',
   templateUrl: './qr-code-save.component.html',
@@ -15,10 +15,11 @@ export class QrCodeSaveComponent {
   @ViewChild('qrCodeContainer', { static: false }) qrCodeContainer!: ElementRef;
   // urlHandle: string = '';
   qrData: string | null = null;
-  caption: string = '';
-  format = 'png';  // Set default to 'img' (PNG)
+  website: string = '';
+  idea: string = '';
+  format = 'svg';  // Set default to 'img' (PNG)
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient) { }
 
 
   qrCode: any;
@@ -28,21 +29,25 @@ export class QrCodeSaveComponent {
       width: 200,
       height: 200,
       margin: 0,
-      data: this.caption,
+      data: `${this.website}/${this.idea}`,
       image: "assets/QuestCircleLogo.png",
       dotsOptions: {
-        type: "extra-rounded",
-        color: "#6a1a4c"
+        type: "square",
+        color: "black"
       },
       backgroundOptions: {
-        color: "#e9ebee",
+        color: "white",
       },
       imageOptions: {
         crossOrigin: "anonymous",
         margin: 0
-      }
+      },
+      qrOptions: {
+        typeNumber: 0,
+        mode: "Byte",
+        errorCorrectionLevel: "M"
+    }
     });
-
     this.qrCode.append(this.qrCodeContainer.nativeElement);
   }
 
@@ -55,9 +60,9 @@ export class QrCodeSaveComponent {
 
   generateQrCode() {
     // const urlHandle = `https://${this.urlHandle}/`;
-    this.qrData = `${this.caption}`;
+    this.qrData = `${this.website}/${this.idea}`;
     console.log(this.qrData)
-    setTimeout(() => this.captureQrCode(), 100); 
+    setTimeout(() => this.captureQrCode(), 100);
     this.afterGenerateCode()
     // Wait for QR code to render
   }
@@ -72,18 +77,18 @@ export class QrCodeSaveComponent {
       tempContainer.style.left = '-9999px';
       tempContainer.style.padding = '5px';
       tempContainer.style.backgroundColor = 'white'; // To ensure the background is white
-    
+
       // Clone the QR code element and caption into the container
       const clonedQrElement = qrElement.cloneNode(true);
       // const captionElement = document.createElement('div');
       // captionElement.innerText = this.caption; // Replace with your caption
       // captionElement.style.marginTop = '10px';
       // captionElement.style.textAlign = 'center';
-    
+
       tempContainer.appendChild(clonedQrElement);
       // tempContainer.appendChild(captionElement);
       document.body.appendChild(tempContainer);
-    
+
       // Use html2canvas to capture the temporary container
       html2canvas(tempContainer).then(canvas => {
         canvas.toBlob(blob => {
@@ -95,13 +100,13 @@ export class QrCodeSaveComponent {
           } else {
             console.error('Failed to create Blob from canvas');
           }
-    
+
           // Clean up: Remove the temporary container from the DOM
           document.body.removeChild(tempContainer);
         }, 'image/png');
       });
+    }
   }
-}
 
   saveQrCode(formData: FormData) {
     this.http.post('http://localhost:3000/save-qr-code', formData)
@@ -115,7 +120,7 @@ export class QrCodeSaveComponent {
       });
   }
 
-  goToDisplayQR(){
+  goToDisplayQR() {
     this.router.navigateByUrl('/qr-code-display')
   }
 
@@ -146,24 +151,24 @@ export class QrCodeSaveComponent {
     setTimeout(() => {
       // Determine the correct selector based on the format (img or svg)
       const qrElement = document.querySelector('qrcode img, qrcode svg') as HTMLElement;
-  
+
       // Debugging: Check if the correct element is selected
       console.log('QR Element:', qrElement);
-  
+
       // Check if the QR code element was found
       if (!qrElement) {
         alert('QR Code is not generated yet.');
         return;
       }
-  
+
       // Get the data URL for download
-      const dataUrl = this.format === 'img' 
-        ? (qrElement as HTMLImageElement).src 
+      const dataUrl = this.format === 'img'
+        ? (qrElement as HTMLImageElement).src
         : this.getSVGDataUrl(qrElement);
-  
+
       // Debugging: Check the data URL
       console.log('Data URL:', dataUrl);
-  
+
       // Create a temporary download link and trigger the download
       const a = document.createElement('a');
       a.href = dataUrl;

@@ -1,6 +1,16 @@
 {
   "name": "connections",
-  "version": "0.1.0",
+  "version": "1.1.6",
+  "owner": "Gokester Enterprises",
+  "author": "Michael Gokey",
+  "contributors": [
+    "Michael Gokey <michael.gokey.architect@gmail.com>",
+    "Sunny Rajdeep <247sunny@gmail.com>",
+    "Emily Dugan <eyln123@gmail.com>",
+    "Siddharth Tiwari <sid17tiwari@gmail.com>",
+    "Epris Richardson <eharrisburnett@gmail.com>"
+  ],  
+  "license": "MIT",
   "description": "a tool for working on CRUD and sandbox operations supporting Biotool",
   "keywords": [
     "auth",
@@ -11,15 +21,6 @@
     "profile",
     "QR Code",
     "tailwindcss"
-  ],
-  "owner": "Michael Gokey <michael.gokey.architect@gmail.com>",
-  "license": "(MIT OR Apache-2.0)",
-  "contributors": [
-    "Michael Gokey <michael.gokey.architect@gmail.com>",
-    "Sunny Rajdeep <247sunny@gmail.com>",
-    "Emily Dugan <eyln123@gmail.com>",
-    "Siddharth Tiwari <sid17tiwari@gmail.com>",
-    "Epris Richardson <eharrisburnett@gmail.com>"
   ],
   "main": "index.html",
   "repository": {

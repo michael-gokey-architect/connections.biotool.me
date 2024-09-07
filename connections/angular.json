@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-              "qrcode", "html2canvas", "cropperjs"
+              "qrcode", "html2canvas", "cropperjs", "qr-code-styling"
             ],
             "outputPath": "dist/connections",
             "index": "src/index.html",
