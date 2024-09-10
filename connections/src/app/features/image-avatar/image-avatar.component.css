@@ -64,3 +64,9 @@
     position: static !important;
     margin-left: 100%;
 }
+
+.label-position-array {
+    position: absolute !important;
+    margin-left: 100%;
+    margin-top: -15%;
+}
