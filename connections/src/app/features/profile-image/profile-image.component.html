@@ -1,0 +1,18 @@
+<div class="image-container">
+    <div class="image-container" *ngIf="file; else placeholder"
+    [ngClass]="{'box-shadow-image': !!file}"
+    [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+    </div>
+    <ng-template #placeholder>
+        <!-- will place user initials here 
+        right now this fetch default image on page load if no file is chosen -->
+        <div class="image-container image-placeholder">
+        </div>
+    </ng-template>
+    <label for="image-input-file" class="label-position mr-5">
+        <div class="icon-wrapper">
+            <input type="file" id="image-input-file" accept="image/*" (change)="onFileChange($event)" />
+            <mat-icon class="icon" fontIcon="edit"></mat-icon>
+        </div>
+    </label>
+</div>

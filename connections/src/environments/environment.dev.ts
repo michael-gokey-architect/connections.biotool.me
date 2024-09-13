@@ -17,6 +17,7 @@ apiUrl_userRoles:        'http://api.mozli.com/Role',
 apiUrl_tags:            'http://api.mozli.com/Tag',
 apiUrl_themes:          'http://api.mozli.com/Theme',
 apiUrl_user:            'http://api.mozli.com/UserProfile',
+apiUrl_profileImage:    'http://api.mozli.com/Picture',
 
 apiUrl_vendor:          'http://localhost:2000/vendor',    
 apiUrl_profilePicture:  'http://localhost:2000/profile-picture',
