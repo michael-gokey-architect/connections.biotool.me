@@ -13,6 +13,8 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
 import { ImageCropperComponent } from './image-cropper/image-cropper.component';
 import { ImageAvatarComponent } from './image-avatar/image-avatar.component';
+import { ProfileImageComponent } from './profile-image/profile-image.component';
+import { ProfileImageEditorComponent } from './profile-image-editor/profile-image-editor.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { ImageAvatarComponent } from './image-avatar/image-avatar.component';
     ImageUploaderComponent,
     ImageAvatarComponent,
     ImageCropperComponent,
+    ProfileImageComponent,
+    ProfileImageEditorComponent,
   ],
   imports: [
 		CommonModule,
