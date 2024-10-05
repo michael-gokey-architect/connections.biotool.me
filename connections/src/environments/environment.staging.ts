@@ -6,8 +6,6 @@ export const environment = {
     apiUrl_biodata:         'http://api.mozli.com/Biodata',
     apiUrl_connection:      'http://api.mozli.com/Connection',
     apiUrl_event:           'http://api.mozli.com/Event',
-    apiUrl_journey:         'http://api.mozli.com/Journey',
-    apiUrl_journeyReward:   'http://api.mozli.com/JourneyReward',
     apiUrl_socialMediLink:  'http://api.mozli.com/Link',
     apiUrl_organization:    'http://api.mozli.com/Organization',
     apiUrl_orgUser:         'http://api.mozli.com/OrgUser',
@@ -17,6 +15,9 @@ export const environment = {
     apiUrl_tags:            'http://api.mozli.com/Tag',
     apiUrl_themes:          'http://api.mozli.com/Theme',
     apiUrl_user:            'http://api.mozli.com/UserProfile',
+    apiUrl_quest:           'http://api.mozli.com/Quest',
+    apiUrl_questReward:     'http://api.mozli.com/QuestReward',
+    apiUrl_collector:       'http://api.mozli.com/Collector',
 
     apiUrl_vendor:          'http://localhost:2000/vendor',    
     apiUrl_profilePicture:  'http://localhost:2000/profile-picture',

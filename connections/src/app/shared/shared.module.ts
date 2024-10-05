@@ -27,11 +27,6 @@ import { GetLinksComponent } from './links/get-links/get-links.component';
 import { CreateLinksComponent } from './links/create-links/create-links.component';
 import { UpdateLinksComponent } from './links/update-links/update-links.component';
 import { DeleteLinksComponent } from './links/delete-links/delete-links.component';
-import { JourneyLandingComponent } from './journey/journey-landing/journey-landing.component';
-import { GetJourneyComponent } from './journey/get-journey/get-journey.component';
-import { CreateJourneyComponent } from './journey/create-journey/create-journey.component';
-import { UpdateJourneyComponent } from './journey/update-journey/update-journey.component';
-import { DeleteJourneyComponent } from './journey/delete-journey/delete-journey.component';
 import { TriggerLandingComponent } from './trigger/trigger-landing/trigger-landing.component';
 import { GetTriggerComponent } from './trigger/get-trigger/get-trigger.component';
 import { UpdateTriggerComponent } from './trigger/update-trigger/update-trigger.component';
@@ -44,6 +39,11 @@ import { UpdateQuestComponent } from './quest/update-quest/update-quest.componen
 import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.component';
+import { CreateCollectorComponent } from './collector/create-collector/create-collector.component';
+import { GetCollectorsComponent } from './collector/get-collectors/get-collectors.component';
+import { CollectorLandingComponent } from './collector/collector-landing/collector-landing.component';
+import { GetCollectorsByTridComponent } from './collector/get-collectors-by-trid/get-collectors-by-trid.component';
+import { UpdateCollectorComponent } from './collector/update-collector/update-collector.component';
 
 @NgModule({
   declarations: [
@@ -71,11 +71,11 @@ import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.comp
     CreateLinksComponent,
     UpdateLinksComponent,
     DeleteLinksComponent,
-    JourneyLandingComponent,
-    GetJourneyComponent,
-    CreateJourneyComponent,
-    UpdateJourneyComponent,
-    DeleteJourneyComponent,
+    CollectorLandingComponent,
+    GetCollectorsComponent,
+    GetCollectorsByTridComponent,
+    CreateCollectorComponent,
+    UpdateCollectorComponent,
     TriggerLandingComponent,
     GetTriggerComponent,
     UpdateTriggerComponent,
@@ -86,7 +86,7 @@ import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.comp
     CreateQuestComponent,
     UpdateQuestComponent,
     DeleteQuestComponent,
-    BadgeLandingComponent
+    BadgeLandingComponent,
   ],
   exports: [  
     FooterComponent,

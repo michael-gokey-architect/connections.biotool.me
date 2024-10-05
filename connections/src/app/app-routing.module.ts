@@ -44,7 +44,6 @@ import { GetLinksComponent } from './shared/links/get-links/get-links.component'
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
-import { JourneyLandingComponent } from './shared/journey/journey-landing/journey-landing.component';
 import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
@@ -61,6 +60,11 @@ import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.co
 import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
 import { ProfileImageComponent } from './features/profile-image/profile-image.component';
+import { CollectorLandingComponent } from './shared/collector/collector-landing/collector-landing.component';
+import { GetCollectorsComponent } from './shared/collector/get-collectors/get-collectors.component';
+import { GetCollectorsByTridComponent } from './shared/collector/get-collectors-by-trid/get-collectors-by-trid.component';
+import { CreateCollectorComponent } from './shared/collector/create-collector/create-collector.component';
+import { UpdateCollectorComponent } from './shared/collector/update-collector/update-collector.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -108,7 +112,11 @@ const routes: Routes = [
   { path: 'delete-pii', component: DeletePiiComponent },
   { path: 'update-pii', component: UpdatePiiComponent },
   // { path: 'quest', component: PiiLandingComponent },
-  { path: 'journey', component: JourneyLandingComponent },
+  { path: 'collectors', component: CollectorLandingComponent},
+  { path: 'get-all-collectors', component:GetCollectorsComponent},
+  { path: 'get-trid-collectors', component:GetCollectorsByTridComponent},
+  { path: 'create-collectors', component:CreateCollectorComponent},
+  { path: 'update-collectors', component:UpdateCollectorComponent},
 
   { path: 'trigger', component: TriggerLandingComponent },
   { path: 'get-trigger', component: GetTriggerComponent },
