@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CollectorService } from 'src/app/core/services/collector.service';
 
+
 @Component({
   selector: 'app-get-collectors',
   templateUrl: './get-collectors.component.html',
@@ -11,12 +12,13 @@ export class GetCollectorsComponent {
   collectorName: string[] = [];
   collectorDescription: string[] = [];
 
-  constructor(private collectorService: CollectorService) {
-    
+  constructor(
+    private collectorService: CollectorService
+  ) {
   }
 
   getCollectors(): void {
-   
+  
       this.collectorService.getAllCollectors().subscribe({
         next: response => {
           this.collectorName.push(response.name ? response.name : "");
@@ -28,5 +30,7 @@ export class GetCollectorsComponent {
         }
       });
     }
+
+
   }
 

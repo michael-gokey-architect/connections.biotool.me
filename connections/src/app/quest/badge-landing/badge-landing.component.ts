@@ -21,3 +21,5 @@ export class BadgeLandingComponent {
   }
 
 }
+
+// Please move this component CRUD section, guts into the quest-crud module, into the proper files. and then removed this CRUD section

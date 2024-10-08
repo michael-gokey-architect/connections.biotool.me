@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CollectorService } from 'src/app/core/services/collector.service';
 
+
 @Component({
   selector: 'app-update-collector',
   templateUrl: './update-collector.component.html',
@@ -12,7 +13,10 @@ export class UpdateCollectorComponent {
   collectorName: string | null = '';
   collectorDescription: string | null = '';
 
-  constructor(private collectorService: CollectorService, private fb: FormBuilder) {
+  constructor(
+    private collectorService: CollectorService, 
+    private fb: FormBuilder
+  ) {
     this.collector = this.fb.group({
       trigger_id: ['', Validators.required],
       name: [''],
@@ -38,4 +42,5 @@ export class UpdateCollectorComponent {
       });
     }
   }
+
 }
