@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class TriggerLandingComponent {
 
 }
+
+
+// We can remove this component CRUD section
+
