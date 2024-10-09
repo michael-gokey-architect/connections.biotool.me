@@ -1,1 +1,31 @@
-<p>quest-get works!</p>
+<div class="mt-6 min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h2 class="text-xl text-center font-bold mb-4">
+            <span> Get All Quests By Id </span>
+        </h2>
+      
+        <form [formGroup]="getForm" (ngSubmit)="getQuests()">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="userId">
+                    <span>User ID</span>
+                </label>
+                <input formControlName="userId"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="userId" type="number" placeholder="Enter User ID" />
+                <div
+                    *ngIf="getForm?.get('userId')?.invalid && (getForm?.get('userId')?.dirty || getForm.get('userId')?.touched)">
+                    <p class="text-red-500 text-xs italic">Valid User Id is required.</p>
+                </div>
+            </div>
+            <button
+                class="bg-cyan-400 hover:bg-cyan-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit" [disabled]="getForm && getForm.invalid">
+                Get Quest
+            </button>
+            <div *ngIf="quest.length > 0;">
+                <li *ngFor="let q of quest">{{ q.journey_name }}
+                    </li>
+            </div>
+        </form>
+    </div>
+</div>

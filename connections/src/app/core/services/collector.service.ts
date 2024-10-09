@@ -18,9 +18,9 @@ export class CollectorService {
   constructor(private http: HttpClient) {}
 
   /* Get all Collectors */
-  getAllCollectors(): Observable<Collector> {
+  getAllCollectors(): Observable<any> {
     return this.http
-      .get<Collector>(environment.apiUrl_collector + '/GetAllCollectors/')
+      .get(environment.apiUrl_collector + '/GetAllCollectors/')
       .pipe(catchError(this.handleError));
   }
   

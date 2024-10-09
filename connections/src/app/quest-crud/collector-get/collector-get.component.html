@@ -1,1 +1,15 @@
-<p>collector-get works!</p>
+<div class="mt-6 min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h2 class="text-xl text-center font-bold mb-4">
+            <span> Get All Collectors </span>
+        </h2>
+      
+            <button (click)="getCollectors()">
+                Get Collectors
+            </button>
+            <div *ngIf="collectors.length > 0;">
+                <li *ngFor="let collector of collectors">{{ collector.name }}
+                    </li>
+            </div>
+    </div>
+</div>

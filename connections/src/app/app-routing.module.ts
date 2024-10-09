@@ -60,11 +60,15 @@ import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.co
 import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
 import { ProfileImageComponent } from './features/profile-image/profile-image.component';
-import { CollectorLandingComponent } from './shared/collector/collector-landing/collector-landing.component';
-import { GetCollectorsComponent } from './shared/collector/get-collectors/get-collectors.component';
+import { CollectorLandingComponent } from './quest-crud/collector-landing/collector-landing.component';
+import { CollectorGetComponent } from './quest-crud/collector-get/collector-get.component';
 import { GetCollectorsByTridComponent } from './shared/collector/get-collectors-by-trid/get-collectors-by-trid.component';
-import { CreateCollectorComponent } from './shared/collector/create-collector/create-collector.component';
-import { UpdateCollectorComponent } from './shared/collector/update-collector/update-collector.component';
+import { CreateCollectorComponent } from './quest-crud/collector-create/collector-create.component';
+import { CollectorUpdateComponent } from './quest-crud/collector-update/collector-update.component';
+import { QuestGetComponent } from './quest-crud/quest-get/quest-get.component';
+import { QuestCreateComponent } from './quest-crud/quest-create/quest-create.component';
+import { QuestUpdateComponent } from './quest-crud/quest-update/quest-update.component';
+import { QuestLandingComponent } from './quest-crud/quest-landing/quest-landing.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -113,10 +117,14 @@ const routes: Routes = [
   { path: 'update-pii', component: UpdatePiiComponent },
   // { path: 'quest', component: PiiLandingComponent },
   { path: 'collectors', component: CollectorLandingComponent},
-  { path: 'get-all-collectors', component:GetCollectorsComponent},
+  { path: 'get-all-collectors', component:CollectorGetComponent},
   { path: 'get-trid-collectors', component:GetCollectorsByTridComponent},
   { path: 'create-collectors', component:CreateCollectorComponent},
-  { path: 'update-collectors', component:UpdateCollectorComponent},
+  { path: 'update-collectors', component:CollectorUpdateComponent},
+  { path: 'quests', component: QuestLandingComponent},
+  { path: 'get-quests', component: QuestGetComponent},
+  { path: 'create-quests', component: QuestCreateComponent},
+  { path: 'update-quests', component: QuestUpdateComponent},
 
   { path: 'trigger', component: TriggerLandingComponent },
   { path: 'get-trigger', component: GetTriggerComponent },

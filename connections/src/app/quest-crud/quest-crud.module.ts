@@ -9,9 +9,10 @@ import { QuestCreateComponent } from './quest-create/quest-create.component';
 import { QuestUpdateComponent } from './quest-update/quest-update.component';
 import { QuestGetComponent } from './quest-get/quest-get.component';
 import { CollectorLandingComponent } from './collector-landing/collector-landing.component';
-import { CollectorCreateComponent } from './collector-create/collector-create.component';
+import { CreateCollectorComponent } from './collector-create/collector-create.component';
 import { CollectorUpdateComponent } from './collector-update/collector-update.component';
 import { CollectorGetComponent } from './collector-get/collector-get.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,12 +27,14 @@ import { CollectorGetComponent } from './collector-get/collector-get.component';
     QuestUpdateComponent,
     QuestGetComponent,
     CollectorLandingComponent,
-    CollectorCreateComponent,
+    CreateCollectorComponent,
     CollectorUpdateComponent,
     CollectorGetComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class QuestCrudModule { }

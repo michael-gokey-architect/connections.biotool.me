@@ -1,1 +1,59 @@
-<p>collector-create works!</p>
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>COLLECTOR DETAILS</span></h1>
+        <form [formGroup]="collector" (ngSubmit)="createCollector()">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="name">
+                    <span>Name</span>
+                </label>
+                <input formControlName="name"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="Enter Name">
+               
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="description">
+                    <span>Description</span>
+                </label>
+                <input formControlName="description"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="description" type="text" placeholder="Enter description">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="latitude">
+                    <span>Latitude</span>
+                </label>
+                <input formControlName="latitude"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="latitude" type="text" placeholder="Enter latitude">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="longitude">
+                    <span>Longitude</span>
+                </label>
+                <input formControlName="longitude"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="longitude" type="text" placeholder="Enter longitude">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="trig">
+                    <span>trig</span>
+                </label>
+                <textarea formControlName="trig"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="trig" placeholder="Enter trig" rows="4"></textarea>
+                <div
+                    *ngIf="collector && collector?.get('trig')?.invalid && (collector?.get('trig')?.dirty || collector?.get('trig')?.touched)">
+                <p class="text-red-500 text-xs italic">Trig is required.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="collector && collector.invalid">
+                    Create Collector
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
