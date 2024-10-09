@@ -32,19 +32,17 @@ import { GetTriggerComponent } from './trigger/get-trigger/get-trigger.component
 import { UpdateTriggerComponent } from './trigger/update-trigger/update-trigger.component';
 import { CreateTriggerComponent } from './trigger/create-trigger/create-trigger.component';
 import { DeleteTriggerComponent } from './trigger/delete-trigger/delete-trigger.component';
-import { QuestLandingComponent } from './quest/quest-landing/quest-landing.component';
-import { GetQuestComponent } from './quest/get-quest/get-quest.component';
-import { CreateQuestComponent } from './quest/create-quest/create-quest.component';
-import { UpdateQuestComponent } from './quest/update-quest/update-quest.component';
-import { DeleteQuestComponent } from './quest/delete-quest/delete-quest.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.component';
-import { CreateCollectorComponent } from './collector/create-collector/create-collector.component';
-import { GetCollectorsComponent } from './collector/get-collectors/get-collectors.component';
-import { CollectorLandingComponent } from './collector/collector-landing/collector-landing.component';
+import { CreateCollectorComponent } from '../quest-crud/collector-create/collector-create.component';
+import { CollectorGetComponent } from '../quest-crud/collector-get/collector-get.component';
+import { CollectorLandingComponent } from '../quest-crud/collector-landing/collector-landing.component';
 import { GetCollectorsByTridComponent } from './collector/get-collectors-by-trid/get-collectors-by-trid.component';
-import { UpdateCollectorComponent } from './collector/update-collector/update-collector.component';
-
+import { CollectorUpdateComponent } from '../quest-crud/collector-update/collector-update.component';
+import { QuestLandingComponent } from '../quest-crud/quest-landing/quest-landing.component';
+import { QuestCreateComponent } from '../quest-crud/quest-create/quest-create.component';
+import { QuestGetComponent } from '../quest-crud/quest-get/quest-get.component';
+import { QuestUpdateComponent } from '../quest-crud/quest-update/quest-update.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -72,21 +70,20 @@ import { UpdateCollectorComponent } from './collector/update-collector/update-co
     UpdateLinksComponent,
     DeleteLinksComponent,
     CollectorLandingComponent,
-    GetCollectorsComponent,
+    CollectorGetComponent,
     GetCollectorsByTridComponent,
     CreateCollectorComponent,
-    UpdateCollectorComponent,
+    CollectorUpdateComponent,
     TriggerLandingComponent,
     GetTriggerComponent,
     UpdateTriggerComponent,
     CreateTriggerComponent,
     DeleteTriggerComponent,
-    QuestLandingComponent,
-    GetQuestComponent,
-    CreateQuestComponent,
-    UpdateQuestComponent,
-    DeleteQuestComponent,
     BadgeLandingComponent,
+    QuestLandingComponent,
+    QuestCreateComponent,
+    QuestGetComponent,
+    QuestUpdateComponent
   ],
   exports: [  
     FooterComponent,

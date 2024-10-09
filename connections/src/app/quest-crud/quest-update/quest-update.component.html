@@ -1,1 +1,63 @@
-<p>quest-update works!</p>
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>QUEST DETAILS</span></h1>
+        <form [formGroup]="quest" (ngSubmit)="updateQuest()">
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="journey_id">
+                    <span>Journey Id</span>
+                </label>
+                <textarea formControlName="journey_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="journey_id" placeholder="Enter Journey Id" rows="4"></textarea>
+                <div
+                    *ngIf="quest && quest?.get('journey_id')?.invalid && (quest.get('journey_id')?.dirty || quest.get('journey_id')?.touched)">
+                <p class="text-red-500 text-xs italic">journey_id is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="journey_name">
+                    <span>Journey Name</span>
+                </label>
+                <input formControlName="journey_name"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="journey_name" type="text" placeholder="Enter Journey Name">
+               
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="event_id">
+                    <span>Event Id</span>
+                </label>
+                <input formControlName="event_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="event_id" type="text" placeholder="Enter Event Id">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="journey_details">
+                    <span>Journey Details</span>
+                </label>
+                <input formControlName="journey_details"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="journey_details" type="text" placeholder="Enter Journey Details">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm mb-2" for="joid">
+                    <span>Joid</span>
+                </label>
+                <textarea formControlName="joid"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="joid" placeholder="Enter Joid" rows="4"></textarea>
+                <div
+                    *ngIf="quest && quest?.get('joid')?.invalid && (quest.get('joid')?.dirty || quest.get('joid')?.touched)">
+                <p class="text-red-500 text-xs italic">Joid is required.</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="quest && quest.invalid">
+                    Update Quest
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
