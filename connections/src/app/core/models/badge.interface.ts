@@ -5,6 +5,6 @@ export interface Badge {
     small_image_color: string | null,
     small_image_greyscale: string | null,
     big_image: string | null,
-    org_id: number,
+    organization_id: number,
     create_date: string
 }

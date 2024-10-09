@@ -33,7 +33,7 @@ import { UpdateTriggerComponent } from './trigger/update-trigger/update-trigger.
 import { CreateTriggerComponent } from './trigger/create-trigger/create-trigger.component';
 import { DeleteTriggerComponent } from './trigger/delete-trigger/delete-trigger.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BadgeLandingComponent } from '../quest/badge-landing/badge-landing.component';
+import { BadgeLandingComponent } from '../quest-crud/badge-landing/badge-landing.component';
 import { CreateCollectorComponent } from '../quest-crud/collector-create/collector-create.component';
 import { CollectorGetComponent } from '../quest-crud/collector-get/collector-get.component';
 import { CollectorLandingComponent } from '../quest-crud/collector-landing/collector-landing.component';
@@ -43,6 +43,8 @@ import { QuestLandingComponent } from '../quest-crud/quest-landing/quest-landing
 import { QuestCreateComponent } from '../quest-crud/quest-create/quest-create.component';
 import { QuestGetComponent } from '../quest-crud/quest-get/quest-get.component';
 import { QuestUpdateComponent } from '../quest-crud/quest-update/quest-update.component';
+import { BadgeCreateComponent } from '../quest-crud/badge-create/badge-create.component';
+import { BadgeGetComponent } from '../quest-crud/badge-get/badge-get.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -83,7 +85,9 @@ import { QuestUpdateComponent } from '../quest-crud/quest-update/quest-update.co
     QuestLandingComponent,
     QuestCreateComponent,
     QuestGetComponent,
-    QuestUpdateComponent
+    QuestUpdateComponent,
+    BadgeCreateComponent,
+    BadgeGetComponent
   ],
   exports: [  
     FooterComponent,
