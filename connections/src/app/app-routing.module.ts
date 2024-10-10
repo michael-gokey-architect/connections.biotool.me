@@ -53,9 +53,9 @@ import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.co
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
 import { ImageUploaderComponent } from './features/image-uploader/image-uploader.component';
 import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
-import { BadgeLandingComponent } from './quest/badge-landing/badge-landing.component';
-import { CreateBadgeComponent } from './quest/create-badge/create-badge.component';
-import { GetBadgeComponent } from './quest/get-badge/get-badge.component';
+import { BadgeLandingComponent } from './quest-crud/badge-landing/badge-landing.component';
+import { BadgeCreateComponent } from './quest-crud/badge-create/badge-create.component';
+import { BadgeGetComponent } from './quest-crud/badge-get/badge-get.component';
 import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.component';
 import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
@@ -141,8 +141,8 @@ const routes: Routes = [
   { path: 'image-avatar', component: ImageAvatarComponent},
   { path: 'profile-image', component: ProfileImageComponent},
   { path: 'badge', component: BadgeLandingComponent},
-  { path: 'create-badge', component: CreateBadgeComponent},
-  { path: 'get-badge', component: GetBadgeComponent},
+  { path: 'create-badge', component: BadgeCreateComponent},
+  { path: 'get-badge', component: BadgeGetComponent},
   { path: '', redirectTo: 'guest', pathMatch: 'full' },
   { path: '**', redirectTo: 'page-not-found' },
 ];

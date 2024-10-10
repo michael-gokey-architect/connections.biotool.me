@@ -1,1 +1,30 @@
-<p>badge-get works!</p>
+<div class="mt-6 min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h2 class="text-xl text-center font-bold mb-4">
+            <span> Get Badge </span>
+        </h2>
+        <form [formGroup]="getForm" (ngSubmit)="getBadge()">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="badge_id">
+                    <span>Badge ID</span>
+                </label>
+                <input formControlName="badge_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="badge_id" type="number" placeholder="Enter Badge ID" />
+                <div
+                    *ngIf="getForm?.get('badge_id')?.invalid && (getForm?.get('badge_id')?.dirty || getForm.get('badge_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">Valid Badge Id is required.</p>
+                </div>
+            </div>
+            <button
+                class="bg-cyan-400 hover:bg-cyan-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit" [disabled]="getForm && getForm.invalid">
+                Get Badge
+            </button>
+            <div *ngIf="badges.length > 0;">
+                <li *ngFor="let badge of badges">{{ badge.badge_name }}, {{badge.badge_description}}
+                   </li>
+            </div>
+        </form>
+    </div>
+</div>
