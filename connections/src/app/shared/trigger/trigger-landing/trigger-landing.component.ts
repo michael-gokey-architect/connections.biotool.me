@@ -10,5 +10,7 @@ export class TriggerLandingComponent {
 }
 
 
-// We can remove this component CRUD section
+
+// TODO: Emily, Please delete
+
 

@@ -37,7 +37,7 @@ import { BadgeLandingComponent } from '../quest-crud/badge-landing/badge-landing
 import { CreateCollectorComponent } from '../quest-crud/collector-create/collector-create.component';
 import { CollectorGetComponent } from '../quest-crud/collector-get/collector-get.component';
 import { CollectorLandingComponent } from '../quest-crud/collector-landing/collector-landing.component';
-import { GetCollectorsByTridComponent } from './collector/get-collectors-by-trid/get-collectors-by-trid.component';
+// import { GetCollectorsByTridComponent } from './collector/get-collectors-by-trid/get-collectors-by-trid.component';
 import { CollectorUpdateComponent } from '../quest-crud/collector-update/collector-update.component';
 import { QuestLandingComponent } from '../quest-crud/quest-landing/quest-landing.component';
 import { QuestCreateComponent } from '../quest-crud/quest-create/quest-create.component';
@@ -45,6 +45,7 @@ import { QuestGetComponent } from '../quest-crud/quest-get/quest-get.component';
 import { QuestUpdateComponent } from '../quest-crud/quest-update/quest-update.component';
 import { BadgeCreateComponent } from '../quest-crud/badge-create/badge-create.component';
 import { BadgeGetComponent } from '../quest-crud/badge-get/badge-get.component';
+
 @NgModule({
   declarations: [
     FooterComponent,
@@ -73,7 +74,7 @@ import { BadgeGetComponent } from '../quest-crud/badge-get/badge-get.component';
     DeleteLinksComponent,
     CollectorLandingComponent,
     CollectorGetComponent,
-    GetCollectorsByTridComponent,
+    // GetCollectorsByTridComponent,
     CreateCollectorComponent,
     CollectorUpdateComponent,
     TriggerLandingComponent,

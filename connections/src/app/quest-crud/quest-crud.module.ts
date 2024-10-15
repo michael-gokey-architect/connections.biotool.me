@@ -13,7 +13,7 @@ import { CreateCollectorComponent } from './collector-create/collector-create.co
 import { CollectorUpdateComponent } from './collector-update/collector-update.component';
 import { CollectorGetComponent } from './collector-get/collector-get.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { GetCollectorsByTridComponent } from './get-collectors-by-trid/get-collectors-by-trid.component';
 
 
 @NgModule({
@@ -28,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QuestGetComponent,
     CollectorLandingComponent,
     CreateCollectorComponent,
+    GetCollectorsByTridComponent,
     CollectorUpdateComponent,
     CollectorGetComponent
   ],
