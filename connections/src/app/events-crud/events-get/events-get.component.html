@@ -1,1 +1,14 @@
-<p>events-get works!</p>
+<div class="flex items-center justify-center min-h-full">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>EVENT NAME & ID</span></h1>
+		<div *ngIf="events.length > 0; else noData">
+			<ul>
+				<li *ngFor="let event of events">{{ event.event_name }}
+					, {{event.event_id}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<ng-template #noData>
+	No events found.
+</ng-template>

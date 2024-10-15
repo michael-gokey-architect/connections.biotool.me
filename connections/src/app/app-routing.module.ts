@@ -18,10 +18,10 @@ import { CreateOrganizationComponent } from './organization/create-organization/
 import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
-import { EventsLandingComponent } from './events/events-landing/events-landing.component';
-import { CreateEventsComponent } from './events/create-events/create-events.component';
-import { GetEventsComponent } from './events/get-events/get-events.component';
-import { UpdateEventsComponent } from './events/update-events/update-events.component';
+import { EventsCrudLandingComponent } from './events-crud/events-crud-landing/events-crud-landing.component';
+import { EventsCreateComponent } from './events-crud/events-create/events-create.component';
+import { EventsGetComponent } from './events-crud/events-get/events-get.component';
+import { EventsUpdateComponent } from './events-crud/events-update/events-update.component';
 import { DeleteEventsComponent } from './events/delete-events/delete-events.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { CreateRolesComponent } from './shared/roles/create-roles/create-roles.component';
@@ -44,7 +44,6 @@ import { GetLinksComponent } from './shared/links/get-links/get-links.component'
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
-import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
@@ -56,8 +55,6 @@ import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.compon
 import { BadgeLandingComponent } from './quest-crud/badge-landing/badge-landing.component';
 import { BadgeCreateComponent } from './quest-crud/badge-create/badge-create.component';
 import { BadgeGetComponent } from './quest-crud/badge-get/badge-get.component';
-import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.component';
-import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
 import { ProfileImageComponent } from './features/profile-image/profile-image.component';
 import { CollectorLandingComponent } from './quest-crud/collector-landing/collector-landing.component';
@@ -85,11 +82,11 @@ const routes: Routes = [
   { path: 'blue', component: PageBlueComponent },
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
-  { path: 'events', component: EventsLandingComponent },
-  { path: 'get-event', component: GetEventsComponent },
-  { path: 'create-event', component: CreateEventsComponent },
+  { path: 'events', component: EventsCrudLandingComponent },
+  { path: 'get-event', component: EventsGetComponent },
+  { path: 'create-event', component: EventsCreateComponent },
   { path: 'delete-event', component: DeleteEventsComponent },
-  { path: 'update-event', component: UpdateEventsComponent },
+  { path: 'update-event', component: EventsUpdateComponent },
   { path: 'organization', component: OrganizationLandingComponent },
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },
@@ -126,9 +123,6 @@ const routes: Routes = [
   { path: 'create-quests', component: QuestCreateComponent},
   { path: 'update-quests', component: QuestUpdateComponent},
 
-  { path: 'trigger', component: TriggerLandingComponent },
-  { path: 'get-trigger', component: GetTriggerComponent },
-  { path: 'create-trigger', component: CreateTriggerComponent },
 
   { path: 'qrcode', component: QrCodeGeneratorComponent },
   { path: 'org-event', component: OrganizationManagerComponent },

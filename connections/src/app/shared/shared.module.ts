@@ -27,11 +27,6 @@ import { GetLinksComponent } from './links/get-links/get-links.component';
 import { CreateLinksComponent } from './links/create-links/create-links.component';
 import { UpdateLinksComponent } from './links/update-links/update-links.component';
 import { DeleteLinksComponent } from './links/delete-links/delete-links.component';
-import { TriggerLandingComponent } from './trigger/trigger-landing/trigger-landing.component';
-import { GetTriggerComponent } from './trigger/get-trigger/get-trigger.component';
-import { UpdateTriggerComponent } from './trigger/update-trigger/update-trigger.component';
-import { CreateTriggerComponent } from './trigger/create-trigger/create-trigger.component';
-import { DeleteTriggerComponent } from './trigger/delete-trigger/delete-trigger.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadgeLandingComponent } from '../quest-crud/badge-landing/badge-landing.component';
 import { CreateCollectorComponent } from '../quest-crud/collector-create/collector-create.component';
@@ -77,11 +72,6 @@ import { BadgeGetComponent } from '../quest-crud/badge-get/badge-get.component';
     // GetCollectorsByTridComponent,
     CreateCollectorComponent,
     CollectorUpdateComponent,
-    TriggerLandingComponent,
-    GetTriggerComponent,
-    UpdateTriggerComponent,
-    CreateTriggerComponent,
-    DeleteTriggerComponent,
     BadgeLandingComponent,
     QuestLandingComponent,
     QuestCreateComponent,
