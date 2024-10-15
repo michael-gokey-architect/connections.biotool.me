@@ -14,7 +14,7 @@ import { FeaturesModule } from './features/features.module';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 import { EventManagerComponent } from './event-management/event-manager/event-manager.component';
 import { PanelistManagerComponent } from './event-management/panelist-manager/panelist-manager.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FeaturesMichaelModule } from './features-michael/features-michael.module';
 import { QrCodeSaveComponent } from './qr-save-mock/qr-code-save/qr-code-save.component';
 import { QrCodeDisplayComponent } from './qr-save-mock/qr-code-display/qr-code-display.component';
@@ -71,6 +71,7 @@ import { TicketsCrudLandingComponent } from './tickets-crud/tickets-crud-landing
     HttpClientModule,
     FeaturesModule,
     FormsModule,
+    ReactiveFormsModule,
     FeaturesMichaelModule,
     MaterialModule,
     BrowserAnimationsModule,

@@ -18,10 +18,10 @@ import { CreateOrganizationComponent } from './organization/create-organization/
 import { GetOrganizationComponent } from './organization/get-organization/get-organization.component';
 import { UpdateOrganizationComponent } from './organization/update-organization/update-organization.component';
 import { DeleteOrganizationComponent } from './organization/delete-organization/delete-organization.component';
-import { EventsLandingComponent } from './events/events-landing/events-landing.component';
-import { CreateEventsComponent } from './events/create-events/create-events.component';
-import { GetEventsComponent } from './events/get-events/get-events.component';
-import { UpdateEventsComponent } from './events/update-events/update-events.component';
+import { EventsCrudLandingComponent } from './events-crud/events-crud-landing/events-crud-landing.component';
+import { EventsCreateComponent } from './events-crud/events-create/events-create.component';
+import { EventsGetComponent } from './events-crud/events-get/events-get.component';
+import { EventsUpdateComponent } from './events-crud/events-update/events-update.component';
 import { DeleteEventsComponent } from './events/delete-events/delete-events.component';
 import { RoleLandingComponent } from './shared/roles/role-landing/role-landing.component';
 import { CreateRolesComponent } from './shared/roles/create-roles/create-roles.component';
@@ -85,11 +85,11 @@ const routes: Routes = [
   { path: 'blue', component: PageBlueComponent },
   { path: 'purple', component: PagePurpleComponent },
   { path: 'red', component: PageRedComponent },
-  { path: 'events', component: EventsLandingComponent },
-  { path: 'get-event', component: GetEventsComponent },
-  { path: 'create-event', component: CreateEventsComponent },
+  { path: 'events', component: EventsCrudLandingComponent },
+  { path: 'get-event', component: EventsGetComponent },
+  { path: 'create-event', component: EventsCreateComponent },
   { path: 'delete-event', component: DeleteEventsComponent },
-  { path: 'update-event', component: UpdateEventsComponent },
+  { path: 'update-event', component: EventsUpdateComponent },
   { path: 'organization', component: OrganizationLandingComponent },
   { path: 'get-organization', component: GetOrganizationComponent },
   { path: 'create-organization', component: CreateOrganizationComponent },
