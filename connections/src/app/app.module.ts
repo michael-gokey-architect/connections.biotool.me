@@ -22,6 +22,19 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.component';
 import { QRCodeModule } from 'angularx-qrcode';
+import { ConnectionsCreateComponent } from './connections-crud/connections-create/connections-create.component';
+import { ConnectionsGetComponent } from './connections-crud/connections-get/connections-get.component';
+import { ConnectionsUpdateComponent } from './connections-crud/connections-update/connections-update.component';
+import { ConnectionsRemoveComponent } from './connections-crud/connections-remove/connections-remove.component';
+import { ConnectionsCrudLandingComponent } from './connections-crud/connections-crud-landing/connections-crud-landing.component';
+import { EventsCreateComponent } from './events-crud/events-create/events-create.component';
+import { EventsGetComponent } from './events-crud/events-get/events-get.component';
+import { EventsUpdateComponent } from './events-crud/events-update/events-update.component';
+import { EventsCrudLandingComponent } from './events-crud/events-crud-landing/events-crud-landing.component';
+import { TicketsCreateComponent } from './tickets-crud/tickets-create/tickets-create.component';
+import { TicketsUpdateComponent } from './tickets-crud/tickets-update/tickets-update.component';
+import { TicketsGetComponent } from './tickets-crud/tickets-get/tickets-get.component';
+import { TicketsCrudLandingComponent } from './tickets-crud/tickets-crud-landing/tickets-crud-landing.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +44,20 @@ import { QRCodeModule } from 'angularx-qrcode';
     PanelistManagerComponent,
     QrCodeSaveComponent,
     QrCodeDisplayComponent,
-    QrUserProfileComponent
+    QrUserProfileComponent,
+    ConnectionsCreateComponent,
+    ConnectionsGetComponent,
+    ConnectionsUpdateComponent,
+    ConnectionsRemoveComponent,
+    ConnectionsCrudLandingComponent,
+    EventsCreateComponent,
+    EventsGetComponent,
+    EventsUpdateComponent,
+    EventsCrudLandingComponent,
+    TicketsCreateComponent,
+    TicketsUpdateComponent,
+    TicketsGetComponent,
+    TicketsCrudLandingComponent
   ],
   imports: [
     BrowserModule,

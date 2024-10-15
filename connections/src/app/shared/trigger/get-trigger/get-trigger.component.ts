@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class GetTriggerComponent {
 
 }
+
+
+// TODO: Emily, Please delete
+
