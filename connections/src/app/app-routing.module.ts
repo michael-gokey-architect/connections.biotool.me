@@ -44,7 +44,6 @@ import { GetLinksComponent } from './shared/links/get-links/get-links.component'
 import { CreateLinksComponent } from './shared/links/create-links/create-links.component';
 import { DeleteLinksComponent } from './shared/links/delete-links/delete-links.component';
 import { UpdateLinksComponent } from './shared/links/update-links/update-links.component';
-import { TriggerLandingComponent } from './shared/trigger/trigger-landing/trigger-landing.component';
 import { QrCodeGeneratorComponent } from './features/qr-code-generator/qr-code-generator.component';
 import { OrganizationManagerComponent } from './event-management/organization-manager/organization-manager.component';
 import { ProfileLoaderComponent } from './features-michael/profile-loader/profile-loader.component';
@@ -56,8 +55,6 @@ import { QrUserProfileComponent } from './qr-user-profile/qr-user-profile.compon
 import { BadgeLandingComponent } from './quest-crud/badge-landing/badge-landing.component';
 import { BadgeCreateComponent } from './quest-crud/badge-create/badge-create.component';
 import { BadgeGetComponent } from './quest-crud/badge-get/badge-get.component';
-import { GetTriggerComponent } from './shared/trigger/get-trigger/get-trigger.component';
-import { CreateTriggerComponent } from './shared/trigger/create-trigger/create-trigger.component';
 import { ImageAvatarComponent } from './features/image-avatar/image-avatar.component';
 import { ProfileImageComponent } from './features/profile-image/profile-image.component';
 import { CollectorLandingComponent } from './quest-crud/collector-landing/collector-landing.component';
@@ -126,9 +123,6 @@ const routes: Routes = [
   { path: 'create-quests', component: QuestCreateComponent},
   { path: 'update-quests', component: QuestUpdateComponent},
 
-  { path: 'trigger', component: TriggerLandingComponent },
-  { path: 'get-trigger', component: GetTriggerComponent },
-  { path: 'create-trigger', component: CreateTriggerComponent },
 
   { path: 'qrcode', component: QrCodeGeneratorComponent },
   { path: 'org-event', component: OrganizationManagerComponent },
