@@ -62,7 +62,7 @@ import { ImageAvatarComponent } from './features/image-avatar/image-avatar.compo
 import { ProfileImageComponent } from './features/profile-image/profile-image.component';
 import { CollectorLandingComponent } from './quest-crud/collector-landing/collector-landing.component';
 import { CollectorGetComponent } from './quest-crud/collector-get/collector-get.component';
-import { GetCollectorsByTridComponent } from './shared/collector/get-collectors-by-trid/get-collectors-by-trid.component';
+import { GetCollectorsByTridComponent } from './quest-crud/get-collectors-by-trid/get-collectors-by-trid.component';
 import { CreateCollectorComponent } from './quest-crud/collector-create/collector-create.component';
 import { CollectorUpdateComponent } from './quest-crud/collector-update/collector-update.component';
 import { QuestGetComponent } from './quest-crud/quest-get/quest-get.component';
