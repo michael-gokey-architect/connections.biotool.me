@@ -2,11 +2,11 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GuestPublicLandingComponent } from './guest/guest-public-landing/guest-public-landing.component';
 import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-found.component';
-import { ConnectionCentralComponent } from './connections/connection-central/connection-central.component';
-import { CreateConnectionsComponent } from './connections/create-connections/create-connections.component';
-import { GetConnectionsComponent } from './connections/get-connections/get-connections.component';
-import { UpdateConnectionsComponent } from './connections/update-connections/update-connections.component';
-import { DeleteConnectionsComponent } from './connections/delete-connections/delete-connections.component';
+import { ConnectionsCreateComponent } from './connections-crud/connections-create/connections-create.component';
+import { ConnectionsGetComponent } from './connections-crud/connections-get/connections-get.component';
+import { ConnectionsRemoveComponent } from './connections-crud/connections-remove/connections-remove.component';
+import { ConnectionsUpdateComponent } from './connections-crud/connections-update/connections-update.component';
+import { ConnectionsCrudLandingComponent } from './connections-crud/connections-crud-landing/connections-crud-landing.component';
 import { QuestRewardsPageComponent } from './quest/quest-rewards-page/quest-rewards-page.component';
 import { ThemeSwitcherComponent } from './features/theme-switcher/theme-switcher.component';
 import { PageRedComponent } from './features-epris/page-red/page-red.component';
@@ -70,11 +70,11 @@ import { QuestLandingComponent } from './quest-crud/quest-landing/quest-landing.
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
-  { path: 'connections', component: ConnectionCentralComponent },
-  { path: 'get-connection', component: GetConnectionsComponent },
-  { path: 'create-connection', component: CreateConnectionsComponent },
-  { path: 'delete-connection', component: DeleteConnectionsComponent },
-  { path: 'update-connection', component: UpdateConnectionsComponent },
+  { path: 'connections', component: ConnectionsCrudLandingComponent },
+  { path: 'get-connection', component: ConnectionsGetComponent },
+  { path: 'create-connection', component: ConnectionsCreateComponent },
+  { path: 'delete-connection', component: ConnectionsRemoveComponent },
+  { path: 'update-connection', component: ConnectionsUpdateComponent },
   { path: 'quests', component: QuestRewardsPageComponent },
   { path: 'theme', component: ThemeSwitcherComponent },
   { path: 'gray', component: PageGrayComponent },

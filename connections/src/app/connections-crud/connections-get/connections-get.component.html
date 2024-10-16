@@ -1,1 +1,33 @@
-<p>connections-get works!</p>
+<div class="flex items-center justify-center min-h-full">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>CONNECTION NAME & ID</span></h1>
+        <form [formGroup]="connectionForm" (ngSubmit)="onSubmit($event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="user_id">
+                    <span>Connection User ID</span>
+                </label>
+                <input formControlName="user_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="user_id" type="number" placeholder="Enter User ID">
+                <div
+                    *ngIf="connectionForm && connectionForm?.get('user_id')?.invalid && (connectionForm?.get('user_id')?.dirty || connectionForm?.get('user_id')?.touched)">
+                    <p class="text-red-500 text-xs italic">Connection User ID is required.</p>
+                </div>
+                <div *ngIf="connections.length > 0; else noData">
+                    <ul>
+                        <li *ngFor="let connection of connections">{{ connection.user_id }}
+                           </li>
+                    </ul>
+                </div>
+            </div>
+            <button
+				class="bg-red-400 hover:bg-red-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				type="submit" [disabled]="connectionForm && connectionForm.invalid">
+				Get Connection
+			</button>
+            </form>
+    </div>
+</div>
+<ng-template #noData>
+    No connections found.
+</ng-template>
