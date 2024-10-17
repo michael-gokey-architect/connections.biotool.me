@@ -1,0 +1,31 @@
+<div class="mt-6 min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h2 class="text-xl text-center font-bold mb-4">
+            <span> Get All Quests Rewards By Id </span>
+        </h2>
+      
+        <form [formGroup]="getForm" (ngSubmit)="getQuestsReward()">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="rewardId">
+                    <span>Reward ID</span>
+                </label>
+                <input formControlName="rewardId"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="rewardId" type="number" placeholder="Enter Reward ID" />
+                <div
+                    *ngIf="getForm?.get('rewardId')?.invalid && (getForm?.get('rewardId')?.dirty || getForm.get('rewardId')?.touched)">
+                    <p class="text-red-500 text-xs italic">Valid Reward Id is required.</p>
+                </div>
+            </div>
+            <button
+                class="bg-cyan-400 hover:bg-cyan-500 rounded-full w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit" [disabled]="getForm && getForm.invalid">
+                Get Quest Reward
+            </button>
+            <div *ngIf="questReward.length > 0;">
+                <li *ngFor="let q of questReward">{{ q.journey_id }}
+                    </li>
+            </div>
+        </form>
+    </div>
+</div>

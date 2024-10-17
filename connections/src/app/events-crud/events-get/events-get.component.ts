@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Event } from 'src/app/core/models/event.interface';
 import { EventService } from 'src/app/core/services/event.service';
 
 @Component({

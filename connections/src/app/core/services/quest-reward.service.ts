@@ -26,12 +26,12 @@ export class QuestRewardService {
   /* Create a new Quest Reward */
   createQuestReward(questReward: QuestReward): Observable<QuestReward> {
     return this.http
-      .post<QuestReward>(environment.apiUrl_questReward + '/AddQuestReward/', JSON.stringify(questReward), this.httpOptions)
+      .post<QuestReward>(environment.apiUrl_questReward + '/AddQuestReward', JSON.stringify(questReward), this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 
   updateQuestReward(questReward: QuestReward): Observable<any> {
-    return this.http.put(environment.apiUrl_questReward + '/UpdateQuestReward/', JSON.stringify(questReward), this.httpOptions)
+    return this.http.put(environment.apiUrl_questReward + '/UpdateQuestReward', JSON.stringify(questReward), this.httpOptions)
       .pipe(
         catchError(this.handleError)
       )

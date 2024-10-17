@@ -14,6 +14,10 @@ import { CollectorUpdateComponent } from './collector-update/collector-update.co
 import { CollectorGetComponent } from './collector-get/collector-get.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetCollectorsByTridComponent } from './get-collectors-by-trid/get-collectors-by-trid.component';
+import { QuestRewardGetComponent } from './quest-reward-get/quest-reward-get.component';
+import { QuestRewardCreateComponent } from './quest-reward-create/quest-reward-create.component';
+import { QuestRewardUpdateComponent } from './quest-reward-update/quest-reward-update.component';
+import { QuestRewardLandingComponent } from './quest-reward-landing/quest-reward-landing.component';
 
 
 @NgModule({
@@ -30,7 +34,11 @@ import { GetCollectorsByTridComponent } from './get-collectors-by-trid/get-colle
     CreateCollectorComponent,
     GetCollectorsByTridComponent,
     CollectorUpdateComponent,
-    CollectorGetComponent
+    CollectorGetComponent,
+    QuestRewardGetComponent,
+    QuestRewardCreateComponent,
+    QuestRewardUpdateComponent,
+    QuestRewardLandingComponent
   ],
   imports: [
     CommonModule,

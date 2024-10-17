@@ -66,6 +66,10 @@ import { QuestGetComponent } from './quest-crud/quest-get/quest-get.component';
 import { QuestCreateComponent } from './quest-crud/quest-create/quest-create.component';
 import { QuestUpdateComponent } from './quest-crud/quest-update/quest-update.component';
 import { QuestLandingComponent } from './quest-crud/quest-landing/quest-landing.component';
+import { QuestRewardGetComponent } from './quest-crud/quest-reward-get/quest-reward-get.component';
+import { QuestRewardCreateComponent } from './quest-crud/quest-reward-create/quest-reward-create.component';
+import { QuestRewardLandingComponent } from './quest-crud/quest-reward-landing/quest-reward-landing.component';
+import { QuestRewardUpdateComponent } from './quest-crud/quest-reward-update/quest-reward-update.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
@@ -122,6 +126,10 @@ const routes: Routes = [
   { path: 'get-quests', component: QuestGetComponent},
   { path: 'create-quests', component: QuestCreateComponent},
   { path: 'update-quests', component: QuestUpdateComponent},
+  { path: 'quest-rewards', component: QuestRewardLandingComponent},
+  { path: 'create-quests-rewards', component: QuestRewardCreateComponent},
+  { path: 'get-quests-rewards', component: QuestRewardGetComponent},
+  { path: 'update-quests-rewards', component: QuestRewardUpdateComponent},
 
 
   { path: 'qrcode', component: QrCodeGeneratorComponent },
