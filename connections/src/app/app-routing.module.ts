@@ -2,11 +2,11 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GuestPublicLandingComponent } from './guest/guest-public-landing/guest-public-landing.component';
 import { PageNotFoundComponent } from './shared/layout/page-not-found/page-not-found.component';
-import { ConnectionCentralComponent } from './connections/connection-central/connection-central.component';
-import { CreateConnectionsComponent } from './connections/create-connections/create-connections.component';
-import { GetConnectionsComponent } from './connections/get-connections/get-connections.component';
-import { UpdateConnectionsComponent } from './connections/update-connections/update-connections.component';
-import { DeleteConnectionsComponent } from './connections/delete-connections/delete-connections.component';
+import { ConnectionsCreateComponent } from './connections-crud/connections-create/connections-create.component';
+import { ConnectionsGetComponent } from './connections-crud/connections-get/connections-get.component';
+import { ConnectionsRemoveComponent } from './connections-crud/connections-remove/connections-remove.component';
+import { ConnectionsUpdateComponent } from './connections-crud/connections-update/connections-update.component';
+import { ConnectionsCrudLandingComponent } from './connections-crud/connections-crud-landing/connections-crud-landing.component';
 import { QuestRewardsPageComponent } from './quest/quest-rewards-page/quest-rewards-page.component';
 import { ThemeSwitcherComponent } from './features/theme-switcher/theme-switcher.component';
 import { PageRedComponent } from './features-epris/page-red/page-red.component';
@@ -66,15 +66,19 @@ import { QuestGetComponent } from './quest-crud/quest-get/quest-get.component';
 import { QuestCreateComponent } from './quest-crud/quest-create/quest-create.component';
 import { QuestUpdateComponent } from './quest-crud/quest-update/quest-update.component';
 import { QuestLandingComponent } from './quest-crud/quest-landing/quest-landing.component';
+import { QuestRewardGetComponent } from './quest-crud/quest-reward-get/quest-reward-get.component';
+import { QuestRewardCreateComponent } from './quest-crud/quest-reward-create/quest-reward-create.component';
+import { QuestRewardLandingComponent } from './quest-crud/quest-reward-landing/quest-reward-landing.component';
+import { QuestRewardUpdateComponent } from './quest-crud/quest-reward-update/quest-reward-update.component';
 
 const routes: Routes = [
   { path: 'guest', component: GuestPublicLandingComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
-  { path: 'connections', component: ConnectionCentralComponent },
-  { path: 'get-connection', component: GetConnectionsComponent },
-  { path: 'create-connection', component: CreateConnectionsComponent },
-  { path: 'delete-connection', component: DeleteConnectionsComponent },
-  { path: 'update-connection', component: UpdateConnectionsComponent },
+  { path: 'connections', component: ConnectionsCrudLandingComponent },
+  { path: 'get-connection', component: ConnectionsGetComponent },
+  { path: 'create-connection', component: ConnectionsCreateComponent },
+  { path: 'delete-connection', component: ConnectionsRemoveComponent },
+  { path: 'update-connection', component: ConnectionsUpdateComponent },
   { path: 'quests', component: QuestRewardsPageComponent },
   { path: 'theme', component: ThemeSwitcherComponent },
   { path: 'gray', component: PageGrayComponent },
@@ -122,6 +126,10 @@ const routes: Routes = [
   { path: 'get-quests', component: QuestGetComponent},
   { path: 'create-quests', component: QuestCreateComponent},
   { path: 'update-quests', component: QuestUpdateComponent},
+  { path: 'quest-rewards', component: QuestRewardLandingComponent},
+  { path: 'create-quests-rewards', component: QuestRewardCreateComponent},
+  { path: 'get-quests-rewards', component: QuestRewardGetComponent},
+  { path: 'update-quests-rewards', component: QuestRewardUpdateComponent},
 
 
   { path: 'qrcode', component: QrCodeGeneratorComponent },

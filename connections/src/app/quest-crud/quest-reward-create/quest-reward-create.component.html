@@ -1,0 +1,34 @@
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h1 class="text-lg font-bold text-center mb-3"><span>QUEST REWARD DETAILS</span></h1>
+        <form [formGroup]="quest" (ngSubmit)="createQuestReward()">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="journey_id">
+                    <span>Journey ID</span>
+                </label>
+                <input formControlName="journey_id"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="journey_id" type="text" placeholder="Enter Journey ID">
+                    <div
+                    *ngIf="quest && quest?.get('journey_id')?.invalid && (quest.get('journey_id')?.dirty || quest.get('journey_id')?.touched)">
+                <p class="text-red-500 text-xs italic">Journey Id is required.</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2" for="award_image">
+                    <span>Award Image</span>
+                </label>
+                <input formControlName="award_image"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="award_image" type="text" placeholder="Enter Award Iamge">
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    type="submit" [disabled]="quest && quest.invalid">
+                    Create Quest Reward
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

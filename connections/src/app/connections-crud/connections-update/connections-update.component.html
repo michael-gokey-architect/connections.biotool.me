@@ -1,1 +1,38 @@
-<p>connections-update works!</p>
+<div class="flex items-center justify-center min-h-screen">
+	<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+		<h1 class="text-lg font-bold text-center mb-3"><span>CONNECTION DETAILS</span></h1>
+		<form [formGroup]="connectionForm" (ngSubmit)="onSubmit($event)">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="user_id">
+					<span>Connection User ID</span>
+				</label>
+				<input formControlName="user_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="user_id" type="number" placeholder="Enter User ID">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('user_id')?.invalid && (connectionForm?.get('user_id')?.dirty || connectionForm?.get('user_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Connection User ID is required.</p>
+				</div>
+			</div>
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm mb-2" for="follow_user_id">
+					<span>Follow User Id</span>
+				</label>
+				<input formControlName="follow_user_id"
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					id="follow_user_id" type="number" placeholder="Enter Follow User Id">
+				<div
+					*ngIf="connectionForm && connectionForm?.get('follow_user_id')?.invalid && (connectionForm?.get('follow_user_id')?.dirty || connectionForm?.get('follow_user_id')?.touched)">
+					<p class="text-red-500 text-xs italic">Follow User Id is required.</p>
+				</div>
+			</div>
+			<div class="flex items-center justify-between">
+				<button
+					class="bg-gray-400 hover:bg-gray-500 w-full text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+					type="submit" [disabled]="connectionForm && connectionForm.invalid">
+					Accept Friend
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

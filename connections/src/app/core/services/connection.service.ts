@@ -13,7 +13,7 @@ import { Connection } from '../models/connection.interface';
 export class ConnectionService {
 
   envName!: string;
-    private apiURL = 'http://api.mozli.com/Biodata';
+    private apiURL = 'http://api.mozli.com/Connection';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -23,38 +23,37 @@ export class ConnectionService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getConnections(): Observable<any> {
+  getFollowsConnections(user_id: number): Observable<any> {
     return this.httpClient
-      .get(this.apiURL + '/GetConnections/')
+      .get(this.apiURL + '/GetFollowsByUser/' + user_id)
 
       .pipe(catchError(this.errorHandler));
   }
 
-  createConnection(connection: Connection): Observable<any> {
+  followUser(user_id: number, follow_user_id: number): Observable<any> {
     return this.httpClient
       .post(
-        this.apiURL + '/AddConnection/',
-        JSON.stringify(connection),
+        this.apiURL + '/FollowUser/' + user_id +'/'+follow_user_id,
         this.httpOptions
       )
 
       .pipe(catchError(this.errorHandler));
   }
 
-  deleteConnections(connection_id: number): Observable<any> {
+  unfollowUser(user_id: number, follow_user_id: number): Observable<any> {
     return this.httpClient
-      .delete(this.apiURL + '/DeleteConnection/' + connection_id)
+      .delete(this.apiURL + '/UnfollowUser/' + user_id +'/'+follow_user_id)
 
       .pipe(catchError(this.errorHandler));
   }
 
   //we need to pass connection id as a query parameter to update
   //right now connection id is given as req body
-  updateConnection(connection: Connection): Observable<any> {
+  acceptFriend(user_id: number, friend_user_id: number): Observable<any> {
     return this.httpClient
       .put(
-        this.apiURL + '/UpdateConnection/',
-        JSON.stringify(connection),
+        this.apiURL + '/AcceptFriend/' + user_id +'/'+friend_user_id,
+        
         this.httpOptions
       )
 

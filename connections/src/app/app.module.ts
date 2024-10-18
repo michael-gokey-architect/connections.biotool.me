@@ -35,6 +35,10 @@ import { TicketsCreateComponent } from './tickets-crud/tickets-create/tickets-cr
 import { TicketsUpdateComponent } from './tickets-crud/tickets-update/tickets-update.component';
 import { TicketsGetComponent } from './tickets-crud/tickets-get/tickets-get.component';
 import { TicketsCrudLandingComponent } from './tickets-crud/tickets-crud-landing/tickets-crud-landing.component';
+import { QuestRewardCreateComponent } from './quest-crud/quest-reward-create/quest-reward-create.component';
+import { QuestRewardGetComponent } from './quest-crud/quest-reward-get/quest-reward-get.component';
+import { QuestRewardLandingComponent } from './quest-crud/quest-reward-landing/quest-reward-landing.component';
+import { QuestRewardUpdateComponent } from './quest-crud/quest-reward-update/quest-reward-update.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,11 @@ import { TicketsCrudLandingComponent } from './tickets-crud/tickets-crud-landing
     TicketsCreateComponent,
     TicketsUpdateComponent,
     TicketsGetComponent,
-    TicketsCrudLandingComponent
+    TicketsCrudLandingComponent,
+    QuestRewardCreateComponent,
+    QuestRewardGetComponent,
+    QuestRewardLandingComponent,
+    QuestRewardUpdateComponent
   ],
   imports: [
     BrowserModule,
